@@ -10,7 +10,7 @@
           </span>
           {{ t('channelMonitorV2.settings.title') }}
         </h2>
-        <p class="page-description mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+        <p class="page-description mt-1.5 text-xs text-gray-500 dark:text-dark-400">
           {{ t('channelMonitorV2.settings.description') }}
         </p>
       </div>
@@ -167,7 +167,7 @@
                 :checked="draft.group_ids.includes(group.id)"
                 @change="toggleGroup(group.id)"
               />
-              <span class="min-w-0 flex-1 truncate font-medium text-gray-800 dark:text-gray-100">{{ group.name }}</span>
+              <span class="min-w-0 flex-1 truncate font-medium text-gray-800 dark:text-dark-100">{{ group.name }}</span>
               <small class="shrink-0 text-xs text-gray-400">{{ platformLabel(group.platform) }} · #{{ group.id }}</small>
             </label>
           </div>
@@ -195,7 +195,7 @@
                 :checked="isCategoryIgnored(category)"
                 @change="toggleIgnoredCategory(category)"
               />
-              <span class="min-w-0 flex-1 truncate font-medium text-gray-800 dark:text-gray-100">
+              <span class="min-w-0 flex-1 truncate font-medium text-gray-800 dark:text-dark-100">
                 {{ categoryLabel(category) }}
               </span>
               <small class="shrink-0 font-mono text-[10px] text-gray-400">{{ category }}</small>
@@ -264,8 +264,8 @@
             {{ t('channelMonitorV2.settings.namedModelsCount', { count: namedModelCount }) }}
           </template>
         </div>
-        <div class="rounded-2xl border border-gray-200 bg-gray-50/80 px-4 py-3 text-xs text-gray-600 dark:border-dark-600 dark:bg-dark-800/50 dark:text-gray-300">
-          <p class="font-medium text-gray-800 dark:text-gray-100">{{ t('channelMonitorV2.settings.userContractTitle') }}</p>
+        <div class="rounded-2xl border border-gray-200 bg-gray-50/80 px-4 py-3 text-xs text-gray-600 dark:border-dark-600 dark:bg-dark-800/50 dark:text-dark-300">
+          <p class="font-medium text-gray-800 dark:text-dark-100">{{ t('channelMonitorV2.settings.userContractTitle') }}</p>
           <ul class="mt-1.5 list-disc space-y-0.5 pl-4">
             <li>{{ t('channelMonitorV2.settings.userContract.health') }}</li>
             <li>{{ t('channelMonitorV2.settings.userContract.trend') }}</li>

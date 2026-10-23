@@ -39,12 +39,12 @@
               </div>
 
               <div class="space-y-1">
-                <p class="truncate text-sm text-gray-600 dark:text-gray-300">
+                <p class="truncate text-sm text-gray-600 dark:text-dark-300">
                   {{ primaryEmailDisplay }}
                 </p>
                 <div
                   v-if="sourceHints.length"
-                  class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400"
+                  class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-dark-400"
                 >
                   <span
                     v-for="hint in sourceHints"
@@ -63,7 +63,7 @@
                 data-testid="profile-overview-metric-balance"
                 class="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-white/70 dark:bg-dark-900/60 dark:ring-dark-700"
               >
-                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-gray-500">
+                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">
                   {{ t('profile.accountBalance') }}
                 </p>
                 <p class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">
@@ -74,7 +74,7 @@
                 data-testid="profile-overview-metric-concurrency"
                 class="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-white/70 dark:bg-dark-900/60 dark:ring-dark-700"
               >
-                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-gray-500">
+                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">
                   {{ t('profile.concurrencyLimit') }}
                 </p>
                 <p class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">
@@ -85,7 +85,7 @@
                 data-testid="profile-overview-metric-member-since"
                 class="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-white/70 dark:bg-dark-900/60 dark:ring-dark-700"
               >
-                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-gray-500">
+                <p class="text-xs font-medium uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">
                   {{ t('profile.memberSince') }}
                 </p>
                 <p class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">
@@ -109,7 +109,7 @@
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                 {{ t('profile.basicsTitle') }}
               </h3>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
                 {{ t('profile.basicsDescription') }}
               </p>
             </div>
@@ -159,7 +159,7 @@
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             {{ t('profile.linkedProfileSources') }}
           </h3>
-          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
             {{ t('profile.linkedProfileSourcesDescription') }}
           </p>
 
@@ -167,9 +167,9 @@
             <div
               v-for="hint in sourceHints"
               :key="hint.key"
-              class="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50/80 px-4 py-3 text-sm text-gray-600 dark:border-dark-700 dark:bg-dark-900/30 dark:text-gray-300"
+              class="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50/80 px-4 py-3 text-sm text-gray-600 dark:border-dark-700 dark:bg-dark-900/30 dark:text-dark-300"
             >
-              <Icon name="link" size="sm" class="mt-0.5 text-gray-400 dark:text-gray-500" />
+              <Icon name="link" size="sm" class="mt-0.5 text-gray-400 dark:text-dark-500" />
               <span>{{ hint.text }}</span>
             </div>
           </div>

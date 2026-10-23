@@ -11,7 +11,7 @@
               <Icon
                 name="search"
                 size="md"
-                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"
+                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-dark-500"
               />
               <input
                 v-model="searchQuery"
@@ -80,7 +80,7 @@
                   v-for="col in toggleableColumns"
                   :key="col.key"
                   @click="toggleColumn(col.key)"
-                  class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                  class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
                 >
                   <span>{{ col.label }}</span>
                   <Icon
@@ -131,7 +131,7 @@
           </template>
 
           <template #cell-id="{ value }">
-            <span class="font-mono text-xs text-gray-500 dark:text-gray-400"
+            <span class="font-mono text-xs text-gray-500 dark:text-dark-400"
               >#{{ value }}</span
             >
           </template>
@@ -174,7 +174,7 @@
                   'inline-block rounded-full px-2 py-0.5 text-xs font-medium',
                   row.subscription_type === 'subscription'
                     ? 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400'
-                    : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300',
+                    : 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-dark-300',
                 ]"
               >
                 {{
@@ -186,7 +186,7 @@
               <!-- Subscription Limits - compact single line -->
               <div
                 v-if="row.subscription_type === 'subscription'"
-                class="space-y-0.5 text-xs text-gray-500 dark:text-gray-400"
+                class="space-y-0.5 text-xs text-gray-500 dark:text-dark-400"
               >
                 <div
                   v-if="
@@ -199,7 +199,7 @@
                   <span v-if="row.daily_limit_usd" class="whitespace-nowrap">
                     <span
                       v-if="usageLoading"
-                      class="font-medium text-gray-400 dark:text-gray-500"
+                      class="font-medium text-gray-400 dark:text-dark-500"
                       >—</span
                     >
                     <span
@@ -214,7 +214,7 @@
                         formatUsd(usageMap.get(row.id)?.today_cost ?? 0)
                       }}</span
                     >
-                    <span class="text-gray-400 dark:text-gray-500">
+                    <span class="text-gray-400 dark:text-dark-500">
                       / {{ formatUsd(row.daily_limit_usd) }}/{{
                         t("admin.groups.limitDay")
                       }}</span
@@ -225,7 +225,7 @@
                       row.daily_limit_usd &&
                       (row.weekly_limit_usd || row.monthly_limit_usd)
                     "
-                    class="mx-1 text-gray-300 dark:text-gray-600"
+                    class="mx-1 text-gray-300 dark:text-dark-600"
                     >·</span
                   >
                   <span v-if="row.weekly_limit_usd" class="whitespace-nowrap"
@@ -235,7 +235,7 @@
                   >
                   <span
                     v-if="row.weekly_limit_usd && row.monthly_limit_usd"
-                    class="mx-1 text-gray-300 dark:text-gray-600"
+                    class="mx-1 text-gray-300 dark:text-dark-600"
                     >·</span
                   >
                   <span v-if="row.monthly_limit_usd" class="whitespace-nowrap"
@@ -244,12 +244,12 @@
                     }}</span
                   >
                 </div>
-                <span v-else class="text-gray-400 dark:text-gray-500">{{
+                <span v-else class="text-gray-400 dark:text-dark-500">{{
                   t("admin.groups.subscription.noLimit")
                 }}</span>
-                <div class="text-gray-400 dark:text-gray-500">
+                <div class="text-gray-400 dark:text-dark-500">
                   {{ t("admin.groups.usageTotal") }}
-                  <span class="ml-1 font-medium text-gray-600 dark:text-gray-300"
+                  <span class="ml-1 font-medium text-gray-600 dark:text-dark-300"
                     >{{
                       usageLoading
                         ? "—"
@@ -262,7 +262,7 @@
           </template>
 
           <template #cell-rate_multiplier="{ value }">
-            <span class="text-sm text-gray-700 dark:text-gray-300"
+            <span class="text-sm text-gray-700 dark:text-dark-300"
               >{{ value }}x</span
             >
           </template>
@@ -278,7 +278,7 @@
           <template #cell-account_count="{ row }">
             <div class="space-y-0.5 text-xs">
               <div>
-                <span class="text-gray-500 dark:text-gray-400">{{
+                <span class="text-gray-500 dark:text-dark-400">{{
                   t("admin.groups.accountsAvailable")
                 }}</span>
                 <span
@@ -286,12 +286,12 @@
                   >{{ row.active_account_count || 0 }}</span
                 >
                 <span
-                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-gray-300"
+                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-dark-300"
                   >{{ t("admin.groups.accountsUnit") }}</span
                 >
               </div>
               <div v-if="row.rate_limited_account_count">
-                <span class="text-gray-500 dark:text-gray-400">{{
+                <span class="text-gray-500 dark:text-dark-400">{{
                   t("admin.groups.accountsRateLimited")
                 }}</span>
                 <span
@@ -299,20 +299,20 @@
                   >{{ row.rate_limited_account_count }}</span
                 >
                 <span
-                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-gray-300"
+                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-dark-300"
                   >{{ t("admin.groups.accountsUnit") }}</span
                 >
               </div>
               <div>
-                <span class="text-gray-500 dark:text-gray-400">{{
+                <span class="text-gray-500 dark:text-dark-400">{{
                   t("admin.groups.accountsTotal")
                 }}</span>
                 <span
-                  class="ml-1 font-medium text-gray-700 dark:text-gray-300"
+                  class="ml-1 font-medium text-gray-700 dark:text-dark-300"
                   >{{ row.account_count || 0 }}</span
                 >
                 <span
-                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-gray-300"
+                  class="ml-1 inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-800 dark:bg-dark-600 dark:text-dark-300"
                   >{{ t("admin.groups.accountsUnit") }}</span
                 >
               </div>
@@ -335,31 +335,31 @@
           <template #cell-usage="{ row }">
             <div v-if="usageLoading" class="text-xs text-gray-400">—</div>
             <div v-else class="space-y-0.5 text-xs">
-              <div class="text-gray-500 dark:text-gray-400">
-                <span class="text-gray-400 dark:text-gray-500">{{
+              <div class="text-gray-500 dark:text-dark-400">
+                <span class="text-gray-400 dark:text-dark-500">{{
                   t("admin.groups.usageToday")
                 }}</span>
-                <span class="ml-1 font-medium text-gray-700 dark:text-gray-300"
+                <span class="ml-1 font-medium text-gray-700 dark:text-dark-300"
                   >${{
                     formatCost(usageMap.get(row.id)?.today_cost ?? 0)
                   }}</span
                 >
               </div>
-              <div class="text-gray-500 dark:text-gray-400">
-                <span class="text-gray-400 dark:text-gray-500">{{
+              <div class="text-gray-500 dark:text-dark-400">
+                <span class="text-gray-400 dark:text-dark-500">{{
                   t("admin.groups.usageYesterday")
                 }}</span>
-                <span class="ml-1 font-medium text-gray-700 dark:text-gray-300"
+                <span class="ml-1 font-medium text-gray-700 dark:text-dark-300"
                   >${{
                     formatCost(usageMap.get(row.id)?.yesterday_cost ?? 0)
                   }}</span
                 >
               </div>
-              <div class="text-gray-500 dark:text-gray-400">
-                <span class="text-gray-400 dark:text-gray-500">{{
+              <div class="text-gray-500 dark:text-dark-400">
+                <span class="text-gray-400 dark:text-dark-500">{{
                   t("admin.groups.usageTotal")
                 }}</span>
-                <span class="ml-1 font-medium text-gray-700 dark:text-gray-300"
+                <span class="ml-1 font-medium text-gray-700 dark:text-dark-300"
                   >${{
                     formatCost(usageMap.get(row.id)?.total_cost ?? 0)
                   }}</span
@@ -524,7 +524,7 @@
         <!-- 从分组复制账号 -->
         <div v-if="!authStore.isSimpleMode && copyAccountsGroupOptions.length > 0">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.copyAccounts.title") }}
             </label>
             <div class="group relative inline-flex">
@@ -532,19 +532,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.copyAccounts.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -652,7 +652,7 @@
           data-tour="group-form-exclusive"
         >
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.form.exclusive") }}
             </label>
             <!-- Help Tooltip -->
@@ -661,14 +661,14 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <!-- Tooltip Popover -->
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="mb-2 text-xs font-medium">
                     {{ t("admin.groups.exclusiveTooltip.title") }}
@@ -676,7 +676,7 @@
                   <p class="mb-2 text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.exclusiveTooltip.description") }}
                   </p>
-                  <div class="rounded bg-gray-800 p-2 dark:bg-gray-700">
+                  <div class="rounded bg-gray-800 p-2 dark:bg-dark-700">
                     <p class="text-xs leading-relaxed text-gray-300">
                       <span
                         class="inline-flex items-center gap-1 text-primary-400"
@@ -688,7 +688,7 @@
                   </div>
                   <!-- Arrow -->
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -696,7 +696,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="createForm.is_exclusive" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 createForm.is_exclusive
                   ? t("admin.groups.exclusive")
@@ -771,10 +771,10 @@
         <div class="border-t pt-4">
           <div class="mb-3 flex items-center justify-between gap-3">
             <div>
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
                 {{ t("admin.groups.modelAllowlist.title") }}
               </label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.groups.modelAllowlist.hint") }}
               </p>
             </div>
@@ -788,7 +788,7 @@
               v-if="!createModelAllowlistLoading && createModelAllowlistState.items.length > 0"
               class="flex items-center justify-between gap-2 border-b border-gray-200 bg-gray-50 px-3 py-2 text-xs dark:border-dark-600 dark:bg-dark-800"
             >
-              <span class="text-gray-500 dark:text-gray-400">
+              <span class="text-gray-500 dark:text-dark-400">
                 {{
                   t("admin.groups.modelAllowlist.selectedSummary", {
                     selected: createModelAllowlistSelectedCount,
@@ -806,7 +806,7 @@
                 </button>
                 <button
                   type="button"
-                  class="rounded px-2 py-1 font-medium text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                  class="rounded px-2 py-1 font-medium text-gray-600 transition-colors hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
                   @click="invertModelAllowlistSelection(createModelAllowlistState)"
                 >
                   {{ t("admin.groups.modelAllowlist.invertSelection") }}
@@ -816,12 +816,12 @@
             <div
               class="max-h-64 space-y-2 overflow-y-auto p-2"
             >
-              <p v-if="createModelAllowlistLoading" class="text-xs text-gray-500 dark:text-gray-400">
+              <p v-if="createModelAllowlistLoading" class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.groups.modelAllowlist.loading") }}
               </p>
               <p
                 v-else-if="createModelAllowlistState.items.length === 0"
-                class="text-xs text-gray-500 dark:text-gray-400"
+                class="text-xs text-gray-500 dark:text-dark-400"
               >
                 {{ t("admin.groups.modelAllowlist.empty") }}
               </p>
@@ -835,7 +835,7 @@
                   type="checkbox"
                   class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
-                <span class="min-w-0 flex-1 break-all text-sm text-gray-700 dark:text-gray-300">
+                <span class="min-w-0 flex-1 break-all text-sm text-gray-700 dark:text-dark-300">
                   {{ item.id }}
                   <span
                     v-if="item.id.includes('*')"
@@ -847,7 +847,7 @@
                 <button
                   type="button"
                   :disabled="index === 0"
-                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-gray-200"
+                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-dark-200"
                   @click="moveCreateModelAllowlistItem(index, index - 1)"
                 >
                   <Icon name="arrowUp" size="sm" />
@@ -855,7 +855,7 @@
                 <button
                   type="button"
                   :disabled="index === createModelAllowlistState.items.length - 1"
-                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-gray-200"
+                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-dark-200"
                   @click="moveCreateModelAllowlistItem(index, index + 1)"
                 >
                   <Icon name="arrowDown" size="sm" />
@@ -868,7 +868,7 @@
                   v-model="createAllowlistCustomEntry"
                   type="text"
                   :placeholder="t('admin.groups.modelAllowlist.customPlaceholder')"
-                  class="min-w-0 flex-1 rounded border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:border-primary-500 focus:outline-none dark:border-dark-500 dark:bg-dark-700 dark:text-gray-200"
+                  class="min-w-0 flex-1 rounded border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:border-primary-500 focus:outline-none dark:border-dark-500 dark:bg-dark-700 dark:text-dark-200"
                   @keydown.enter.prevent="submitCreateAllowlistCustomEntry"
                 />
                 <button
@@ -895,15 +895,15 @@
           class="border-t pt-4"
         >
           <label
-            class="block mb-2 font-medium text-gray-700 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-700 dark:text-dark-300"
           >
             {{ t(imagePricingI18nKey(createForm.platform, "title")) }}
           </label>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t(imagePricingI18nKey(createForm.platform, "description")) }}
           </p>
           <div class="mb-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="createForm.allow_image_generation"
                 type="checkbox"
@@ -911,7 +911,7 @@
               />
               {{ t(imagePricingI18nKey(createForm.platform, "allowImageGeneration")) }}
             </label>
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="createForm.image_rate_independent"
                 type="checkbox"
@@ -971,10 +971,10 @@
               />
             </div>
           </div>
-          <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-3 text-xs text-gray-500 dark:text-dark-400">
             {{ t(imagePricingI18nKey(createForm.platform, "modeHint")) }}
           </p>
-          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-dark-800 dark:text-dark-300">
             <div class="mb-1 font-medium">
               {{ t(imagePricingI18nKey(createForm.platform, "finalPricePreview")) }}
             </div>
@@ -989,7 +989,7 @@
           </div>
           <div v-if="createForm.platform === 'gemini' && createForm.allow_image_generation" class="mt-4 border-t border-dashed border-gray-200 pt-4 dark:border-dark-700">
             <label
-              class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300"
             >
               <input
                 v-model="createForm.allow_batch_image_generation"
@@ -998,7 +998,7 @@
               />
               {{ t("admin.groups.imagePricing.allowBatchImageGeneration") }}
             </label>
-            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-2 text-xs text-gray-500 dark:text-dark-400">
               {{ t("admin.groups.imagePricing.batchSectionHint") }}
             </p>
             <div
@@ -1035,7 +1035,7 @@
           </div>
           <p
             v-else-if="createForm.platform !== 'gemini'"
-            class="mt-4 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-500 dark:border-dark-700 dark:text-gray-400"
+            class="mt-4 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-500 dark:border-dark-700 dark:text-dark-400"
           >
             {{ t("admin.groups.imagePricing.batchGeminiOnlyHint") }}
           </p>
@@ -1047,15 +1047,15 @@
           class="border-t pt-4"
         >
           <label
-            class="block mb-2 font-medium text-gray-700 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-700 dark:text-dark-300"
           >
             {{ t(videoPricingI18nKey("title")) }}
           </label>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t(videoPricingI18nKey("description")) }}
           </p>
           <div class="mb-4">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="createForm.video_rate_independent"
                 type="checkbox"
@@ -1119,10 +1119,10 @@
             class="mt-4 border-t border-dashed border-gray-200 pt-4 dark:border-dark-700"
             data-testid="create-grok-video-model-prices"
           >
-            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.videoPricing.modelOverridesTitle") }}
             </p>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t("admin.groups.videoPricing.modelOverridesDescription") }}
             </p>
             <div class="mt-3 space-y-3">
@@ -1131,7 +1131,7 @@
                 :key="family.key"
                 class="grid gap-2 sm:grid-cols-[minmax(0,1fr)_repeat(3,minmax(0,7rem))] sm:items-end"
               >
-                <div class="min-w-0 pb-1 font-mono text-xs text-gray-700 dark:text-gray-300">
+                <div class="min-w-0 pb-1 font-mono text-xs text-gray-700 dark:text-dark-300">
                   {{ family.label }}
                 </div>
                 <label
@@ -1139,7 +1139,7 @@
                   :key="resolution.key"
                   class="block"
                 >
-                  <span class="mb-1 block text-xs text-gray-500 dark:text-gray-400">
+                  <span class="mb-1 block text-xs text-gray-500 dark:text-dark-400">
                     {{ resolution.label }} ($/s)
                   </span>
                   <input
@@ -1154,10 +1154,10 @@
               </div>
             </div>
           </div>
-          <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-3 text-xs text-gray-500 dark:text-dark-400">
             {{ t(videoPricingI18nKey("modeHint")) }}
           </p>
-          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-dark-800 dark:text-dark-300">
             <div class="mb-1 font-medium">
               {{ t(videoPricingI18nKey("finalPricePreview")) }}
             </div>
@@ -1175,7 +1175,7 @@
         <!-- 高峰时段倍率配置（仅订阅类型分组） -->
         <div v-if="createForm.subscription_type === 'subscription'" class="border-t pt-4">
           <div class="mb-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="createForm.peak_rate_enabled"
                 type="checkbox"
@@ -1221,7 +1221,7 @@
 
         <!-- 分组利润控制（五个平台 token 请求） -->
         <div v-if="isProfitControlPlatform(createForm.platform)" class="border-t pt-4">
-          <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+          <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
             <input
               v-model="createForm.profit_control_enabled"
               type="checkbox"
@@ -1229,7 +1229,7 @@
             />
             <span>{{ t("admin.groups.profitControl.enable") }}</span>
           </label>
-          <p class="mb-3 mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mb-3 mt-1.5 text-xs text-gray-500 dark:text-dark-400">
             {{
               createForm.profit_control_enabled
                 ? t("admin.groups.profitControl.enabledHint")
@@ -1272,7 +1272,7 @@
         <!-- 支持的模型系列（仅 antigravity 平台） -->
         <div v-if="createForm.platform === 'antigravity'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.supportedScopes.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -1281,19 +1281,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.supportedScopes.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -1307,7 +1307,7 @@
                 @change="toggleCreateScope('claude')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.claude")
               }}</span>
             </label>
@@ -1320,7 +1320,7 @@
                 @change="toggleCreateScope('gemini_text')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.geminiText")
               }}</span>
             </label>
@@ -1333,12 +1333,12 @@
                 @change="toggleCreateScope('gemini_image')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.geminiImage")
               }}</span>
             </label>
           </div>
-          <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-2 text-xs text-gray-500 dark:text-dark-400">
             {{ t("admin.groups.supportedScopes.hint") }}
           </p>
         </div>
@@ -1346,7 +1346,7 @@
         <!-- MCP XML 协议注入（仅 antigravity 平台） -->
         <div v-if="createForm.platform === 'antigravity'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.mcpXml.title") }}
             </label>
             <div class="group relative inline-flex">
@@ -1354,19 +1354,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.mcpXml.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -1374,7 +1374,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="createForm.mcp_xml_inject" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 createForm.mcp_xml_inject
                   ? t("admin.groups.mcpXml.enabled")
@@ -1387,7 +1387,7 @@
         <!-- Claude Code 客户端限制（仅 anthropic 平台） -->
         <div v-if="createForm.platform === 'anthropic'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.claudeCode.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -1396,19 +1396,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.claudeCode.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -1416,7 +1416,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="createForm.claude_code_only" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 createForm.claude_code_only
                   ? t("admin.groups.claudeCode.enabled")
@@ -1445,7 +1445,7 @@
           v-if="createForm.platform === 'openai'"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.webSearchPricing.title") }}
           </h4>
           <div>
@@ -1464,7 +1464,7 @@
               {{ t("admin.groups.webSearchPricing.pricePerCallHint") }}
             </p>
             <div
-              class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-600 dark:bg-dark-700 dark:text-gray-300"
+              class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-600 dark:bg-dark-700 dark:text-dark-300"
             >
               {{
                 t("admin.groups.webSearchPricing.finalPricePreview", {
@@ -1479,8 +1479,8 @@
         <div class="border-t border-gray-200 pt-4 mt-4 dark:border-dark-400">
           <div class="flex flex-wrap items-start justify-between gap-3">
             <div class="min-w-0 flex-1">
-              <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ t("admin.groups.modelPricing.title") }}</h4>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">{{ t("admin.groups.modelPricing.description") }}</p>
+              <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300">{{ t("admin.groups.modelPricing.title") }}</h4>
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">{{ t("admin.groups.modelPricing.description") }}</p>
             </div>
             <button type="button" class="btn btn-secondary shrink-0 whitespace-nowrap" @click="addGroupPricing(createForm.model_pricing)">
               <Icon name="plus" size="sm" class="mr-1" />{{ t("admin.groups.modelPricing.add") }}
@@ -1488,7 +1488,7 @@
           </div>
           <label class="mt-3 flex items-start gap-2">
             <input v-model="createForm.long_context_pricing_enabled" type="checkbox" class="mt-0.5" />
-            <span><span class="block text-sm text-gray-700 dark:text-gray-300">{{ t("admin.groups.modelPricing.longContext") }}</span><span class="block text-xs text-gray-500">{{ t("admin.groups.modelPricing.longContextHint") }}</span></span>
+            <span><span class="block text-sm text-gray-700 dark:text-dark-300">{{ t("admin.groups.modelPricing.longContext") }}</span><span class="block text-xs text-gray-500">{{ t("admin.groups.modelPricing.longContextHint") }}</span></span>
           </label>
           <div class="mt-3 space-y-2">
             <PricingEntryCard v-for="(entry, index) in createForm.model_pricing" :key="index" :entry="entry" :platform="createForm.platform" hide-token-intervals @update="createForm.model_pricing[index] = $event" @remove="createForm.model_pricing.splice(index, 1)" />
@@ -1500,10 +1500,10 @@
           v-if="createForm.platform === 'grok'"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-1">
             {{ t("admin.groups.explicitPricing.title") }}
           </h4>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t("admin.groups.explicitPricing.description") }}
           </p>
           <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
@@ -1562,11 +1562,11 @@
           v-if="supportsGroupOpenAIFast(createForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiFast.title") }}
           </h4>
           <div class="flex items-center justify-between gap-4">
-            <label class="text-sm text-gray-600 dark:text-gray-400">
+            <label class="text-sm text-gray-600 dark:text-dark-400">
               {{ t("admin.groups.openaiFast.force") }}
             </label>
             <Toggle
@@ -1575,11 +1575,11 @@
               v-model="createForm.force_openai_fast"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiFast.hint") }}
           </p>
           <div class="flex items-center justify-between gap-4 mt-4">
-            <label class="text-sm text-gray-600 dark:text-gray-400">
+            <label class="text-sm text-gray-600 dark:text-dark-400">
               {{ t("admin.groups.openaiFast.free") }}
             </label>
             <Toggle
@@ -1588,7 +1588,7 @@
               v-model="createForm.free_openai_fast"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiFast.freeHint") }}
           </p>
         </div>
@@ -1598,11 +1598,11 @@
           v-if="supportsLivePlatform(createForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiLive.title") }}
           </h4>
           <div class="flex items-center justify-between">
-            <label class="text-sm text-gray-600 dark:text-gray-400">{{
+            <label class="text-sm text-gray-600 dark:text-dark-400">{{
               t("admin.groups.openaiLive.allow")
             }}</label>
             <Toggle
@@ -1610,7 +1610,7 @@
               @update:model-value="toggleLive('create')"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiLive.hint") }}
           </p>
         </div>
@@ -1620,18 +1620,18 @@
           v-if="supportsMessagesDispatchPlatform(createForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiMessages.title") }}
           </h4>
 
           <!-- 允许 Messages 调度开关 -->
           <div class="flex items-center justify-between">
-            <label class="text-sm text-gray-600 dark:text-gray-400">{{
+            <label class="text-sm text-gray-600 dark:text-dark-400">{{
               t("admin.groups.openaiMessages.allowDispatch")
             }}</label>
             <Toggle v-model="createForm.allow_messages_dispatch" />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiMessages.allowDispatchHint") }}
           </p>
 
@@ -1657,7 +1657,7 @@
                     }}</label
                   >
                 </div>
-                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                   {{ t("admin.groups.openaiMessages.familyMappingHint") }}
                 </p>
               </div>
@@ -1816,7 +1816,7 @@
                   <button
                     type="button"
                     @click="addCreateMessagesDispatchMapping"
-                    class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-300 bg-white py-3 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50/50 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-800 dark:text-gray-400 dark:hover:border-primary-800 dark:hover:bg-primary-900/20 dark:hover:text-primary-400"
+                    class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-300 bg-white py-3 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50/50 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-800 dark:text-dark-400 dark:hover:border-primary-800 dark:hover:bg-primary-900/20 dark:hover:text-primary-400"
                   >
                     <Icon name="plus" size="sm" />
                     {{ t("admin.groups.openaiMessages.addExactMapping") }}
@@ -1836,17 +1836,17 @@
           "
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4 space-y-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.accountFilters.title") }}
           </h4>
 
           <!-- require_oauth_only toggle -->
           <div class="flex items-center justify-between">
             <div>
-              <label class="text-sm text-gray-600 dark:text-gray-400"
+              <label class="text-sm text-gray-600 dark:text-dark-400"
                 >{{ t("admin.groups.accountFilters.oauthOnly") }}</label
               >
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+              <p class="text-xs text-gray-500 dark:text-dark-400 mt-0.5">
                 {{
                   createForm.require_oauth_only
                     ? t("admin.groups.accountFilters.oauthOnlyEnabled")
@@ -1860,10 +1860,10 @@
           <!-- require_privacy_set toggle -->
           <div class="flex items-center justify-between">
             <div>
-              <label class="text-sm text-gray-600 dark:text-gray-400"
+              <label class="text-sm text-gray-600 dark:text-dark-400"
                 >{{ t("admin.groups.accountFilters.privacySetOnly") }}</label
               >
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+              <p class="text-xs text-gray-500 dark:text-dark-400 mt-0.5">
                 {{
                   createForm.require_privacy_set
                     ? t("admin.groups.accountFilters.privacySetOnlyEnabled")
@@ -1899,7 +1899,7 @@
         <!-- 模型路由配置（仅 anthropic 平台） -->
         <div v-if="createForm.platform === 'anthropic'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.modelRouting.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -1908,19 +1908,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-80 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.modelRouting.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -1929,7 +1929,7 @@
           <!-- 启用开关 -->
           <div class="flex items-center gap-3 mb-3">
             <Toggle v-model="createForm.model_routing_enabled" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 createForm.model_routing_enabled
                   ? t("admin.groups.modelRouting.enabled")
@@ -1939,11 +1939,11 @@
           </div>
           <p
             v-if="!createForm.model_routing_enabled"
-            class="text-xs text-gray-500 dark:text-gray-400 mb-3"
+            class="text-xs text-gray-500 dark:text-dark-400 mb-3"
           >
             {{ t("admin.groups.modelRouting.disabledHint") }}
           </p>
-          <p v-else class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p v-else class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t("admin.groups.modelRouting.noRulesHint") }}
           </p>
           <!-- 路由规则列表（仅在启用时显示） -->
@@ -2162,7 +2162,7 @@
         <!-- 从分组复制账号（编辑时） -->
         <div v-if="copyAccountsGroupOptionsForEdit.length > 0">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.copyAccounts.title") }}
             </label>
             <div class="group relative inline-flex">
@@ -2170,19 +2170,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.copyAccounts.tooltipEdit") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -2287,7 +2287,7 @@
         />
         <div v-if="editForm.subscription_type !== 'subscription'">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.form.exclusive") }}
             </label>
             <!-- Help Tooltip -->
@@ -2296,14 +2296,14 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <!-- Tooltip Popover -->
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="mb-2 text-xs font-medium">
                     {{ t("admin.groups.exclusiveTooltip.title") }}
@@ -2311,7 +2311,7 @@
                   <p class="mb-2 text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.exclusiveTooltip.description") }}
                   </p>
-                  <div class="rounded bg-gray-800 p-2 dark:bg-gray-700">
+                  <div class="rounded bg-gray-800 p-2 dark:bg-dark-700">
                     <p class="text-xs leading-relaxed text-gray-300">
                       <span
                         class="inline-flex items-center gap-1 text-primary-400"
@@ -2323,7 +2323,7 @@
                   </div>
                   <!-- Arrow -->
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -2331,7 +2331,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="editForm.is_exclusive" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 editForm.is_exclusive
                   ? t("admin.groups.exclusive")
@@ -2411,10 +2411,10 @@
         <div class="border-t pt-4">
           <div class="mb-3 flex items-center justify-between gap-3">
             <div>
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
                 {{ t("admin.groups.modelAllowlist.title") }}
               </label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.groups.modelAllowlist.hint") }}
               </p>
             </div>
@@ -2428,7 +2428,7 @@
               v-if="!editModelAllowlistLoading && editModelAllowlistState.items.length > 0"
               class="flex items-center justify-between gap-2 border-b border-gray-200 bg-gray-50 px-3 py-2 text-xs dark:border-dark-600 dark:bg-dark-800"
             >
-              <span class="text-gray-500 dark:text-gray-400">
+              <span class="text-gray-500 dark:text-dark-400">
                 {{
                   t("admin.groups.modelAllowlist.selectedSummary", {
                     selected: editModelAllowlistSelectedCount,
@@ -2446,7 +2446,7 @@
                 </button>
                 <button
                   type="button"
-                  class="rounded px-2 py-1 font-medium text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                  class="rounded px-2 py-1 font-medium text-gray-600 transition-colors hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
                   @click="invertModelAllowlistSelection(editModelAllowlistState)"
                 >
                   {{ t("admin.groups.modelAllowlist.invertSelection") }}
@@ -2456,12 +2456,12 @@
             <div
               class="max-h-64 space-y-2 overflow-y-auto p-2"
             >
-              <p v-if="editModelAllowlistLoading" class="text-xs text-gray-500 dark:text-gray-400">
+              <p v-if="editModelAllowlistLoading" class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.groups.modelAllowlist.loading") }}
               </p>
               <p
                 v-else-if="editModelAllowlistState.items.length === 0"
-                class="text-xs text-gray-500 dark:text-gray-400"
+                class="text-xs text-gray-500 dark:text-dark-400"
               >
                 {{ t("admin.groups.modelAllowlist.empty") }}
               </p>
@@ -2475,7 +2475,7 @@
                   type="checkbox"
                   class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
-                <span class="min-w-0 flex-1 break-all text-sm text-gray-700 dark:text-gray-300">
+                <span class="min-w-0 flex-1 break-all text-sm text-gray-700 dark:text-dark-300">
                   {{ item.id }}
                   <span
                     v-if="item.id.includes('*')"
@@ -2487,7 +2487,7 @@
                 <button
                   type="button"
                   :disabled="index === 0"
-                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-gray-200"
+                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-dark-200"
                   @click="moveEditModelAllowlistItem(index, index - 1)"
                 >
                   <Icon name="arrowUp" size="sm" />
@@ -2495,7 +2495,7 @@
                 <button
                   type="button"
                   :disabled="index === editModelAllowlistState.items.length - 1"
-                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-gray-200"
+                  class="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-40 dark:hover:bg-dark-600 dark:hover:text-dark-200"
                   @click="moveEditModelAllowlistItem(index, index + 1)"
                 >
                   <Icon name="arrowDown" size="sm" />
@@ -2508,7 +2508,7 @@
                   v-model="editAllowlistCustomEntry"
                   type="text"
                   :placeholder="t('admin.groups.modelAllowlist.customPlaceholder')"
-                  class="min-w-0 flex-1 rounded border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:border-primary-500 focus:outline-none dark:border-dark-500 dark:bg-dark-700 dark:text-gray-200"
+                  class="min-w-0 flex-1 rounded border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:border-primary-500 focus:outline-none dark:border-dark-500 dark:bg-dark-700 dark:text-dark-200"
                   @keydown.enter.prevent="submitEditAllowlistCustomEntry"
                 />
                 <button
@@ -2535,15 +2535,15 @@
           class="border-t pt-4"
         >
           <label
-            class="block mb-2 font-medium text-gray-700 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-700 dark:text-dark-300"
           >
             {{ t(imagePricingI18nKey(editForm.platform, "title")) }}
           </label>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t(imagePricingI18nKey(editForm.platform, "description")) }}
           </p>
           <div class="mb-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="editForm.allow_image_generation"
                 type="checkbox"
@@ -2551,7 +2551,7 @@
               />
               {{ t(imagePricingI18nKey(editForm.platform, "allowImageGeneration")) }}
             </label>
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="editForm.image_rate_independent"
                 type="checkbox"
@@ -2611,10 +2611,10 @@
               />
             </div>
           </div>
-          <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-3 text-xs text-gray-500 dark:text-dark-400">
             {{ t(imagePricingI18nKey(editForm.platform, "modeHint")) }}
           </p>
-          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-dark-800 dark:text-dark-300">
             <div class="mb-1 font-medium">
               {{ t(imagePricingI18nKey(editForm.platform, "finalPricePreview")) }}
             </div>
@@ -2629,7 +2629,7 @@
           </div>
           <div v-if="editForm.platform === 'gemini' && editForm.allow_image_generation" class="mt-4 border-t border-dashed border-gray-200 pt-4 dark:border-dark-700">
             <label
-              class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300"
             >
               <input
                 v-model="editForm.allow_batch_image_generation"
@@ -2638,7 +2638,7 @@
               />
               {{ t("admin.groups.imagePricing.allowBatchImageGeneration") }}
             </label>
-            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-2 text-xs text-gray-500 dark:text-dark-400">
               {{ t("admin.groups.imagePricing.batchSectionHint") }}
             </p>
             <div
@@ -2675,7 +2675,7 @@
           </div>
           <p
             v-else-if="editForm.platform !== 'gemini'"
-            class="mt-4 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-500 dark:border-dark-700 dark:text-gray-400"
+            class="mt-4 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-500 dark:border-dark-700 dark:text-dark-400"
           >
             {{ t("admin.groups.imagePricing.batchGeminiOnlyHint") }}
           </p>
@@ -2687,15 +2687,15 @@
           class="border-t pt-4"
         >
           <label
-            class="block mb-2 font-medium text-gray-700 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-700 dark:text-dark-300"
           >
             {{ t(videoPricingI18nKey("title")) }}
           </label>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t(videoPricingI18nKey("description")) }}
           </p>
           <div class="mb-4">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="editForm.video_rate_independent"
                 type="checkbox"
@@ -2759,10 +2759,10 @@
             class="mt-4 border-t border-dashed border-gray-200 pt-4 dark:border-dark-700"
             data-testid="edit-grok-video-model-prices"
           >
-            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.videoPricing.modelOverridesTitle") }}
             </p>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t("admin.groups.videoPricing.modelOverridesDescription") }}
             </p>
             <div class="mt-3 space-y-3">
@@ -2771,7 +2771,7 @@
                 :key="family.key"
                 class="grid gap-2 sm:grid-cols-[minmax(0,1fr)_repeat(3,minmax(0,7rem))] sm:items-end"
               >
-                <div class="min-w-0 pb-1 font-mono text-xs text-gray-700 dark:text-gray-300">
+                <div class="min-w-0 pb-1 font-mono text-xs text-gray-700 dark:text-dark-300">
                   {{ family.label }}
                 </div>
                 <label
@@ -2779,7 +2779,7 @@
                   :key="resolution.key"
                   class="block"
                 >
-                  <span class="mb-1 block text-xs text-gray-500 dark:text-gray-400">
+                  <span class="mb-1 block text-xs text-gray-500 dark:text-dark-400">
                     {{ resolution.label }} ($/s)
                   </span>
                   <input
@@ -2794,10 +2794,10 @@
               </div>
             </div>
           </div>
-          <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-3 text-xs text-gray-500 dark:text-dark-400">
             {{ t(videoPricingI18nKey("modeHint")) }}
           </p>
-          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+          <div class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-700 dark:bg-dark-800 dark:text-dark-300">
             <div class="mb-1 font-medium">
               {{ t(videoPricingI18nKey("finalPricePreview")) }}
             </div>
@@ -2815,7 +2815,7 @@
         <!-- 高峰时段倍率配置（仅订阅类型分组） -->
         <div v-if="editForm.subscription_type === 'subscription'" class="border-t pt-4">
           <div class="mb-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
               <input
                 v-model="editForm.peak_rate_enabled"
                 type="checkbox"
@@ -2861,7 +2861,7 @@
 
         <!-- 分组利润控制（五个平台 token 请求） -->
         <div v-if="isProfitControlPlatform(editForm.platform)" class="border-t pt-4">
-          <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+          <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
             <input
               v-model="editForm.profit_control_enabled"
               type="checkbox"
@@ -2869,7 +2869,7 @@
             />
             <span>{{ t("admin.groups.profitControl.enable") }}</span>
           </label>
-          <p class="mb-3 mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mb-3 mt-1.5 text-xs text-gray-500 dark:text-dark-400">
             {{
               editForm.profit_control_enabled
                 ? t("admin.groups.profitControl.enabledHint")
@@ -2912,7 +2912,7 @@
         <!-- 支持的模型系列（仅 antigravity 平台） -->
         <div v-if="editForm.platform === 'antigravity'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.supportedScopes.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -2921,19 +2921,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.supportedScopes.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -2947,7 +2947,7 @@
                 @change="toggleEditScope('claude')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.claude")
               }}</span>
             </label>
@@ -2960,7 +2960,7 @@
                 @change="toggleEditScope('gemini_text')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.geminiText")
               }}</span>
             </label>
@@ -2973,12 +2973,12 @@
                 @change="toggleEditScope('gemini_image')"
                 class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{
                 t("admin.groups.supportedScopes.geminiImage")
               }}</span>
             </label>
           </div>
-          <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-2 text-xs text-gray-500 dark:text-dark-400">
             {{ t("admin.groups.supportedScopes.hint") }}
           </p>
         </div>
@@ -2986,7 +2986,7 @@
         <!-- MCP XML 协议注入（仅 antigravity 平台） -->
         <div v-if="editForm.platform === 'antigravity'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.mcpXml.title") }}
             </label>
             <div class="group relative inline-flex">
@@ -2994,19 +2994,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.mcpXml.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -3014,7 +3014,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="editForm.mcp_xml_inject" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 editForm.mcp_xml_inject
                   ? t("admin.groups.mcpXml.enabled")
@@ -3027,7 +3027,7 @@
         <!-- Claude Code 客户端限制（仅 anthropic 平台） -->
         <div v-if="editForm.platform === 'anthropic'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.claudeCode.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -3036,19 +3036,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-72 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.claudeCode.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -3056,7 +3056,7 @@
           </div>
           <div class="flex items-center gap-3">
             <Toggle v-model="editForm.claude_code_only" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 editForm.claude_code_only
                   ? t("admin.groups.claudeCode.enabled")
@@ -3085,7 +3085,7 @@
           v-if="editForm.platform === 'openai'"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.webSearchPricing.title") }}
           </h4>
           <div>
@@ -3104,7 +3104,7 @@
               {{ t("admin.groups.webSearchPricing.pricePerCallHint") }}
             </p>
             <div
-              class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-600 dark:bg-dark-700 dark:text-gray-300"
+              class="mt-2 rounded-lg bg-gray-50 p-3 text-xs text-gray-600 dark:bg-dark-700 dark:text-dark-300"
             >
               {{
                 t("admin.groups.webSearchPricing.finalPricePreview", {
@@ -3129,8 +3129,8 @@
         <div class="border-t border-gray-200 pt-4 mt-4 dark:border-dark-400">
           <div class="flex flex-wrap items-start justify-between gap-3">
             <div class="min-w-0 flex-1">
-              <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ t("admin.groups.modelPricing.title") }}</h4>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">{{ t("admin.groups.modelPricing.description") }}</p>
+              <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300">{{ t("admin.groups.modelPricing.title") }}</h4>
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">{{ t("admin.groups.modelPricing.description") }}</p>
             </div>
             <button type="button" class="btn btn-secondary shrink-0 whitespace-nowrap" @click="addGroupPricing(editForm.model_pricing)">
               <Icon name="plus" size="sm" class="mr-1" />{{ t("admin.groups.modelPricing.add") }}
@@ -3138,7 +3138,7 @@
           </div>
           <label class="mt-3 flex items-start gap-2">
             <input v-model="editForm.long_context_pricing_enabled" type="checkbox" class="mt-0.5" />
-            <span><span class="block text-sm text-gray-700 dark:text-gray-300">{{ t("admin.groups.modelPricing.longContext") }}</span><span class="block text-xs text-gray-500">{{ t("admin.groups.modelPricing.longContextHint") }}</span></span>
+            <span><span class="block text-sm text-gray-700 dark:text-dark-300">{{ t("admin.groups.modelPricing.longContext") }}</span><span class="block text-xs text-gray-500">{{ t("admin.groups.modelPricing.longContextHint") }}</span></span>
           </label>
           <div class="mt-3 space-y-2">
             <PricingEntryCard v-for="(entry, index) in editForm.model_pricing" :key="index" :entry="entry" :platform="editForm.platform" hide-token-intervals @update="editForm.model_pricing[index] = $event" @remove="editForm.model_pricing.splice(index, 1)" />
@@ -3150,10 +3150,10 @@
           v-if="editForm.platform === 'grok'"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-1">
             {{ t("admin.groups.explicitPricing.title") }}
           </h4>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t("admin.groups.explicitPricing.description") }}
           </p>
           <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
@@ -3212,11 +3212,11 @@
           v-if="supportsGroupOpenAIFast(editForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiFast.title") }}
           </h4>
           <div class="flex items-center justify-between gap-4">
-            <label class="text-sm text-gray-600 dark:text-gray-400">
+            <label class="text-sm text-gray-600 dark:text-dark-400">
               {{ t("admin.groups.openaiFast.force") }}
             </label>
             <Toggle
@@ -3225,11 +3225,11 @@
               v-model="editForm.force_openai_fast"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiFast.hint") }}
           </p>
           <div class="flex items-center justify-between gap-4 mt-4">
-            <label class="text-sm text-gray-600 dark:text-gray-400">
+            <label class="text-sm text-gray-600 dark:text-dark-400">
               {{ t("admin.groups.openaiFast.free") }}
             </label>
             <Toggle
@@ -3238,7 +3238,7 @@
               v-model="editForm.free_openai_fast"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiFast.freeHint") }}
           </p>
         </div>
@@ -3248,11 +3248,11 @@
           v-if="supportsLivePlatform(editForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiLive.title") }}
           </h4>
           <div class="flex items-center justify-between">
-            <label class="text-sm text-gray-600 dark:text-gray-400">{{
+            <label class="text-sm text-gray-600 dark:text-dark-400">{{
               t("admin.groups.openaiLive.allow")
             }}</label>
             <Toggle
@@ -3260,7 +3260,7 @@
               @update:model-value="toggleLive('edit')"
             />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiLive.hint") }}
           </p>
         </div>
@@ -3270,18 +3270,18 @@
           v-if="supportsMessagesDispatchPlatform(editForm.platform)"
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.openaiMessages.title") }}
           </h4>
 
           <!-- 允许 Messages 调度开关 -->
           <div class="flex items-center justify-between">
-            <label class="text-sm text-gray-600 dark:text-gray-400">{{
+            <label class="text-sm text-gray-600 dark:text-dark-400">{{
               t("admin.groups.openaiMessages.allowDispatch")
             }}</label>
             <Toggle v-model="editForm.allow_messages_dispatch" />
           </div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p class="text-xs text-gray-500 dark:text-dark-400 mt-1">
             {{ t("admin.groups.openaiMessages.allowDispatchHint") }}
           </p>
 
@@ -3306,7 +3306,7 @@
                     }}</label
                   >
                 </div>
-                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                   {{ t("admin.groups.openaiMessages.familyMappingHint") }}
                 </p>
               </div>
@@ -3465,7 +3465,7 @@
                   <button
                     type="button"
                     @click="addEditMessagesDispatchMapping"
-                    class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-300 bg-white py-3 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50/50 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-800 dark:text-gray-400 dark:hover:border-primary-800 dark:hover:bg-primary-900/20 dark:hover:text-primary-400"
+                    class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-300 bg-white py-3 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50/50 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-800 dark:text-dark-400 dark:hover:border-primary-800 dark:hover:bg-primary-900/20 dark:hover:text-primary-400"
                   >
                     <Icon name="plus" size="sm" />
                     {{ t("admin.groups.openaiMessages.addExactMapping") }}
@@ -3485,17 +3485,17 @@
           "
           class="border-t border-gray-200 dark:border-dark-400 pt-4 mt-4 space-y-4"
         >
-          <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+          <h4 class="text-sm font-medium text-gray-700 dark:text-dark-300 mb-3">
             {{ t("admin.groups.accountFilters.title") }}
           </h4>
 
           <!-- require_oauth_only toggle -->
           <div class="flex items-center justify-between">
             <div>
-              <label class="text-sm text-gray-600 dark:text-gray-400"
+              <label class="text-sm text-gray-600 dark:text-dark-400"
                 >{{ t("admin.groups.accountFilters.oauthOnly") }}</label
               >
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+              <p class="text-xs text-gray-500 dark:text-dark-400 mt-0.5">
                 {{
                   editForm.require_oauth_only
                     ? t("admin.groups.accountFilters.oauthOnlyEnabled")
@@ -3509,10 +3509,10 @@
           <!-- require_privacy_set toggle -->
           <div class="flex items-center justify-between">
             <div>
-              <label class="text-sm text-gray-600 dark:text-gray-400"
+              <label class="text-sm text-gray-600 dark:text-dark-400"
                 >{{ t("admin.groups.accountFilters.privacySetOnly") }}</label
               >
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+              <p class="text-xs text-gray-500 dark:text-dark-400 mt-0.5">
                 {{
                   editForm.require_privacy_set
                     ? t("admin.groups.accountFilters.privacySetOnlyEnabled")
@@ -3548,7 +3548,7 @@
         <!-- 模型路由配置（仅 anthropic 平台） -->
         <div v-if="editForm.platform === 'anthropic'" class="border-t pt-4">
           <div class="mb-1.5 flex items-center gap-1">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t("admin.groups.modelRouting.title") }}
             </label>
             <!-- Help Tooltip -->
@@ -3557,19 +3557,19 @@
                 name="questionCircle"
                 size="sm"
                 :stroke-width="2"
-                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-gray-500 dark:hover:text-primary-400"
+                class="cursor-help text-gray-400 transition-colors hover:text-primary-500 dark:text-dark-500 dark:hover:text-primary-400"
               />
               <div
                 class="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-80 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <div
-                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-gray-800"
+                  class="rounded-lg bg-gray-900 p-3 text-white shadow-lg dark:bg-dark-800"
                 >
                   <p class="text-xs leading-relaxed text-gray-300">
                     {{ t("admin.groups.modelRouting.tooltip") }}
                   </p>
                   <div
-                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-gray-800"
+                    class="absolute -bottom-1.5 left-3 h-3 w-3 rotate-45 bg-gray-900 dark:bg-dark-800"
                   ></div>
                 </div>
               </div>
@@ -3578,7 +3578,7 @@
           <!-- 启用开关 -->
           <div class="flex items-center gap-3 mb-3">
             <Toggle v-model="editForm.model_routing_enabled" />
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 editForm.model_routing_enabled
                   ? t("admin.groups.modelRouting.enabled")
@@ -3588,11 +3588,11 @@
           </div>
           <p
             v-if="!editForm.model_routing_enabled"
-            class="text-xs text-gray-500 dark:text-gray-400 mb-3"
+            class="text-xs text-gray-500 dark:text-dark-400 mb-3"
           >
             {{ t("admin.groups.modelRouting.disabledHint") }}
           </p>
-          <p v-else class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <p v-else class="text-xs text-gray-500 dark:text-dark-400 mb-3">
             {{ t("admin.groups.modelRouting.noRulesHint") }}
           </p>
           <!-- 路由规则列表（仅在启用时显示） -->
@@ -3793,7 +3793,7 @@
       @close="closeSortModal"
     >
       <div class="space-y-4">
-        <p class="text-sm text-gray-500 dark:text-gray-400">
+        <p class="text-sm text-gray-500 dark:text-dark-400">
           {{ t("admin.groups.sortOrderHint") }}
         </p>
         <VueDraggable
@@ -3813,7 +3813,7 @@
               <div class="font-medium text-gray-900 dark:text-white">
                 {{ group.name }}
               </div>
-              <div class="text-xs text-gray-500 dark:text-gray-400">
+              <div class="text-xs text-gray-500 dark:text-dark-400">
                 <span
                   :class="[
                     'inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium',
@@ -3925,19 +3925,19 @@
           >
             <div
               v-if="compositeRoutesLoading"
-              class="flex h-36 items-center justify-center text-sm text-gray-500 dark:text-gray-400"
+              class="flex h-36 items-center justify-center text-sm text-gray-500 dark:text-dark-400"
             >
               {{ t("common.loading") }}
             </div>
             <div
               v-else-if="compositeRoutes.length === 0"
-              class="flex h-36 items-center justify-center text-sm text-gray-500 dark:text-gray-400"
+              class="flex h-36 items-center justify-center text-sm text-gray-500 dark:text-dark-400"
             >
               {{ t("admin.groups.compositeRoutes.empty") }}
             </div>
             <div v-else class="overflow-x-auto">
               <table class="min-w-full divide-y divide-gray-200 text-sm dark:divide-dark-600">
-                <thead class="bg-gray-50 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:bg-dark-800 dark:text-gray-400">
+                <thead class="bg-gray-50 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:bg-dark-800 dark:text-dark-400">
                   <tr>
                     <th class="px-3 py-2">
                       {{ t("admin.groups.compositeRoutes.publicModel") }}
@@ -3980,15 +3980,15 @@
                         <PlatformIcon :platform="route.target_platform" size="xs" />
                         <span>{{ formatCompositePlatform(route.target_platform) }}</span>
                       </div>
-                      <div class="mt-1 break-all text-xs text-gray-500 dark:text-gray-400">
+                      <div class="mt-1 break-all text-xs text-gray-500 dark:text-dark-400">
                         {{ route.upstream_model || route.public_model }}
                       </div>
                     </td>
                     <td class="px-3 py-2">
-                      <div class="text-gray-700 dark:text-gray-300">
+                      <div class="text-gray-700 dark:text-dark-300">
                         {{ formatCompositeEndpoint(route.endpoint) }}
                       </div>
-                      <div class="text-xs text-gray-500 dark:text-gray-400">
+                      <div class="text-xs text-gray-500 dark:text-dark-400">
                         {{ t("admin.groups.compositeRoutes.priority") }}:
                         {{ route.priority }}
                       </div>
@@ -4033,7 +4033,7 @@
               <button
                 v-if="compositeRouteEditingId"
                 type="button"
-                class="text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                class="text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-dark-400 dark:hover:text-dark-200"
                 @click="resetCompositeRouteForm"
               >
                 {{ t("common.cancel") }}
@@ -4108,7 +4108,7 @@
                 class="input"
                 placeholder="gpt-5"
               />
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.groups.compositeRoutes.upstreamModelHint") }}
               </p>
             </div>
@@ -4125,7 +4125,7 @@
             </div>
 
             <div class="flex items-center justify-between gap-3">
-              <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+              <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-dark-300">
                 <input
                   v-model="compositeRouteForm.enabled"
                   type="checkbox"
@@ -4206,7 +4206,7 @@
                 </div>
                 <div
                   v-if="compositePreviewDecision.matched"
-                  class="space-y-1 text-gray-700 dark:text-gray-300"
+                  class="space-y-1 text-gray-700 dark:text-dark-300"
                 >
                   <div>
                     {{ t("admin.groups.compositeRoutes.targetPlatform") }}:
@@ -4223,7 +4223,7 @@
                 </div>
                 <div
                   v-else
-                  class="text-gray-500 dark:text-gray-400"
+                  class="text-gray-500 dark:text-dark-400"
                 >
                   {{ compositePreviewDecision.reason }}
                 </div>
@@ -5664,7 +5664,7 @@ const getQuotaUsageClass = (
   limit: number | null | undefined,
 ): string => {
   if (!limit || limit <= 0) {
-    return "font-medium text-gray-700 dark:text-gray-300";
+    return "font-medium text-gray-700 dark:text-dark-300";
   }
   const ratio = used / limit;
   if (ratio >= 1) {
@@ -5673,7 +5673,7 @@ const getQuotaUsageClass = (
   if (ratio >= 0.8) {
     return "font-semibold text-amber-600 dark:text-amber-400";
   }
-  return "font-medium text-gray-700 dark:text-gray-300";
+  return "font-medium text-gray-700 dark:text-dark-300";
 };
 
 const loadUsageSummary = async () => {

@@ -24,7 +24,7 @@
       <!-- Platform-specific content -->
       <template v-else>
         <!-- Description -->
-        <p class="text-sm text-gray-600 dark:text-gray-400">
+        <p class="text-sm text-gray-600 dark:text-dark-400">
           {{ platformDescription }}
         </p>
 
@@ -40,7 +40,7 @@
                 'whitespace-nowrap py-2.5 px-1 border-b-2 font-medium text-sm transition-colors',
                 activeClientTab === tab.id
                   ? 'border-primary-500 text-primary-600 dark:text-primary-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-dark-400 dark:hover:text-dark-300'
               ]"
             >
               <span class="flex items-center gap-2">
@@ -60,7 +60,7 @@
             <p class="text-sm font-medium text-gray-900 dark:text-white">
               {{ t('keys.useKeyModal.openai.authModeTitle') }}
             </p>
-            <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-0.5 text-xs text-gray-500 dark:text-dark-400">
               {{ t('keys.useKeyModal.openai.authModeDescription') }}
             </p>
           </div>
@@ -122,7 +122,7 @@
                 'whitespace-nowrap py-2.5 px-1 border-b-2 font-medium text-sm transition-colors',
                 activeTab === tab.id
                   ? 'border-primary-500 text-primary-600 dark:text-primary-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-dark-400 dark:hover:text-dark-300'
               ]"
             >
               <span class="flex items-center gap-2">
@@ -182,10 +182,10 @@
               <h3 class="text-sm font-medium text-gray-900 dark:text-white">
                 {{ t('keys.useKeyModal.codexModelCatalog.title') }}
               </h3>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('keys.useKeyModal.codexModelCatalog.description') }}
               </p>
-              <p class="mt-1 truncate font-mono text-xs text-gray-700 dark:text-gray-300">
+              <p class="mt-1 truncate font-mono text-xs text-gray-700 dark:text-dark-300">
                 {{ codexModelCatalogMode === 'remote' ? codexModelCatalogUrl : codexModelCatalogPath }}
               </p>
               <select

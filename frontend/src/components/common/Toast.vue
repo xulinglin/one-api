@@ -44,7 +44,7 @@
                   :class="[
                     'text-sm leading-relaxed',
                     toast.title
-                      ? 'mt-1 text-gray-600 dark:text-gray-300'
+                      ? 'mt-1 text-gray-600 dark:text-dark-300'
                       : 'text-gray-900 dark:text-white'
                   ]"
                 >
@@ -55,7 +55,7 @@
               <!-- Close button -->
               <button
                 @click="removeToast(toast.id)"
-                class="-m-1 flex-shrink-0 rounded p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:text-gray-500 dark:hover:bg-dark-700 dark:hover:text-gray-300"
+                class="-m-1 flex-shrink-0 rounded p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:text-dark-500 dark:hover:bg-dark-700 dark:hover:text-dark-300"
                 aria-label="Close notification"
               >
                 <Icon name="x" size="sm" />

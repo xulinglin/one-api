@@ -78,7 +78,7 @@
           </div>
 
           <template v-if="needsInvitation">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
+            <p class="text-sm text-gray-700 dark:text-dark-300">
               {{ t('auth.oidc.invitationRequired', { providerName }) }}
             </p>
             <div>
@@ -105,7 +105,7 @@
           </template>
 
           <template v-else-if="needsAdoptionConfirmation">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
+            <p class="text-sm text-gray-700 dark:text-dark-300">
               {{ t('auth.oauthFlow.reviewProfileBeforeContinue', { providerName }) }}
             </p>
             <button class="btn btn-primary w-full" :disabled="isSubmitting" @click="handleContinueLogin">
@@ -150,7 +150,7 @@
           </template>
 
           <template v-else-if="needsCreateAccount">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
+            <p class="text-sm text-gray-700 dark:text-dark-300">
               {{ t('auth.oauthFlow.createAccountHint') }}
             </p>
             <PendingOAuthCreateAccountForm
@@ -164,7 +164,7 @@
           </template>
 
           <template v-else-if="needsBindLogin">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
+            <p class="text-sm text-gray-700 dark:text-dark-300">
               {{ t('auth.oauthFlow.bindLoginHint', { providerName }) }}
             </p>
             <div class="space-y-3">
@@ -206,7 +206,7 @@
           </template>
 
           <template v-else-if="needsTotpChallenge">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
+            <p class="text-sm text-gray-700 dark:text-dark-300">
               {{
                 t('auth.oauthFlow.totpHint', {
                   providerName,

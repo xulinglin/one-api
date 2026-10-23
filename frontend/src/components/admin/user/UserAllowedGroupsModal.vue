@@ -8,7 +8,7 @@
         </div>
         <div class="flex-1">
           <p class="text-lg font-semibold text-gray-900 dark:text-white">{{ user.email }}</p>
-          <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{{ t('admin.users.groupConfigHint', { email: user.email }) }}</p>
+          <p class="mt-1 text-sm text-gray-600 dark:text-dark-400">{{ t('admin.users.groupConfigHint', { email: user.email }) }}</p>
         </div>
       </div>
 
@@ -25,7 +25,7 @@
         <div v-if="exclusiveGroups.length > 0">
           <div class="mb-3 flex items-center gap-2">
             <div class="h-1.5 w-1.5 rounded-full bg-purple-500"></div>
-            <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300">{{ t('admin.users.exclusiveGroups') }}</h4>
+            <h4 class="text-sm font-semibold text-gray-700 dark:text-dark-300">{{ t('admin.users.exclusiveGroups') }}</h4>
             <span class="text-xs text-gray-400">({{ exclusiveGroupConfigs.filter(c => c.isSelected).length }}/{{ exclusiveGroupConfigs.length }})</span>
           </div>
           <div class="grid gap-3">
@@ -64,20 +64,20 @@
                     </span>
                   </div>
                   <div class="mt-1.5 flex items-center gap-3 text-sm">
-                    <span class="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400">
+                    <span class="inline-flex items-center gap-1 text-gray-500 dark:text-dark-400">
                       <PlatformIcon :platform="config.platform" size="xs" />
                       <span>{{ config.platform }}</span>
                     </span>
                     <span class="text-gray-300 dark:text-dark-500">•</span>
-                    <span class="text-gray-500 dark:text-gray-400">
-                      {{ t('admin.users.defaultRate') }}: <span class="font-medium text-gray-700 dark:text-gray-300">{{ config.defaultRate }}x</span>
+                    <span class="text-gray-500 dark:text-dark-400">
+                      {{ t('admin.users.defaultRate') }}: <span class="font-medium text-gray-700 dark:text-dark-300">{{ config.defaultRate }}x</span>
                     </span>
                   </div>
                 </div>
 
                 <!-- 专属倍率输入 -->
                 <div class="flex flex-shrink-0 items-center gap-3">
-                  <label class="text-sm font-medium text-gray-600 dark:text-gray-400">{{ t('admin.users.customRate') }}</label>
+                  <label class="text-sm font-medium text-gray-600 dark:text-dark-400">{{ t('admin.users.customRate') }}</label>
                   <input
                     type="number"
                     step="0.001"
@@ -97,11 +97,11 @@
         <div v-if="publicGroups.length > 0">
           <div class="mb-3 flex flex-wrap items-center gap-2">
             <div class="h-1.5 w-1.5 rounded-full bg-green-500"></div>
-            <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <h4 class="text-sm font-semibold text-gray-700 dark:text-dark-300">
               {{ restrictPublicGroups ? t('admin.users.publicGroupsRestricted') : t('admin.users.publicGroups') }}
             </h4>
             <span class="text-xs text-gray-400">({{ publicGroupConfigs.length }})</span>
-            <label class="ml-auto flex cursor-pointer items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <label class="ml-auto flex cursor-pointer items-center gap-2 text-sm text-gray-600 dark:text-dark-400">
               <input
                 type="checkbox"
                 :checked="restrictPublicGroups"
@@ -111,7 +111,7 @@
               {{ t('admin.users.restrictPublicGroups') }}
             </label>
           </div>
-          <p class="mb-3 text-xs text-gray-500 dark:text-gray-400">{{ t('admin.users.restrictPublicGroupsHint') }}</p>
+          <p class="mb-3 text-xs text-gray-500 dark:text-dark-400">{{ t('admin.users.restrictPublicGroupsHint') }}</p>
           <div class="grid gap-3">
             <div
               v-for="config in publicGroupConfigs"
@@ -144,20 +144,20 @@
                     <span class="text-base font-semibold text-gray-900 dark:text-white">{{ config.groupName }}</span>
                   </div>
                   <div class="mt-1.5 flex items-center gap-3 text-sm">
-                    <span class="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400">
+                    <span class="inline-flex items-center gap-1 text-gray-500 dark:text-dark-400">
                       <PlatformIcon :platform="config.platform" size="xs" />
                       <span>{{ config.platform }}</span>
                     </span>
                     <span class="text-gray-300 dark:text-dark-500">•</span>
-                    <span class="text-gray-500 dark:text-gray-400">
-                      {{ t('admin.users.defaultRate') }}: <span class="font-medium text-gray-700 dark:text-gray-300">{{ config.defaultRate }}x</span>
+                    <span class="text-gray-500 dark:text-dark-400">
+                      {{ t('admin.users.defaultRate') }}: <span class="font-medium text-gray-700 dark:text-dark-300">{{ config.defaultRate }}x</span>
                     </span>
                   </div>
                 </div>
 
                 <!-- 专属倍率输入 -->
                 <div class="flex flex-shrink-0 items-center gap-3">
-                  <label class="text-sm font-medium text-gray-600 dark:text-gray-400">{{ t('admin.users.customRate') }}</label>
+                  <label class="text-sm font-medium text-gray-600 dark:text-dark-400">{{ t('admin.users.customRate') }}</label>
                   <input
                     type="number"
                     step="0.001"
@@ -180,7 +180,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
           </div>
-          <p class="text-gray-500 dark:text-gray-400">{{ t('common.noGroupsAvailable') }}</p>
+          <p class="text-gray-500 dark:text-dark-400">{{ t('common.noGroupsAvailable') }}</p>
         </div>
       </div>
     </div>

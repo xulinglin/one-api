@@ -190,7 +190,7 @@
                 v-if="contactInfo"
                 class="border-t border-gray-100 px-4 py-2.5 dark:border-dark-700"
               >
-                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-400">
                   <svg
                     class="h-3.5 w-3.5 flex-shrink-0"
                     fill="none"
@@ -205,7 +205,7 @@
                     />
                   </svg>
                   <span>{{ t('common.contactSupport') }}:</span>
-                  <span class="font-medium text-gray-700 dark:text-gray-300">{{
+                  <span class="font-medium text-gray-700 dark:text-dark-300">{{
                     contactInfo
                   }}</span>
                 </div>

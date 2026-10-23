@@ -7,7 +7,7 @@
         <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
           {{ t("admin.settings.emailTemplates.title") }}
         </h2>
-        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
           {{ t("admin.settings.emailTemplates.description") }}
         </p>
       </div>
@@ -42,7 +42,7 @@
     <div class="space-y-6 p-6">
       <div
         v-if="loadingList"
-        class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"
+        class="flex items-center gap-2 text-sm text-gray-500 dark:text-dark-400"
       >
         <span
           class="h-4 w-4 animate-spin rounded-full border-b-2 border-primary-600"
@@ -101,7 +101,7 @@
               {{ selectedEventMeta.label }}
             </div>
             <span
-              class="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-gray-600 shadow-sm ring-1 ring-gray-200 dark:bg-dark-800 dark:text-gray-300 dark:ring-dark-600"
+              class="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-gray-600 shadow-sm ring-1 ring-gray-200 dark:bg-dark-800 dark:text-dark-300 dark:ring-dark-600"
             >
               {{ selectedEventMeta.categoryLabel }}
             </span>
@@ -116,12 +116,12 @@
               {{ selectedEventMeta.optional ? localText("可退订通知", "Optional") : localText("事务邮件", "Transactional") }}
             </span>
           </div>
-          <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-300">
+          <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-dark-300">
             {{ selectedEventMeta.timing }}
           </p>
           <p
             v-if="selectedEventDescription"
-            class="mt-1 text-xs text-gray-500 dark:text-gray-400"
+            class="mt-1 text-xs text-gray-500 dark:text-dark-400"
           >
             {{ selectedEventDescription }}
           </p>
@@ -170,7 +170,7 @@
               <div class="text-sm font-medium text-gray-900 dark:text-white">
                 {{ t("admin.settings.emailTemplates.placeholders") }}
               </div>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t("admin.settings.emailTemplates.placeholdersHelp") }}
               </p>
               <div class="mt-3 flex flex-wrap gap-2">
@@ -178,7 +178,7 @@
                   v-for="placeholder in placeholderList"
                   :key="placeholder"
                   type="button"
-                  class="rounded-full border border-gray-200 bg-white px-3 py-1 font-mono text-xs text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-700 dark:text-gray-200 dark:hover:border-primary-500 dark:hover:text-primary-300"
+                  class="rounded-full border border-gray-200 bg-white px-3 py-1 font-mono text-xs text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-600 dark:border-dark-600 dark:bg-dark-700 dark:text-dark-200 dark:hover:border-primary-500 dark:hover:text-primary-300"
                   @click="copyPlaceholder(placeholder)"
                 >
                   {{ placeholder }}
@@ -198,7 +198,7 @@
                   <div class="text-sm font-medium text-gray-900 dark:text-white">
                     {{ t("admin.settings.emailTemplates.livePreview") }}
                   </div>
-                  <div class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                  <div class="mt-0.5 text-xs text-gray-500 dark:text-dark-400">
                     {{ previewSubject || t("admin.settings.emailTemplates.noPreview") }}
                   </div>
                 </div>
@@ -219,7 +219,7 @@
               </div>
             </div>
 
-            <p class="text-xs text-gray-500 dark:text-gray-400">
+            <p class="text-xs text-gray-500 dark:text-dark-400">
               {{ t("admin.settings.emailTemplates.previewSecurityHint") }}
             </p>
           </div>

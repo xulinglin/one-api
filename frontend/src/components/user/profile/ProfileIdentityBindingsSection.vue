@@ -7,7 +7,7 @@
       <h2 class="text-lg font-medium text-gray-900 dark:text-white">
         {{ t('profile.authBindings.title') }}
       </h2>
-      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+      <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
         {{ t('profile.authBindings.description') }}
       </p>
     </div>
@@ -17,7 +17,7 @@
         <p class="text-sm font-semibold text-gray-900 dark:text-white">
           {{ t('profile.authBindings.title') }}
         </p>
-        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
           {{ t('profile.authBindings.description') }}
         </p>
       </div>
@@ -61,18 +61,18 @@
 
               <p
                 v-if="providerSummary(item.provider)"
-                class="text-sm text-gray-600 dark:text-gray-300"
+                class="text-sm text-gray-600 dark:text-dark-300"
               >
                 {{ providerSummary(item.provider) }}
               </p>
 
               <div
                 v-if="hasBindingDetails(item.provider, item.details)"
-                class="grid gap-1 text-sm text-gray-500 dark:text-gray-400"
+                class="grid gap-1 text-sm text-gray-500 dark:text-dark-400"
               >
                 <p
                   v-if="item.provider !== 'email' && item.details?.display_name"
-                  class="font-medium text-gray-700 dark:text-gray-200"
+                  class="font-medium text-gray-700 dark:text-dark-200"
                 >
                   {{ item.details.display_name }}
                 </p>

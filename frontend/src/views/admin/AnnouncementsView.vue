@@ -90,13 +90,13 @@
           </template>
 
           <template #cell-targeting="{ row }">
-            <span class="text-sm text-gray-600 dark:text-gray-300">
+            <span class="text-sm text-gray-600 dark:text-dark-300">
               {{ targetingSummary(row.targeting) }}
             </span>
           </template>
 
           <template #cell-timeRange="{ row }">
-            <div class="text-sm text-gray-600 dark:text-gray-300">
+            <div class="text-sm text-gray-600 dark:text-dark-300">
               <div>
                 <span class="font-medium">{{ t('admin.announcements.form.startsAt') }}:</span>
                 <span class="ml-1">{{ row.starts_at ? formatDateTime(row.starts_at) : t('admin.announcements.timeImmediate') }}</span>
@@ -130,7 +130,7 @@
               </button>
               <button
                 @click="openEditDialog(row)"
-                class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-dark-600 dark:hover:text-gray-300"
+                class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-dark-600 dark:hover:text-dark-300"
                 :title="t('common.edit')"
               >
                 <Icon name="edit" size="sm" />

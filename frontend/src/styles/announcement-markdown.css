@@ -1,7 +1,7 @@
 /* Shared rich-text styles for announcement popup and bell detail content. */
 .markdown-body {
   @apply text-[15px] leading-[1.75];
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-dark-300;
 }
 
 .markdown-body h1 {
@@ -50,7 +50,7 @@
 }
 
 .markdown-body blockquote {
-  @apply relative my-5 border-l-4 border-blue-500 bg-blue-50/50 py-3 pl-5 pr-4 italic text-gray-700 dark:border-blue-400 dark:bg-blue-900/10 dark:text-gray-300;
+  @apply relative my-5 border-l-4 border-blue-500 bg-blue-50/50 py-3 pl-5 pr-4 italic text-gray-700 dark:border-blue-400 dark:bg-blue-900/10 dark:text-dark-300;
 }
 
 .markdown-body blockquote::before {
@@ -67,7 +67,7 @@
 }
 
 .markdown-body pre code {
-  @apply bg-transparent p-0 text-[13px] text-gray-800 dark:text-gray-200;
+  @apply bg-transparent p-0 text-[13px] text-gray-800 dark:text-dark-200;
 }
 
 .markdown-body hr {
@@ -109,5 +109,5 @@
 }
 
 .markdown-body em {
-  @apply italic text-gray-600 dark:text-gray-400;
+  @apply italic text-gray-600 dark:text-dark-400;
 }

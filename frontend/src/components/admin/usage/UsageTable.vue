@@ -4,7 +4,7 @@
       v-if="showIpGeoToolbar"
       class="flex items-center justify-end gap-2 border-b border-gray-200 px-4 py-2 dark:border-dark-700"
     >
-      <span v-if="pendingIpCount > 0" class="text-xs text-gray-500 dark:text-gray-400">
+      <span v-if="pendingIpCount > 0" class="text-xs text-gray-500 dark:text-dark-400">
         {{ t('usage.ipGeo.pending', { count: pendingIpCount }) }}
       </span>
       <button
@@ -40,7 +40,7 @@
             <span v-if="row.user?.deleted_at" class="ml-1 inline-flex items-center rounded px-1 py-px text-[10px] font-medium leading-tight bg-rose-100 text-rose-600 ring-1 ring-inset ring-rose-200 dark:bg-rose-500/20 dark:text-rose-400 dark:ring-rose-500/30">
               {{ t('admin.usage.userDeletedBadge') }}
             </span>
-            <span class="ml-1 text-gray-500 dark:text-gray-400">#{{ row.user_id }}</span>
+            <span class="ml-1 text-gray-500 dark:text-dark-400">#{{ row.user_id }}</span>
           </div>
         </template>
 
@@ -57,7 +57,7 @@
             <div v-if="row.model_mapping_chain && row.model_mapping_chain.includes('→')" class="space-y-0.5">
               <div v-for="(step, i) in row.model_mapping_chain.split('→')" :key="i"
                    class="break-all"
-                   :class="i === 0 ? 'font-medium text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'"
+                   :class="i === 0 ? 'font-medium text-gray-900 dark:text-white' : 'text-gray-500 dark:text-dark-400'"
                    :style="i > 0 ? `padding-left: ${i * 0.75}rem` : ''">
                 <span v-if="i > 0" class="mr-0.5">↳</span>{{ step }}
               </div>
@@ -66,7 +66,7 @@
               <div class="break-all font-medium text-gray-900 dark:text-white">
                 {{ row.model }}
               </div>
-              <div class="break-all text-gray-500 dark:text-gray-400">
+              <div class="break-all text-gray-500 dark:text-dark-400">
                 <span class="mr-0.5">↳</span>{{ row.upstream_model }}
               </div>
             </div>
@@ -95,7 +95,7 @@
             <div class="font-medium text-gray-900 dark:text-white">
               {{ formatReasoningEffort(row.reasoning_effort) }}
             </div>
-            <div class="text-gray-500 dark:text-gray-400">
+            <div class="text-gray-500 dark:text-dark-400">
               <span class="mr-0.5">↳</span>{{ formatReasoningEffort(row.upstream_reasoning_effort) }}
             </div>
           </div>
@@ -106,12 +106,12 @@
 
         <template #cell-endpoint="{ row }">
           <div class="max-w-[320px] space-y-1 text-xs">
-            <div class="break-all text-gray-700 dark:text-gray-300">
-              <span class="font-medium text-gray-500 dark:text-gray-400">{{ t('usage.inbound') }}:</span>
+            <div class="break-all text-gray-700 dark:text-dark-300">
+              <span class="font-medium text-gray-500 dark:text-dark-400">{{ t('usage.inbound') }}:</span>
               <span class="ml-1">{{ row.inbound_endpoint?.trim() || '-' }}</span>
             </div>
-            <div v-if="showUpstreamEndpoint" class="break-all text-gray-700 dark:text-gray-300">
-              <span class="font-medium text-gray-500 dark:text-gray-400">{{ t('usage.upstream') }}:</span>
+            <div v-if="showUpstreamEndpoint" class="break-all text-gray-700 dark:text-dark-300">
+              <span class="font-medium text-gray-500 dark:text-dark-400">{{ t('usage.upstream') }}:</span>
               <span class="ml-1">{{ row.upstream_endpoint?.trim() || '-' }}</span>
             </div>
           </div>
@@ -121,7 +121,7 @@
           <span v-if="row.group" class="inline-flex items-center rounded px-2 py-0.5 text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
             {{ row.group.name }}
           </span>
-          <span v-else class="text-sm text-gray-400 dark:text-gray-500">-</span>
+          <span v-else class="text-sm text-gray-400 dark:text-dark-500">-</span>
         </template>
 
         <template #cell-stream="{ row }">
@@ -198,8 +198,8 @@
               @mouseenter="showTokenTooltip($event, row)"
               @mouseleave="hideTokenTooltip"
             >
-              <div class="flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-blue-100 dark:bg-gray-700 dark:group-hover:bg-blue-900/50">
-                <Icon name="infoCircle" size="xs" class="text-gray-400 group-hover:text-blue-500 dark:text-gray-500 dark:group-hover:text-blue-400" />
+              <div class="flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-blue-100 dark:bg-dark-700 dark:group-hover:bg-blue-900/50">
+                <Icon name="infoCircle" size="xs" class="text-gray-400 group-hover:text-blue-500 dark:text-dark-500 dark:group-hover:text-blue-400" />
               </div>
             </div>
           </div>
@@ -221,8 +221,8 @@
                 @mouseenter="showTooltip($event, row)"
                 @mouseleave="hideTooltip"
               >
-                <div class="flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-blue-100 dark:bg-gray-700 dark:group-hover:bg-blue-900/50">
-                  <Icon name="infoCircle" size="xs" class="text-gray-400 group-hover:text-blue-500 dark:text-gray-500 dark:group-hover:text-blue-400" />
+                <div class="flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-blue-100 dark:bg-dark-700 dark:group-hover:bg-blue-900/50">
+                  <Icon name="infoCircle" size="xs" class="text-gray-400 group-hover:text-blue-500 dark:text-dark-500 dark:group-hover:text-blue-400" />
                 </div>
               </div>
             </div>
@@ -243,29 +243,29 @@
               aria-hidden="true"
             ></span>
             <div class="grid grid-cols-[max-content_max-content] items-baseline gap-x-2 gap-y-0.5 text-xs">
-              <span class="text-gray-400 dark:text-gray-500">{{ t('usage.latencyFirstToken') }}</span>
+              <span class="text-gray-400 dark:text-dark-500">{{ t('usage.latencyFirstToken') }}</span>
               <span v-if="row.first_token_ms != null" class="font-medium tabular-nums" :class="LATENCY_TEXT_CLASSES[firstTokenSeverity(row.first_token_ms)]">{{ formatDuration(row.first_token_ms) }}</span>
-              <span v-else class="text-gray-400 dark:text-gray-500">-</span>
-              <span class="text-gray-400 dark:text-gray-500">{{ t('usage.latencyDuration') }}</span>
+              <span v-else class="text-gray-400 dark:text-dark-500">-</span>
+              <span class="text-gray-400 dark:text-dark-500">{{ t('usage.latencyDuration') }}</span>
               <span class="font-medium tabular-nums" :class="LATENCY_TEXT_CLASSES[durationSeverity(row.duration_ms ?? 0)]">{{ formatDuration(row.duration_ms) }}</span>
-              <span class="text-gray-400 dark:text-gray-500" :title="t('usage.outputTpsHint')">{{ t('usage.outputTps') }}</span>
-              <span data-testid="output-tps" class="font-medium tabular-nums text-gray-700 dark:text-gray-300">{{ formatUsageOutputRate(row) }}</span>
+              <span class="text-gray-400 dark:text-dark-500" :title="t('usage.outputTpsHint')">{{ t('usage.outputTps') }}</span>
+              <span data-testid="output-tps" class="font-medium tabular-nums text-gray-700 dark:text-dark-300">{{ formatUsageOutputRate(row) }}</span>
             </div>
           </div>
         </template>
 
         <template #cell-created_at="{ value }">
-          <span class="text-sm text-gray-600 dark:text-gray-400">{{ formatDateTime(value) }}</span>
+          <span class="text-sm text-gray-600 dark:text-dark-400">{{ formatDateTime(value) }}</span>
         </template>
 
         <template #cell-request_id="{ row }">
           <div v-if="row.request_id" class="flex max-w-[160px] items-center gap-1.5">
-            <span class="truncate font-mono text-xs text-gray-500 dark:text-gray-400" :title="row.request_id">
+            <span class="truncate font-mono text-xs text-gray-500 dark:text-dark-400" :title="row.request_id">
               {{ row.request_id }}
             </span>
             <button
               type="button"
-              class="shrink-0 rounded p-0.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-gray-300"
+              class="shrink-0 rounded p-0.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-dark-300"
               :class="copiedRequestId === row.request_id ? 'text-green-500 hover:text-green-500' : ''"
               :title="copiedRequestId === row.request_id ? t('keys.copied') : t('keys.copyToClipboard')"
               @click="copyRequestId(row.request_id)"
@@ -273,17 +273,17 @@
               <Icon :name="copiedRequestId === row.request_id ? 'check' : 'copy'" size="sm" class="h-3.5 w-3.5" />
             </button>
           </div>
-          <span v-else class="text-sm text-gray-400 dark:text-gray-500">-</span>
+          <span v-else class="text-sm text-gray-400 dark:text-dark-500">-</span>
         </template>
 
         <template #cell-upstream_request_id="{ row }">
           <div v-if="row.upstream_request_id" class="flex max-w-[160px] items-center gap-1.5">
-            <span class="truncate font-mono text-xs text-gray-500 dark:text-gray-400" :title="row.upstream_request_id">
+            <span class="truncate font-mono text-xs text-gray-500 dark:text-dark-400" :title="row.upstream_request_id">
               {{ row.upstream_request_id }}
             </span>
             <button
               type="button"
-              class="shrink-0 rounded p-0.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-gray-300"
+              class="shrink-0 rounded p-0.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-dark-300"
               :class="copiedRequestId === row.upstream_request_id ? 'text-green-500 hover:text-green-500' : ''"
               :title="copiedRequestId === row.upstream_request_id ? t('keys.copied') : t('keys.copyToClipboard')"
               @click="copyUpstreamRequestId(row.upstream_request_id)"
@@ -291,20 +291,20 @@
               <Icon :name="copiedRequestId === row.upstream_request_id ? 'check' : 'copy'" size="sm" class="h-3.5 w-3.5" />
             </button>
           </div>
-          <span v-else class="text-sm text-gray-400 dark:text-gray-500">-</span>
+          <span v-else class="text-sm text-gray-400 dark:text-dark-500">-</span>
         </template>
 
         <template #cell-user_agent="{ row }">
-          <span v-if="row.user_agent" class="text-sm text-gray-600 dark:text-gray-400 block max-w-[320px] truncate" :title="row.user_agent">{{ formatUserAgent(row.user_agent) }}</span>
-          <span v-else class="text-sm text-gray-400 dark:text-gray-500">-</span>
+          <span v-if="row.user_agent" class="text-sm text-gray-600 dark:text-dark-400 block max-w-[320px] truncate" :title="row.user_agent">{{ formatUserAgent(row.user_agent) }}</span>
+          <span v-else class="text-sm text-gray-400 dark:text-dark-500">-</span>
         </template>
 
         <template #cell-ip_address="{ row }">
           <div v-if="row.ip_address">
-            <span class="text-sm font-mono text-gray-600 dark:text-gray-400">{{ row.ip_address }}</span>
+            <span class="text-sm font-mono text-gray-600 dark:text-dark-400">{{ row.ip_address }}</span>
             <IpGeoCell :ip="row.ip_address" />
           </div>
-          <span v-else class="text-sm text-gray-400 dark:text-gray-500">-</span>
+          <span v-else class="text-sm text-gray-400 dark:text-dark-500">-</span>
         </template>
 
         <template #empty><EmptyState :message="t('usage.noRecords')" /></template>
@@ -322,7 +322,7 @@
         top: tokenTooltipPosition.y + 'px'
       }"
     >
-      <div class="whitespace-nowrap rounded-lg border border-gray-700 bg-gray-900 px-3 py-2.5 text-xs text-white shadow-xl dark:border-gray-600 dark:bg-gray-800">
+      <div class="whitespace-nowrap rounded-lg border border-gray-700 bg-gray-900 px-3 py-2.5 text-xs text-white shadow-xl dark:border-dark-600 dark:bg-dark-800">
         <div class="space-y-1.5">
           <div>
             <div class="text-xs font-semibold text-gray-300 mb-1">{{ t('usage.tokenDetails') }}</div>
@@ -391,7 +391,7 @@
             <span class="font-semibold text-blue-400">{{ ((tokenTooltipData?.input_tokens || 0) + (tokenTooltipData?.output_tokens || 0) + (tokenTooltipData?.cache_creation_tokens || 0) + (tokenTooltipData?.cache_read_tokens || 0)).toLocaleString() }}</span>
           </div>
         </div>
-        <div class="absolute right-full top-1/2 h-0 w-0 -translate-y-1/2 border-b-[6px] border-r-[6px] border-t-[6px] border-b-transparent border-r-gray-900 border-t-transparent dark:border-r-gray-800"></div>
+        <div class="absolute right-full top-1/2 h-0 w-0 -translate-y-1/2 border-b-[6px] border-r-[6px] border-t-[6px] border-b-transparent border-r-gray-900 border-t-transparent dark:border-r-dark-800"></div>
       </div>
     </div>
   </Teleport>
@@ -406,7 +406,7 @@
         top: tooltipPosition.y + 'px'
       }"
     >
-      <div class="whitespace-nowrap rounded-lg border border-gray-700 bg-gray-900 px-3 py-2.5 text-xs text-white shadow-xl dark:border-gray-600 dark:bg-gray-800">
+      <div class="whitespace-nowrap rounded-lg border border-gray-700 bg-gray-900 px-3 py-2.5 text-xs text-white shadow-xl dark:border-dark-600 dark:bg-dark-800">
         <div class="space-y-1.5">
           <!-- Cost Breakdown -->
           <div class="mb-2 border-b border-gray-700 pb-1.5">
@@ -528,7 +528,7 @@
             </div>
           </template>
         </div>
-        <div class="absolute right-full top-1/2 h-0 w-0 -translate-y-1/2 border-b-[6px] border-r-[6px] border-t-[6px] border-b-transparent border-r-gray-900 border-t-transparent dark:border-r-gray-800"></div>
+        <div class="absolute right-full top-1/2 h-0 w-0 -translate-y-1/2 border-b-[6px] border-r-[6px] border-t-[6px] border-b-transparent border-r-gray-900 border-t-transparent dark:border-r-dark-800"></div>
       </div>
     </div>
   </Teleport>
@@ -718,7 +718,7 @@ const getRequestTypeBadgeClass = (row: AdminUsageLog): string => {
   if (requestType === 'live') return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200'
   if (requestType === 'ws_v2') return 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200'
   if (requestType === 'stream') return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-  if (requestType === 'sync') return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+  if (requestType === 'sync') return 'bg-gray-100 text-gray-800 dark:bg-dark-700 dark:text-dark-200'
   return 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200'
 }
 

@@ -8,7 +8,7 @@
     <div class="space-y-4">
       <!-- Header -->
       <div class="flex items-center justify-between">
-        <p class="text-sm text-gray-500 dark:text-gray-400">
+        <p class="text-sm text-gray-500 dark:text-dark-400">
           {{ t('admin.tlsFingerprintProfiles.description') }}
         </p>
         <button @click="showCreateModal = true" class="btn btn-primary btn-sm">
@@ -29,7 +29,7 @@
         <h4 class="mb-1 text-sm font-medium text-gray-900 dark:text-white">
           {{ t('admin.tlsFingerprintProfiles.noProfiles') }}
         </h4>
-        <p class="text-sm text-gray-500 dark:text-gray-400">
+        <p class="text-sm text-gray-500 dark:text-dark-400">
           {{ t('admin.tlsFingerprintProfiles.createFirstProfile') }}
         </p>
       </div>
@@ -38,19 +38,19 @@
         <table class="min-w-full divide-y divide-gray-200 dark:divide-dark-700">
           <thead class="sticky top-0 bg-gray-50 dark:bg-dark-700">
             <tr>
-              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-dark-400">
                 {{ t('admin.tlsFingerprintProfiles.columns.name') }}
               </th>
-              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-dark-400">
                 {{ t('admin.tlsFingerprintProfiles.columns.description') }}
               </th>
-              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-dark-400">
                 {{ t('admin.tlsFingerprintProfiles.columns.grease') }}
               </th>
-              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-dark-400">
                 {{ t('admin.tlsFingerprintProfiles.columns.alpn') }}
               </th>
-              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+              <th class="px-3 py-2 text-left text-xs font-medium uppercase text-gray-500 dark:text-dark-400">
                 {{ t('admin.tlsFingerprintProfiles.columns.actions') }}
               </th>
             </tr>
@@ -61,10 +61,10 @@
                 <div class="font-medium text-gray-900 dark:text-white text-sm">{{ profile.name }}</div>
               </td>
               <td class="px-3 py-2">
-                <div v-if="profile.description" class="text-sm text-gray-500 dark:text-gray-400 max-w-xs truncate">
+                <div v-if="profile.description" class="text-sm text-gray-500 dark:text-dark-400 max-w-xs truncate">
                   {{ profile.description }}
                 </div>
-                <div v-else class="text-xs text-gray-400 dark:text-gray-600">—</div>
+                <div v-else class="text-xs text-gray-400 dark:text-dark-600">—</div>
               </td>
               <td class="px-3 py-2">
                 <Icon
@@ -86,7 +86,7 @@
                     +{{ profile.alpn_protocols.length - 3 }}
                   </span>
                 </div>
-                <div v-else class="text-xs text-gray-400 dark:text-gray-600">—</div>
+                <div v-else class="text-xs text-gray-400 dark:text-dark-600">—</div>
               </td>
               <td class="px-3 py-2">
                 <div class="flex items-center gap-1">
@@ -143,7 +143,7 @@
             <button type="button" @click="parseYamlInput" class="btn btn-secondary btn-sm">
               {{ t('admin.tlsFingerprintProfiles.form.parseYaml') }}
             </button>
-            <p class="text-xs text-gray-500 dark:text-gray-400">
+            <p class="text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.tlsFingerprintProfiles.form.pasteYamlHint') }}
               <a href="https://tls.sub2api.org" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 underline">{{ t('admin.tlsFingerprintProfiles.form.openCollector') }}</a>
             </p>
@@ -193,10 +193,10 @@
             />
           </button>
           <div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t('admin.tlsFingerprintProfiles.form.enableGrease') }}
             </span>
-            <p class="text-xs text-gray-500 dark:text-gray-400">
+            <p class="text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.tlsFingerprintProfiles.form.enableGreaseHint') }}
             </p>
           </div>

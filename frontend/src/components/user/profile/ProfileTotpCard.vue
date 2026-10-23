@@ -4,7 +4,7 @@
       <h2 class="text-lg font-medium text-gray-900 dark:text-white">
         {{ t('profile.totp.title') }}
       </h2>
-      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+      <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
         {{ t('profile.totp.description') }}
       </p>
     </div>
@@ -22,10 +22,10 @@
           </svg>
         </div>
         <div>
-          <p class="font-medium text-gray-700 dark:text-gray-300">
+          <p class="font-medium text-gray-700 dark:text-dark-300">
             {{ t('profile.totp.featureDisabled') }}
           </p>
-          <p class="text-sm text-gray-500 dark:text-gray-400">
+          <p class="text-sm text-gray-500 dark:text-dark-400">
             {{ t('profile.totp.featureDisabledHint') }}
           </p>
         </div>
@@ -43,7 +43,7 @@
             <p class="font-medium text-gray-900 dark:text-white">
               {{ t('profile.totp.enabled') }}
             </p>
-            <p v-if="status.enabled_at" class="text-sm text-gray-500 dark:text-gray-400">
+            <p v-if="status.enabled_at" class="text-sm text-gray-500 dark:text-dark-400">
               {{ t('profile.totp.enabledAt') }}: {{ formatDate(status.enabled_at) }}
             </p>
           </div>
@@ -66,10 +66,10 @@
             </svg>
           </div>
           <div>
-            <p class="font-medium text-gray-700 dark:text-gray-300">
+            <p class="font-medium text-gray-700 dark:text-dark-300">
               {{ t('profile.totp.notEnabled') }}
             </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
+            <p class="text-sm text-gray-500 dark:text-dark-400">
               {{ t('profile.totp.notEnabledHint') }}
             </p>
           </div>

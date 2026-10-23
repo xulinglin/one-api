@@ -23,7 +23,7 @@
               size="xl"
               class="mb-4 h-12 w-12 text-gray-400 dark:text-dark-500"
             />
-            <p class="text-lg font-medium text-gray-900 dark:text-gray-100">
+            <p class="text-lg font-medium text-gray-900 dark:text-dark-100">
               {{ t('empty.noData') }}
             </p>
           </div>
@@ -33,7 +33,7 @@
 
     <template v-else>
       <div v-if="selectable" class="flex items-center justify-end gap-2 px-1">
-        <label class="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300">
+        <label class="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-dark-300">
           <input
             type="checkbox"
             class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-800"
@@ -76,7 +76,7 @@
             <span class="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-dark-400">
               {{ column.label }}
             </span>
-            <div class="min-w-0 max-w-full text-right text-sm text-gray-900 dark:text-gray-100">
+            <div class="min-w-0 max-w-full text-right text-sm text-gray-900 dark:text-dark-100">
               <slot :name="`cell-${column.key}`" :row="row" :value="row[column.key]" :expanded="actionsExpanded">
                 {{ column.formatter ? column.formatter(row[column.key], row) : row[column.key] }}
               </slot>
@@ -192,7 +192,7 @@
                   size="xl"
                   class="mb-4 h-12 w-12 text-gray-400 dark:text-dark-500"
                 />
-                <p class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                <p class="text-lg font-medium text-gray-900 dark:text-dark-100">
                   {{ t('empty.noData') }}
                 </p>
               </div>
@@ -235,7 +235,7 @@
               v-for="(column, colIndex) in columns"
               :key="column.key"
               :class="[
-                'whitespace-nowrap py-4 text-sm text-gray-900 dark:text-gray-100',
+                'whitespace-nowrap py-4 text-sm text-gray-900 dark:text-dark-100',
                 getAdaptivePaddingClass(),
                 getStickyColumnClass(column, colIndex),
                 column.class
@@ -971,7 +971,7 @@ defineExpose({
 }
 
 .dark .table-wrapper .table-header {
-  background-color: rgb(31 41 55);
+  background-color: rgb(38 38 38);
 }
 
 /* 表体保持在表头下方 */
@@ -989,7 +989,7 @@ defineExpose({
 }
 
 .dark .sticky-header-cell {
-  background-color: rgb(31 41 55);
+  background-color: rgb(38 38 38);
 }
 
 /* Sticky 列基础样式 */
@@ -1029,7 +1029,7 @@ tbody .sticky-col {
 }
 
 .dark tbody .sticky-col {
-  background-color: rgb(17 24 39);
+  background-color: rgb(28 28 28);
 }
 
 /* hover 状态保持 */
@@ -1038,7 +1038,7 @@ tbody tr:hover .sticky-col {
 }
 
 .dark tbody tr:hover .sticky-col {
-  background-color: rgb(31 41 55);
+  background-color: rgb(38 38 38);
 }
 
 /* 阴影只在可滚动时显示 */

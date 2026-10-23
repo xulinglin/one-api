@@ -875,7 +875,7 @@ function handleToolbarRefresh() {
           {{ t('admin.ops.title') }}
         </h1>
 
-        <div v-if="!props.fullscreen" class="mt-1 flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+        <div v-if="!props.fullscreen" class="mt-1 flex items-center gap-3 text-xs text-gray-500 dark:text-dark-400">
           <span class="flex items-center gap-1.5" :title="props.loading ? t('admin.ops.loadingText') : t('admin.ops.ready')">
             <span class="relative flex h-2 w-2">
               <span class="relative inline-flex h-2 w-2 rounded-full" :class="props.loading ? 'bg-gray-400' : 'bg-green-500'"></span>
@@ -930,7 +930,7 @@ function handleToolbarRefresh() {
         <button
           v-if="!props.fullscreen"
           type="button"
-          class="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-500 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-gray-400 dark:hover:bg-dark-600"
+          class="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-500 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-dark-400 dark:hover:bg-dark-600"
           :disabled="loading"
           :title="t('common.refresh')"
           @click="handleToolbarRefresh"
@@ -965,7 +965,7 @@ function handleToolbarRefresh() {
         <button
           v-if="!props.fullscreen"
           type="button"
-          class="flex h-8 items-center gap-1.5 rounded-lg bg-gray-100 px-3 text-xs font-bold text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-gray-300 dark:hover:bg-dark-600"
+          class="flex h-8 items-center gap-1.5 rounded-lg bg-gray-100 px-3 text-xs font-bold text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-dark-300 dark:hover:bg-dark-600"
           :title="t('admin.ops.settings.title')"
           @click="emit('openSettings')"
         >
@@ -980,7 +980,7 @@ function handleToolbarRefresh() {
         <button
           v-if="!props.fullscreen"
           type="button"
-          class="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-gray-300 dark:hover:bg-dark-600"
+          class="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-700 dark:text-dark-300 dark:hover:bg-dark-600"
           :title="t('admin.ops.fullscreen.enter')"
           @click="emit('enterFullscreen')"
         >
@@ -1036,7 +1036,7 @@ function handleToolbarRefresh() {
                     </div>
                     <div class="flex-1">
                       <div class="text-xs font-semibold text-gray-900 dark:text-white">{{ item.message }}</div>
-                      <div class="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">{{ item.impact }}</div>
+                      <div class="mt-0.5 text-[11px] text-gray-500 dark:text-dark-400">{{ item.impact }}</div>
                       <div v-if="item.action" class="mt-1 text-[11px] text-blue-600 dark:text-blue-400 flex items-center gap-1">
                         <Icon name="lightbulb" size="xs" />
                         {{ item.action }}
@@ -1122,7 +1122,7 @@ function handleToolbarRefresh() {
                   class="rounded px-1.5 py-0.5 text-[9px] font-bold transition-colors sm:px-2 sm:text-[10px]"
                   :class="realtimeWindow === window
                     ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-gray-600 hover:bg-gray-300 dark:bg-dark-700 dark:text-gray-400 dark:hover:bg-dark-600'"
+                    : 'bg-gray-200 text-gray-600 hover:bg-gray-300 dark:bg-dark-700 dark:text-dark-400 dark:hover:bg-dark-600'"
                   @click="realtimeWindow = window"
                 >
                   {{ window }}
@@ -1151,7 +1151,7 @@ function handleToolbarRefresh() {
                 <!-- Peak -->
                 <div>
                   <div :class="[props.fullscreen ? 'text-xs' : 'text-[10px]', 'font-bold uppercase text-gray-400']">{{ t('admin.ops.peak') }}</div>
-                  <div :class="[props.fullscreen ? 'text-base' : 'text-sm', 'mt-1 space-y-0.5 font-medium text-gray-600 dark:text-gray-400']">
+                  <div :class="[props.fullscreen ? 'text-base' : 'text-sm', 'mt-1 space-y-0.5 font-medium text-gray-600 dark:text-dark-400']">
                     <div class="flex items-baseline gap-1.5">
                       <span class="font-black text-gray-900 dark:text-white">{{ realtimeQpsPeakLabel }}</span>
                       <span class="text-xs">QPS</span>
@@ -1166,7 +1166,7 @@ function handleToolbarRefresh() {
                 <!-- Average -->
                 <div>
                   <div :class="[props.fullscreen ? 'text-xs' : 'text-[10px]', 'font-bold uppercase text-gray-400']">{{ t('admin.ops.average') }}</div>
-                  <div :class="[props.fullscreen ? 'text-base' : 'text-sm', 'mt-1 space-y-0.5 font-medium text-gray-600 dark:text-gray-400']">
+                  <div :class="[props.fullscreen ? 'text-base' : 'text-sm', 'mt-1 space-y-0.5 font-medium text-gray-600 dark:text-dark-400']">
                     <div class="flex items-baseline gap-1.5">
                       <span class="font-black text-gray-900 dark:text-white">{{ realtimeQpsAvgLabel }}</span>
                       <span class="text-xs">QPS</span>
@@ -1465,7 +1465,7 @@ function handleToolbarRefresh() {
           <div class="mt-1 text-lg font-black" :class="cpuPercentClass">
             {{ cpuPercentValue == null ? '-' : `${cpuPercentValue.toFixed(1)}%` }}
           </div>
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{ t('common.warning') }} 80% · {{ t('common.critical') }} 95%
           </div>
         </div>
@@ -1479,7 +1479,7 @@ function handleToolbarRefresh() {
           <div class="mt-1 text-lg font-black" :class="memPercentClass">
             {{ memPercentValue == null ? '-' : `${memPercentValue.toFixed(1)}%` }}
           </div>
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{
               systemMetrics?.memory_used_mb == null || systemMetrics?.memory_total_mb == null
                 ? '-'
@@ -1497,7 +1497,7 @@ function handleToolbarRefresh() {
           <div class="mt-1 text-lg font-black" :class="dbMiddleClass">
             {{ dbMiddleLabel }}
           </div>
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{ t('admin.ops.conns') }} {{ dbConnOpenValue ?? '-' }} / {{ dbMaxOpenConnsValue ?? '-' }}
             · {{ t('admin.ops.active') }} {{ dbConnActiveValue ?? '-' }}
             · {{ t('admin.ops.idle') }} {{ dbConnIdleValue ?? '-' }}
@@ -1514,7 +1514,7 @@ function handleToolbarRefresh() {
           <div class="mt-1 text-lg font-black" :class="redisMiddleClass">
             {{ redisMiddleLabel }}
           </div>
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{ t('admin.ops.conns') }} {{ redisConnTotalValue ?? '-' }} / {{ redisPoolSizeValue ?? '-' }}
             <span v-if="redisConnActiveValue != null"> · {{ t('admin.ops.active') }} {{ redisConnActiveValue }} </span>
             <span v-if="redisConnIdleValue != null"> · {{ t('admin.ops.idle') }} {{ redisConnIdleValue }} </span>
@@ -1530,7 +1530,7 @@ function handleToolbarRefresh() {
           <div class="mt-1 text-lg font-black" :class="goroutineStatusClass">
             {{ goroutineStatusLabel }}
           </div>
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{ t('admin.ops.current') }} <span class="font-mono">{{ goroutineCountValue ?? '-' }}</span>
             · {{ t('common.warning') }} <span class="font-mono">{{ goroutinesWarnThreshold }}</span>
             · {{ t('common.critical') }} <span class="font-mono">{{ goroutinesCriticalThreshold }}</span>
@@ -1556,7 +1556,7 @@ function handleToolbarRefresh() {
             {{ jobsStatusLabel }}
           </div>
 
-          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-gray-400">
+          <div v-if="!props.fullscreen" class="mt-1 text-[10px] text-gray-500 dark:text-dark-400">
             {{ t('common.total') }} <span class="font-mono">{{ jobHeartbeats.length }}</span>
             · {{ t('common.warning') }} <span class="font-mono">{{ jobsWarnCount }}</span>
           </div>
@@ -1565,7 +1565,7 @@ function handleToolbarRefresh() {
     </div>
 
     <BaseDialog :show="showJobsDetails" :title="t('admin.ops.jobs')" width="wide" @close="showJobsDetails = false">
-      <div v-if="!jobHeartbeats.length" class="text-sm text-gray-500 dark:text-gray-400">
+      <div v-if="!jobHeartbeats.length" class="text-sm text-gray-500 dark:text-dark-400">
         {{ t('admin.ops.noData') }}
       </div>
       <div v-else class="space-y-3">
@@ -1576,13 +1576,13 @@ function handleToolbarRefresh() {
         >
           <div class="flex items-center justify-between gap-3">
             <div class="truncate text-sm font-semibold text-gray-900 dark:text-white">{{ hb.job_name }}</div>
-            <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+            <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-dark-400">
               <span v-if="hb.last_duration_ms != null" class="font-mono">{{ hb.last_duration_ms }}ms</span>
               <span>{{ formatTimeShort(hb.updated_at) }}</span>
             </div>
           </div>
 
-          <div class="mt-2 grid grid-cols-1 gap-2 text-xs text-gray-600 dark:text-gray-300 sm:grid-cols-2">
+          <div class="mt-2 grid grid-cols-1 gap-2 text-xs text-gray-600 dark:text-dark-300 sm:grid-cols-2">
             <div>
               {{ t('admin.ops.lastSuccess') }} <span class="font-mono">{{ formatTimeShort(hb.last_success_at) }}</span>
             </div>
@@ -1608,7 +1608,7 @@ function handleToolbarRefresh() {
     <BaseDialog :show="showCustomTimeRangeDialog" :title="t('admin.ops.timeRange.custom')" width="narrow" @close="handleCustomTimeRangeCancel">
       <div class="space-y-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-1">
             {{ t('admin.ops.customTimeRange.startTime') }}
           </label>
           <input
@@ -1618,7 +1618,7 @@ function handleToolbarRefresh() {
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-1">
             {{ t('admin.ops.customTimeRange.endTime') }}
           </label>
           <input
@@ -1630,7 +1630,7 @@ function handleToolbarRefresh() {
         <div class="flex justify-end gap-3 pt-2">
           <button
             type="button"
-            class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 dark:bg-dark-700 dark:text-gray-300 dark:hover:bg-dark-600"
+            class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 dark:bg-dark-700 dark:text-dark-300 dark:hover:bg-dark-600"
             @click="handleCustomTimeRangeCancel"
           >
             {{ t('common.cancel') }}

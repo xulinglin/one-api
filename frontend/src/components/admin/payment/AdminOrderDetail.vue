@@ -8,66 +8,66 @@
     <div v-if="order" class="space-y-4">
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.orderId') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.orderId') }}</p>
           <p class="font-mono text-sm font-medium text-gray-900 dark:text-white">#{{ order.id }}</p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.status') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.status') }}</p>
           <span :class="['badge', statusBadgeClass(order.status)]">
             {{ t('payment.status.' + order.status.toLowerCase(), order.status) }}
           </span>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.baseAmount') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.baseAmount') }}</p>
           <p class="text-sm font-medium text-gray-900 dark:text-white">{{ paymentAmountSymbol }}{{ baseAmount.toFixed(2) }}</p>
         </div>
         <div v-if="order.fee_rate > 0">
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.fee') }} ({{ order.fee_rate }}%)</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.fee') }} ({{ order.fee_rate }}%)</p>
           <p class="text-sm font-medium text-gray-900 dark:text-white">{{ paymentAmountSymbol }}{{ feeAmount.toFixed(2) }}</p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.payAmount') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.payAmount') }}</p>
           <p class="text-sm font-medium text-gray-900 dark:text-white">{{ paymentAmountSymbol }}{{ order.pay_amount.toFixed(2) }}</p>
         </div>
         <div v-if="(order.bonus_amount ?? 0) > 0">
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.bonusAmount') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.bonusAmount') }}</p>
           <p class="text-sm font-medium text-amber-600 dark:text-amber-400">+{{ creditedAmountSymbol }}{{ (order.bonus_amount ?? 0).toFixed(2) }}</p>
         </div>
         <div v-if="order.amount !== order.pay_amount || (order.bonus_amount ?? 0) > 0">
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.creditedAmount') }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.creditedAmount') }}</p>
           <p class="text-sm font-medium text-gray-900 dark:text-white">{{ creditedAmountSymbol }}{{ order.amount.toFixed(2) }}</p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.paymentMethod') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.paymentMethod') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">
             {{ t('payment.methods.' + order.payment_type, order.payment_type) }}
           </p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.admin.orderType') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.admin.orderType') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">
             {{ t('payment.admin.' + order.order_type + 'Order', order.order_type) }}
           </p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.userId') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">#{{ order.user_id }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.userId') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">#{{ order.user_id }}</p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.orders.createdAt') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">{{ formatDateTime(order.created_at) }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.orders.createdAt') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">{{ formatDateTime(order.created_at) }}</p>
         </div>
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.admin.expiresAt') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">{{ formatDateTime(order.expires_at) }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.admin.expiresAt') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">{{ formatDateTime(order.expires_at) }}</p>
         </div>
         <div v-if="order.paid_at">
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.admin.paidAt') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">{{ formatDateTime(order.paid_at) }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.admin.paidAt') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">{{ formatDateTime(order.paid_at) }}</p>
         </div>
         <div v-if="order.completed_at">
-          <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('payment.admin.completedAt') }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">{{ formatDateTime(order.completed_at) }}</p>
+          <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('payment.admin.completedAt') }}</p>
+          <p class="text-sm text-gray-700 dark:text-dark-300">{{ formatDateTime(order.completed_at) }}</p>
         </div>
       </div>
 

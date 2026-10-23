@@ -4,7 +4,7 @@
     :title="t('admin.channelMonitor.template.applyPickerTitle', { name: templateName })"
     @close="$emit('close')"
   >
-    <p class="mb-3 text-sm text-gray-600 dark:text-gray-400">
+    <p class="mb-3 text-sm text-gray-600 dark:text-dark-400">
       {{ t('admin.channelMonitor.template.applyPickerHint') }}
     </p>
 
@@ -28,12 +28,12 @@
         </button>
         <button
           type="button"
-          class="text-gray-500 hover:underline dark:text-gray-400"
+          class="text-gray-500 hover:underline dark:text-dark-400"
           @click="selectNone"
         >
           {{ t('admin.channelMonitor.template.selectNone') }}
         </button>
-        <span class="ml-auto text-gray-500 dark:text-gray-400">
+        <span class="ml-auto text-gray-500 dark:text-dark-400">
           {{ t('admin.channelMonitor.template.selectedCount', {
             n: selectedIds.length,
             total: monitors.length,
@@ -59,7 +59,7 @@
           <span v-if="m.provider === 'openai'" class="text-xs text-gray-400">{{ m.api_mode }}</span>
           <span
             v-if="!m.enabled"
-            class="ml-auto rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500 dark:bg-dark-700 dark:text-gray-400"
+            class="ml-auto rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500 dark:bg-dark-700 dark:text-dark-400"
           >
             {{ t('admin.channelMonitor.onlyDisabled').replace(/^仅|^Only /, '') }}
           </span>

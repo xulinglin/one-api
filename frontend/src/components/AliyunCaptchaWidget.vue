@@ -338,7 +338,7 @@ onUnmounted(() => {
 :root.dark .aliyun-captcha-button,
 .dark .aliyun-captcha-button {
   border-color: rgb(55 65 81);
-  background-color: rgb(31 41 55);
+  background-color: rgb(38 38 38);
   color: rgb(209 213 219);
 }
 

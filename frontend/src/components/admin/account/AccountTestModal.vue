@@ -18,8 +18,8 @@
             <Icon name="play" size="md" class="text-white" :stroke-width="2" />
           </div>
           <div>
-            <div class="font-semibold text-gray-900 dark:text-gray-100">{{ account.name }}</div>
-            <div class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
+            <div class="font-semibold text-gray-900 dark:text-dark-100">{{ account.name }}</div>
+            <div class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-dark-400">
               <span
                 class="rounded bg-gray-200 px-1.5 py-0.5 text-[10px] font-medium uppercase dark:bg-dark-500"
               >
@@ -34,7 +34,7 @@
             'rounded-full px-2.5 py-1 text-xs font-semibold',
             account.status === 'active'
               ? 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400'
-              : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+              : 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-dark-400'
           ]"
         >
           {{ account.status }}
@@ -43,7 +43,7 @@
 
       <!-- Grok: mode first, then optional model / mode params -->
       <div v-if="isGrokAccount" class="space-y-1.5">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.accounts.grok.testMode') }}
         </label>
         <Select
@@ -51,13 +51,13 @@
           :options="grokTestModeOptions"
           :disabled="status === 'connecting'"
         />
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+        <p class="text-xs text-gray-500 dark:text-dark-400">
           {{ t('admin.accounts.grok.testModeHint') }}
         </p>
       </div>
 
       <div v-if="showModelSelect" class="space-y-1.5">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.accounts.selectTestModel') }}
         </label>
         <Select
@@ -71,7 +71,7 @@
       </div>
 
       <div v-if="isOpenAIAccount" class="space-y-1.5">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.accounts.openai.testMode') }}
         </label>
         <Select
@@ -93,14 +93,14 @@
       </div>
       <p
         v-else-if="isGrokAccount && promptInputHint"
-        class="text-xs text-gray-500 dark:text-gray-400"
+        class="text-xs text-gray-500 dark:text-dark-400"
       >
         {{ promptInputHint }}
       </p>
 
       <!-- Optional media uploads for real generation / transcription -->
       <div v-if="supportsImageUpload" class="space-y-1.5">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ imageUploadLabel }}
         </label>
         <div class="flex items-center gap-3">
@@ -112,7 +112,7 @@
           >
             {{ t('admin.accounts.grok.chooseImageFile') }}
           </button>
-          <span class="min-w-0 truncate text-xs text-gray-500 dark:text-gray-400">
+          <span class="min-w-0 truncate text-xs text-gray-500 dark:text-dark-400">
             {{
               uploadImageName
                 ? t('common.selectedFile', { name: uploadImageName })
@@ -128,7 +128,7 @@
             @change="onImageFileChange"
           />
         </div>
-        <p class="text-xs text-gray-500 dark:text-gray-400">{{ imageUploadHint }}</p>
+        <p class="text-xs text-gray-500 dark:text-dark-400">{{ imageUploadHint }}</p>
         <div v-if="uploadImagePreview" class="overflow-hidden rounded-lg border border-gray-200 dark:border-dark-500">
           <img
             :src="uploadImagePreview"
@@ -139,7 +139,7 @@
       </div>
 
       <div v-if="supportsAudioUpload" class="space-y-1.5">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.accounts.grok.audioUploadLabel') }}
         </label>
         <div class="flex items-center gap-3">
@@ -151,7 +151,7 @@
           >
             {{ t('admin.accounts.grok.chooseAudioFile') }}
           </button>
-          <span class="min-w-0 truncate text-xs text-gray-500 dark:text-gray-400">
+          <span class="min-w-0 truncate text-xs text-gray-500 dark:text-dark-400">
             {{
               uploadAudioName
                 ? t('common.selectedFile', { name: uploadAudioName })
@@ -167,14 +167,14 @@
             @change="onAudioFileChange"
           />
         </div>
-        <p class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.grok.audioUploadHint') }}</p>
+        <p class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.grok.audioUploadHint') }}</p>
       </div>
 
       <!-- Terminal Output -->
       <div class="group relative">
         <div
           ref="terminalRef"
-          class="max-h-[240px] min-h-[120px] overflow-y-auto rounded-xl border border-gray-700 bg-gray-900 p-4 font-mono text-sm dark:border-gray-800 dark:bg-black"
+          class="max-h-[240px] min-h-[120px] overflow-y-auto rounded-xl border border-gray-700 bg-gray-900 p-4 font-mono text-sm dark:border-dark-800 dark:bg-black"
         >
           <!-- Status Line -->
           <div v-if="status === 'idle'" class="flex items-center gap-2 text-gray-500">
@@ -225,7 +225,7 @@
       </div>
 
       <div v-if="generatedImages.length > 0" class="space-y-2">
-        <div class="text-xs font-medium text-gray-600 dark:text-gray-300">
+        <div class="text-xs font-medium text-gray-600 dark:text-dark-300">
           {{ t('admin.accounts.imagePreview') }}
         </div>
         <div class="flex flex-wrap justify-center gap-3">
@@ -243,7 +243,7 @@
             <div class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover/img:bg-black/20">
               <Icon name="eye" size="lg" class="text-white opacity-0 drop-shadow-lg transition-opacity group-hover/img:opacity-100" :stroke-width="2" />
             </div>
-            <div class="border-t border-gray-100 px-3 py-1.5 text-xs text-gray-500 dark:border-dark-500 dark:text-gray-300">
+            <div class="border-t border-gray-100 px-3 py-1.5 text-xs text-gray-500 dark:border-dark-500 dark:text-dark-300">
               {{ image.mimeType || 'image/*' }}
             </div>
           </div>
@@ -251,7 +251,7 @@
       </div>
 
       <div v-if="generatedAudios.length > 0" class="space-y-2">
-        <div class="text-xs font-medium text-gray-600 dark:text-gray-300">
+        <div class="text-xs font-medium text-gray-600 dark:text-dark-300">
           {{ t('admin.accounts.audioPreview') }}
         </div>
         <div
@@ -260,12 +260,12 @@
           class="rounded-xl border border-gray-200 bg-white p-3 dark:border-dark-500 dark:bg-dark-700"
         >
           <audio :src="audio.url" controls class="w-full" :type="audio.mimeType" />
-          <div class="mt-1 text-xs text-gray-500 dark:text-gray-300">{{ audio.mimeType || 'audio/*' }}</div>
+          <div class="mt-1 text-xs text-gray-500 dark:text-dark-300">{{ audio.mimeType || 'audio/*' }}</div>
         </div>
       </div>
 
       <div v-if="generatedVideos.length > 0" class="space-y-2">
-        <div class="text-xs font-medium text-gray-600 dark:text-gray-300">
+        <div class="text-xs font-medium text-gray-600 dark:text-dark-300">
           {{ t('admin.accounts.videoPreview') }}
         </div>
         <div
@@ -274,7 +274,7 @@
           class="overflow-hidden rounded-xl border border-gray-200 bg-black dark:border-dark-500"
         >
           <video :src="video.url" controls class="max-h-[360px] w-full" :type="video.mimeType" />
-          <div class="border-t border-gray-100 bg-white px-3 py-1.5 text-xs text-gray-500 dark:border-dark-500 dark:bg-dark-700 dark:text-gray-300">
+          <div class="border-t border-gray-100 bg-white px-3 py-1.5 text-xs text-gray-500 dark:border-dark-500 dark:bg-dark-700 dark:text-dark-300">
             {{ video.mimeType || 'video/*' }}
           </div>
         </div>
@@ -304,7 +304,7 @@
       </Teleport>
 
       <!-- Test Info -->
-      <div class="flex items-center justify-between px-1 text-xs text-gray-500 dark:text-gray-400">
+      <div class="flex items-center justify-between px-1 text-xs text-gray-500 dark:text-dark-400">
         <div class="flex items-center gap-3">
           <span class="flex items-center gap-1">
             <Icon name="grid" size="sm" :stroke-width="2" />
@@ -322,7 +322,7 @@
       <div class="flex justify-end gap-3">
         <button
           @click="handleClose"
-          class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-300 dark:hover:bg-dark-500"
+          class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-300 dark:hover:bg-dark-500"
         >
           {{ t('common.close') }}
         </button>

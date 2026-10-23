@@ -13,7 +13,7 @@
           <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
             {{ t('stepUp.title') }}
           </h3>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
             {{ t('stepUp.hint') }}
           </p>
         </div>

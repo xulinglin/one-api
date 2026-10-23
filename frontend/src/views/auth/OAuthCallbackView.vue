@@ -6,7 +6,7 @@
         <h1 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
           {{ t('auth.oauth.callbackTitle') }}
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-600 dark:text-dark-400">
           {{ t('auth.oauth.callbackHint') }}
         </p>
       </div>
@@ -15,7 +15,7 @@
         <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
           {{ t('auth.oidc.callbackTitle', { providerName }) }}
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-600 dark:text-dark-400">
           {{ registrationHint }}
         </p>
 
@@ -83,7 +83,7 @@
         <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
           {{ t('auth.oauth.invalidCallbackTitle') }}
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-600 dark:text-dark-400">
           {{ t('auth.oauth.invalidCallbackHint') }}
         </p>
         <button class="btn btn-primary mt-6" type="button" @click="router.replace('/login')">
@@ -95,7 +95,7 @@
         <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
           {{ t('auth.oauth.callbackTitle') }}
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-600 dark:text-dark-400">
           {{ t('auth.oauth.callbackHint') }}
         </p>
 

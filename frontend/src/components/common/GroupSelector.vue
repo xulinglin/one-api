@@ -13,7 +13,7 @@
         v-model="searchText"
         type="text"
         :placeholder="t('common.searchPlaceholder')"
-        class="flex-1 bg-transparent text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none dark:text-gray-100 dark:placeholder:text-dark-400"
+        class="flex-1 bg-transparent text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none dark:text-dark-100 dark:placeholder:text-dark-400"
       />
     </div>
     <div
@@ -48,7 +48,7 @@
       </label>
       <div
         v-if="filteredGroups.length === 0"
-        class="col-span-2 py-2 text-center text-sm text-gray-500 dark:text-gray-400"
+        class="col-span-2 py-2 text-center text-sm text-gray-500 dark:text-dark-400"
       >
         {{ t('common.noGroupsAvailable') }}
       </div>

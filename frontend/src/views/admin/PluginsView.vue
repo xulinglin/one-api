@@ -8,11 +8,11 @@
           <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
             {{ t("admin.plugins.title") }}
           </h2>
-          <p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400">
+          <p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-dark-400">
             {{ t("admin.plugins.description") }}
           </p>
           <div
-            class="mt-3 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300"
+            class="mt-3 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-dark-300"
           >
             <span class="rounded bg-gray-100 px-2 py-1 dark:bg-dark-700">{{
               t("admin.plugins.onlyOpenAI")
@@ -53,7 +53,7 @@
         </div>
       </section>
 
-      <p class="text-xs text-gray-500 dark:text-gray-400">
+      <p class="text-xs text-gray-500 dark:text-dark-400">
         {{ t("admin.plugins.uploadHint") }}
       </p>
 
@@ -76,10 +76,10 @@
         class="flex min-h-56 flex-col items-center justify-center border border-dashed border-gray-300 px-6 text-center dark:border-dark-600"
       >
         <Icon name="cube" size="xl" class="text-gray-400" />
-        <p class="mt-3 font-medium text-gray-800 dark:text-gray-200">
+        <p class="mt-3 font-medium text-gray-800 dark:text-dark-200">
           {{ t("admin.plugins.empty") }}
         </p>
-        <p class="mt-1 max-w-lg text-sm text-gray-500 dark:text-gray-400">
+        <p class="mt-1 max-w-lg text-sm text-gray-500 dark:text-dark-400">
           {{ t("admin.plugins.emptyHint") }}
         </p>
       </div>
@@ -116,7 +116,7 @@
               </p>
               <p
                 v-if="plugin.description"
-                class="mt-2 text-sm text-gray-600 dark:text-gray-300"
+                class="mt-2 text-sm text-gray-600 dark:text-dark-300"
               >
                 {{ plugin.description }}
               </p>
@@ -143,7 +143,7 @@
                 >
                   {{ t(`admin.plugins.${plugin.compatibility.status}`) }}
                 </span>
-                <span class="text-xs text-gray-500 dark:text-gray-400">{{
+                <span class="text-xs text-gray-500 dark:text-dark-400">{{
                   plugin.compatibility.message
                 }}</span>
               </div>
@@ -153,19 +153,19 @@
                 <dt class="text-gray-500">
                   {{ t("admin.plugins.currentVersion") }}
                 </dt>
-                <dd class="font-mono text-gray-800 dark:text-gray-200">
+                <dd class="font-mono text-gray-800 dark:text-dark-200">
                   {{ plugin.compatibility.current_sub2api_version }}
                 </dd>
                 <dt class="text-gray-500">
                   {{ t("admin.plugins.requiredVersion") }}
                 </dt>
-                <dd class="font-mono text-gray-800 dark:text-gray-200">
+                <dd class="font-mono text-gray-800 dark:text-dark-200">
                   {{ plugin.compatibility.required_sub2api_version }}
                 </dd>
                 <dt class="text-gray-500">
                   {{ t("admin.plugins.recommendedVersion") }}
                 </dt>
-                <dd class="font-mono text-gray-800 dark:text-gray-200">
+                <dd class="font-mono text-gray-800 dark:text-dark-200">
                   {{ plugin.compatibility.recommended_sub2api_version || "-" }}
                 </dd>
               </dl>
@@ -181,7 +181,7 @@
                   :class="
                     plugin.runtime_healthy
                       ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300'
-                      : 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-gray-300'
+                      : 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-dark-300'
                   "
                 >
                   {{
@@ -191,7 +191,7 @@
                   }}
                 </span>
                 <span
-                  class="rounded bg-gray-100 px-2 py-0.5 text-gray-600 dark:bg-dark-700 dark:text-gray-300"
+                  class="rounded bg-gray-100 px-2 py-0.5 text-gray-600 dark:bg-dark-700 dark:text-dark-300"
                 >
                   {{ t("admin.plugins.signature") }}:
                   {{ t(`admin.plugins.${plugin.signature_status}`) }}
@@ -213,7 +213,7 @@
 
             <div class="md:col-span-2">
               <label
-                class="flex items-center justify-between gap-4 text-xs font-medium text-gray-600 dark:text-gray-300"
+                class="flex items-center justify-between gap-4 text-xs font-medium text-gray-600 dark:text-dark-300"
               >
                 <span>{{ t("admin.plugins.rollout") }}</span>
                 <span class="w-11 text-right font-mono"
@@ -307,7 +307,7 @@
             class="absolute inset-0 z-20 flex flex-col items-center justify-center p-8 text-center"
           >
             <Icon name="exclamationTriangle" size="xl" class="text-amber-500" />
-            <p class="mt-3 font-medium text-gray-800 dark:text-gray-200">
+            <p class="mt-3 font-medium text-gray-800 dark:text-dark-200">
               {{ t("admin.plugins.uiUnavailable") }}
             </p>
             <p class="mt-1 max-w-xl text-sm text-gray-500">{{ uiError }}</p>
@@ -709,7 +709,7 @@ function stateClass(state: PluginInstallation["state"]): string {
     return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300";
   if (state === "starting")
     return "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300";
-  return "bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-gray-300";
+  return "bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-dark-300";
 }
 
 function compatibilityClass(

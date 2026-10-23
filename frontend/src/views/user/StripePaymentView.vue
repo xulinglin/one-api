@@ -9,7 +9,7 @@
           <Icon name="exclamationCircle" size="xl" class="text-red-500" />
         </div>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ t('payment.stripeLoadFailed') }}</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ initError }}</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">{{ initError }}</p>
         <button class="btn btn-primary mt-6" @click="router.push('/purchase')">{{ t('payment.result.backToRecharge') }}</button>
       </div>
       <template v-else>
@@ -34,11 +34,11 @@
                   </span>
                 </div>
               </div>
-              <p class="text-center text-sm text-gray-500 dark:text-gray-400">{{ t('payment.qr.scanWxpayHint') }}</p>
+              <p class="text-center text-sm text-gray-500 dark:text-dark-400">{{ t('payment.qr.scanWxpayHint') }}</p>
             </div>
           </div>
           <div class="card p-4 text-center">
-            <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('payment.qr.waitingPayment') }}</p>
+            <p class="text-sm text-gray-500 dark:text-dark-400">{{ t('payment.qr.waitingPayment') }}</p>
           </div>
         </template>
 
@@ -47,7 +47,7 @@
           <div class="card p-6">
             <div class="flex flex-col items-center space-y-4 py-4">
               <div class="h-10 w-10 animate-spin rounded-full border-4 border-[#00AEEF] border-t-transparent"></div>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('payment.qr.payInNewWindowHint') }}</p>
+              <p class="text-sm text-gray-500 dark:text-dark-400">{{ t('payment.qr.payInNewWindowHint') }}</p>
             </div>
           </div>
         </template>
@@ -60,7 +60,7 @@
                 <Icon name="check" size="lg" class="text-green-500" />
               </div>
               <p class="text-lg font-bold text-gray-900 dark:text-white">{{ t('payment.result.success') }}</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('payment.stripeSuccessProcessing') }}</p>
+              <p class="text-sm text-gray-500 dark:text-dark-400">{{ t('payment.stripeSuccessProcessing') }}</p>
             </div>
           </div>
         </template>

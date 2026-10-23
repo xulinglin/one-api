@@ -88,7 +88,7 @@
                 <!-- Account count badge -->
                 <span
                   v-if="proxy.account_count !== undefined"
-                  class="inline-flex flex-shrink-0 items-center rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-600 dark:bg-dark-600 dark:text-gray-400"
+                  class="inline-flex flex-shrink-0 items-center rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-600 dark:bg-dark-600 dark:text-dark-400"
                 >
                   {{ proxy.account_count }}
                 </span>
@@ -113,7 +113,7 @@
                   </span>
                 </template>
               </div>
-              <div class="truncate text-xs text-gray-500 dark:text-gray-400">
+              <div class="truncate text-xs text-gray-500 dark:text-dark-400">
                 {{ proxy.protocol }}://{{ proxy.host }}:{{ proxy.port }}
               </div>
             </div>
@@ -318,7 +318,7 @@ onUnmounted(() => {
   @apply rounded-xl px-4 py-2.5 text-sm;
   @apply bg-white dark:bg-dark-800;
   @apply border border-gray-200 dark:border-dark-600;
-  @apply text-gray-900 dark:text-gray-100;
+  @apply text-gray-900 dark:text-dark-100;
   @apply transition-all duration-200;
   @apply focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30;
   @apply hover:border-gray-300 dark:hover:border-dark-500;
@@ -361,7 +361,7 @@ onUnmounted(() => {
 
 .select-search-input {
   @apply flex-1 bg-transparent text-sm;
-  @apply text-gray-900 dark:text-gray-100;
+  @apply text-gray-900 dark:text-dark-100;
   @apply placeholder:text-gray-400 dark:placeholder:text-dark-400;
   @apply focus:outline-none;
 }
@@ -380,7 +380,7 @@ onUnmounted(() => {
 .select-option {
   @apply flex items-center justify-between gap-2;
   @apply px-4 py-2.5 text-sm;
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-dark-300;
   @apply cursor-pointer transition-colors duration-150;
   @apply hover:bg-gray-50 dark:hover:bg-dark-700;
 }

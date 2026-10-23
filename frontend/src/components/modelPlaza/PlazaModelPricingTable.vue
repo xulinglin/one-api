@@ -113,7 +113,7 @@
 
           <!-- token 计费:输入 / 输出 / 缓存(写/读),有阶梯时每档一行;档位标签只放输入列,其余列按行对齐 -->
           <template v-if="billingMode(m) === BILLING_MODE_TOKEN">
-            <td class="pz-cell px-3 py-2.5 align-middle font-mono font-semibold text-gray-900 dark:text-gray-50">
+            <td class="pz-cell px-3 py-2.5 align-middle font-mono font-semibold text-gray-900 dark:text-dark-50">
               <template v-if="tokenIntervals(m).length">
                 <div
                   v-for="(iv, idx) in tokenIntervals(m)"
@@ -126,7 +126,7 @@
               </template>
               <template v-else>{{ paidPerMillion(m.pricing?.input_price, period) }}</template>
             </td>
-            <td class="pz-cell px-3 py-2.5 align-middle font-mono font-semibold text-gray-900 dark:text-gray-50">
+            <td class="pz-cell px-3 py-2.5 align-middle font-mono font-semibold text-gray-900 dark:text-dark-50">
               <template v-if="tokenIntervals(m).length">
                 <div
                   v-for="(iv, idx) in tokenIntervals(m)"
@@ -144,7 +144,7 @@
                 <div
                   v-for="(iv, idx) in tokenIntervals(m)"
                   :key="idx"
-                  class="whitespace-nowrap font-mono text-xs leading-5 text-gray-800 dark:text-gray-200"
+                  class="whitespace-nowrap font-mono text-xs leading-5 text-gray-800 dark:text-dark-200"
                   :title="tierHint(m)"
                 >
                   <template v-if="iv.cache_write_price != null || iv.cache_write_1h_price != null || iv.cache_read_price != null">
@@ -162,7 +162,7 @@
               </template>
               <div
                 v-else-if="hasCachePricing(m)"
-                class="space-y-0.5 font-mono text-xs text-gray-800 dark:text-gray-200"
+                class="space-y-0.5 font-mono text-xs text-gray-800 dark:text-dark-200"
               >
                 <div>
                   <span class="mr-1 font-sans font-normal text-gray-400 dark:text-dark-500">{{ t('modelPlaza.table.cacheWrite') }}</span>
@@ -191,7 +191,7 @@
                 <span
                   v-for="(iv, idx) in requestIntervals(m)"
                   :key="idx"
-                  class="inline-flex items-center gap-1 rounded-md bg-gray-100 px-2 py-0.5 font-mono text-xs text-gray-800 dark:bg-dark-700/60 dark:text-gray-200"
+                  class="inline-flex items-center gap-1 rounded-md bg-gray-100 px-2 py-0.5 font-mono text-xs text-gray-800 dark:bg-dark-700/60 dark:text-dark-200"
                 >
                   <span class="font-sans text-gray-400 dark:text-dark-500">{{ tierLabel(iv) }}</span>
                   {{ paidRequestPrice(m, iv.per_request_price)
@@ -199,7 +199,7 @@
                 </span>
               </div>
               <template v-else-if="m.pricing?.per_request_price != null">
-                <span class="font-mono font-semibold text-gray-900 dark:text-gray-50">
+                <span class="font-mono font-semibold text-gray-900 dark:text-dark-50">
                   {{ paidRequestPrice(m, m.pricing.per_request_price) }}
                 </span>
                 <span class="ml-1 text-xs text-gray-400 dark:text-dark-500">{{ perUnitSuffix(m) }}</span>
@@ -290,14 +290,14 @@
             >
             <span
               v-else-if="usesIndependentMediaRate(m)"
-              class="font-bold text-gray-700 dark:text-gray-300"
+              class="font-bold text-gray-700 dark:text-dark-300"
               >{{ requestRate(m) }}x</span
             >
             <template v-else-if="hasCustomRate">
               <span class="mr-1 text-gray-400 line-through dark:text-dark-500">{{ rateMultiplier }}x</span>
               <span class="font-bold text-primary-600 dark:text-primary-400">{{ effectiveRate }}x</span>
             </template>
-            <span v-else class="font-bold text-gray-700 dark:text-gray-300">{{ effectiveRate }}x</span>
+            <span v-else class="font-bold text-gray-700 dark:text-dark-300">{{ effectiveRate }}x</span>
           </td>
         </tr>
       </tbody>

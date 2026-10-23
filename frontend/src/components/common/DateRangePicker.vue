@@ -327,7 +327,7 @@ onUnmounted(() => {
   @apply rounded-lg px-3 py-2 text-sm;
   @apply bg-white dark:bg-dark-800;
   @apply border border-gray-200 dark:border-dark-600;
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-dark-300;
   @apply transition-all duration-200;
   @apply focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30;
   @apply hover:border-gray-300 dark:hover:border-dark-500;
@@ -366,7 +366,7 @@ onUnmounted(() => {
 
 .date-picker-preset {
   @apply rounded-md px-3 py-1.5 text-xs font-medium;
-  @apply text-gray-600 dark:text-gray-400;
+  @apply text-gray-600 dark:text-dark-400;
   @apply hover:bg-gray-100 dark:hover:bg-dark-700;
   @apply transition-colors duration-150;
 }
@@ -389,14 +389,14 @@ onUnmounted(() => {
 }
 
 .date-picker-label {
-  @apply mb-1 block text-xs font-medium text-gray-500 dark:text-gray-400;
+  @apply mb-1 block text-xs font-medium text-gray-500 dark:text-dark-400;
 }
 
 .date-picker-input {
   @apply w-full rounded-md px-2 py-1.5 text-sm;
   @apply bg-gray-50 dark:bg-dark-700;
   @apply border border-gray-200 dark:border-dark-600;
-  @apply text-gray-900 dark:text-gray-100;
+  @apply text-gray-900 dark:text-dark-100;
   @apply focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30;
 }
 

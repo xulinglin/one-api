@@ -8,7 +8,7 @@
         </h2>
         <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
           {{ t('auth.sendCodeDesc') }}
-          <span class="font-medium text-gray-700 dark:text-gray-300">{{ email }}</span>
+          <span class="font-medium text-gray-700 dark:text-dark-300">{{ email }}</span>
         </p>
       </div>
 
@@ -168,7 +168,7 @@
     <template #footer>
       <button
         @click="handleBack"
-        class="flex items-center gap-2 text-gray-500 transition-colors hover:text-gray-700 dark:text-dark-400 dark:hover:text-gray-300"
+        class="flex items-center gap-2 text-gray-500 transition-colors hover:text-gray-700 dark:text-dark-400 dark:hover:text-dark-300"
       >
         <Icon name="arrowLeft" size="sm" />
         {{ t('auth.backToRegistration') }}

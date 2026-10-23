@@ -59,7 +59,7 @@
           </button>
           <router-link
             :to="isAuthenticated ? dashboardPath : '/login'"
-            class="inline-flex min-h-10 shrink-0 items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200"
+            class="inline-flex min-h-10 shrink-0 items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 dark:bg-white dark:text-dark-900 dark:hover:bg-dark-200"
           >
             {{ isAuthenticated ? t('home.dashboard') : t('home.login') }}
           </router-link>
@@ -166,7 +166,7 @@
           <router-link
             v-if="isAuthenticated"
             :to="dashboardPath"
-            class="inline-flex items-center gap-1.5 rounded-full bg-gray-900 py-1 pl-1 pr-2.5 transition-colors hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700"
+            class="inline-flex items-center gap-1.5 rounded-full bg-gray-900 py-1 pl-1 pr-2.5 transition-colors hover:bg-gray-800 dark:bg-dark-800 dark:hover:bg-dark-700"
           >
             <span
               class="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-primary-400 to-primary-600 text-[10px] font-semibold text-white"
@@ -191,7 +191,7 @@
           <router-link
             v-else
             to="/login"
-            class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white transition-colors hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700"
+            class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white transition-colors hover:bg-gray-800 dark:bg-dark-800 dark:hover:bg-dark-700"
           >
             {{ t('home.login') }}
           </router-link>
@@ -590,7 +590,7 @@ onMounted(() => {
 /* Terminal Window */
 .terminal-window {
   width: 420px;
-  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(145deg, #262626 0%, #171717 100%);
   border-radius: 14px;
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.4),
@@ -610,7 +610,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(38, 38, 38, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 

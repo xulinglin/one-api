@@ -10,7 +10,7 @@
         <span class="text-gray-400">|</span>
         <span class="font-medium text-gray-900 dark:text-white">{{ group.name }}</span>
         <span class="text-gray-400">|</span>
-        <span class="text-gray-600 dark:text-gray-400">
+        <span class="text-gray-600 dark:text-dark-400">
           {{ t('admin.groups.columns.rateMultiplier') }}: {{ group.rate_multiplier }}x
         </span>
       </div>
@@ -18,7 +18,7 @@
       <!-- 操作区 -->
       <div class="rounded-lg border border-gray-200 p-3 dark:border-dark-600">
         <!-- 添加用户 -->
-        <h4 class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+        <h4 class="mb-2 text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.groups.addUserRate') }}
         </h4>
         <div class="flex items-end gap-2">
@@ -72,7 +72,7 @@
 
         <!-- 批量调整 + 全部清空 -->
         <div v-if="localEntries.length > 0" class="mt-3 flex items-center gap-3 border-t border-gray-100 pt-3 dark:border-dark-600">
-          <span class="text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.batchAdjust') }}</span>
+          <span class="text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.batchAdjust') }}</span>
           <div class="flex items-center gap-1.5">
             <span class="text-xs text-gray-400">×</span>
             <input
@@ -115,11 +115,11 @@
 
       <!-- 已设置的用户列表 -->
       <div v-else>
-        <h4 class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+        <h4 class="mb-2 text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.groups.rateMultipliers') }} ({{ localEntries.length }})
         </h4>
 
-        <div v-if="localEntries.length === 0" class="py-6 text-center text-sm text-gray-400 dark:text-gray-500">
+        <div v-if="localEntries.length === 0" class="py-6 text-center text-sm text-gray-400 dark:text-dark-500">
           {{ t('admin.groups.noRateMultipliers') }}
         </div>
 
@@ -130,12 +130,12 @@
               <table class="w-full min-w-max text-sm">
                 <thead class="sticky top-0 z-[1]">
                   <tr class="border-b border-gray-200 bg-gray-50 dark:border-dark-600 dark:bg-dark-700">
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.columns.userEmail') }}</th>
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">ID</th>
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.columns.userName') }}</th>
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.columns.userNotes') }}</th>
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.columns.userStatus') }}</th>
-                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('admin.groups.columns.rateMultiplier') }}</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.columns.userEmail') }}</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">ID</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.columns.userName') }}</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.columns.userNotes') }}</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.columns.userStatus') }}</th>
+                    <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-dark-400">{{ t('admin.groups.columns.rateMultiplier') }}</th>
                     <th v-if="showFinalRate" class="px-3 py-2 text-left text-xs font-medium text-primary-600 dark:text-primary-400">{{ t('admin.groups.finalRate') }}</th>
                     <th class="w-10 px-2 py-2"></th>
                   </tr>
@@ -146,17 +146,17 @@
                     :key="entry.user_id"
                     class="hover:bg-gray-50 dark:hover:bg-dark-700/50"
                   >
-                    <td class="px-3 py-2 text-gray-600 dark:text-gray-400">{{ entry.user_email }}</td>
-                    <td class="whitespace-nowrap px-3 py-2 text-gray-400 dark:text-gray-500">{{ entry.user_id }}</td>
+                    <td class="px-3 py-2 text-gray-600 dark:text-dark-400">{{ entry.user_email }}</td>
+                    <td class="whitespace-nowrap px-3 py-2 text-gray-400 dark:text-dark-500">{{ entry.user_id }}</td>
                     <td class="whitespace-nowrap px-3 py-2 text-gray-900 dark:text-white">{{ entry.user_name || '-' }}</td>
-                    <td class="max-w-[160px] truncate px-3 py-2 text-gray-500 dark:text-gray-400" :title="entry.user_notes">{{ entry.user_notes || '-' }}</td>
+                    <td class="max-w-[160px] truncate px-3 py-2 text-gray-500 dark:text-dark-400" :title="entry.user_notes">{{ entry.user_notes || '-' }}</td>
                     <td class="whitespace-nowrap px-3 py-2">
                       <span
                         :class="[
                           'inline-flex rounded-full px-2 py-0.5 text-xs font-medium',
                           entry.user_status === 'active'
                             ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                            : 'bg-gray-100 text-gray-600 dark:bg-dark-600 dark:text-gray-400'
+                            : 'bg-gray-100 text-gray-600 dark:bg-dark-600 dark:text-dark-400'
                         ]"
                       >
                         {{ entry.user_status }}

@@ -356,7 +356,7 @@ watch(
           class="flex items-center justify-center rounded-lg px-2 py-1 transition-colors"
           :class="showByUser
             ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-            : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:bg-dark-700 dark:text-gray-400 dark:hover:bg-dark-600 dark:hover:text-gray-300'"
+            : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:bg-dark-700 dark:text-dark-400 dark:hover:bg-dark-600 dark:hover:text-dark-300'"
           :title="showByUser ? t('admin.ops.concurrency.switchToPlatform') : t('admin.ops.concurrency.switchToUser')"
           @click="showByUser = !showByUser"
         >
@@ -366,7 +366,7 @@ watch(
         </button>
         <!-- 刷新按钮 -->
         <button
-          class="flex items-center gap-1 rounded-lg bg-gray-100 px-2 py-1 text-[11px] font-semibold text-gray-700 transition-colors hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-dark-700 dark:text-gray-300 dark:hover:bg-dark-600"
+          class="flex items-center gap-1 rounded-lg bg-gray-100 px-2 py-1 text-[11px] font-semibold text-gray-700 transition-colors hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-dark-700 dark:text-dark-300 dark:hover:bg-dark-600"
           :disabled="loading"
           :title="t('common.refresh')"
           @click="loadData"
@@ -386,7 +386,7 @@ watch(
     <!-- 禁用状态 -->
     <div
       v-if="!realtimeEnabled"
-      class="flex flex-1 items-center justify-center rounded-xl border border-dashed border-gray-200 text-sm text-gray-500 dark:border-dark-700 dark:text-gray-400"
+      class="flex flex-1 items-center justify-center rounded-xl border border-dashed border-gray-200 text-sm text-gray-500 dark:border-dark-700 dark:text-dark-400"
     >
       {{ t('admin.ops.concurrency.disabledHint') }}
     </div>
@@ -395,16 +395,16 @@ watch(
     <div v-else class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl border border-gray-200 dark:border-dark-700">
       <!-- 维度标题栏 -->
       <div class="flex shrink-0 items-center justify-between border-b border-gray-200 bg-gray-50 px-3 py-2 dark:border-dark-700 dark:bg-dark-900">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-dark-400">
           {{ displayTitle }}
         </span>
-        <span class="text-[10px] text-gray-500 dark:text-gray-400">
+        <span class="text-[10px] text-gray-500 dark:text-dark-400">
           {{ t('admin.ops.concurrency.totalRows', { count: displayRows.length }) }}
         </span>
       </div>
 
       <!-- 空状态 -->
-      <div v-if="displayRows.length === 0" class="flex flex-1 items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+      <div v-if="displayRows.length === 0" class="flex flex-1 items-center justify-center text-sm text-gray-500 dark:text-dark-400">
         {{ t('admin.ops.concurrency.empty') }}
       </div>
 
@@ -417,7 +417,7 @@ watch(
               <span class="truncate text-[11px] font-bold text-gray-900 dark:text-white" :title="row.username || row.user_email">
                 {{ row.username || row.user_email }}
               </span>
-              <span v-if="row.username" class="shrink-0 truncate text-[10px] text-gray-400 dark:text-gray-500" :title="row.user_email">
+              <span v-if="row.username" class="shrink-0 truncate text-[10px] text-gray-400 dark:text-dark-500" :title="row.user_email">
                 {{ row.user_email }}
               </span>
             </div>
@@ -450,7 +450,7 @@ watch(
               <div class="truncate text-[11px] font-bold text-gray-900 dark:text-white" :title="row.name">
                 {{ row.name }}
               </div>
-              <span v-if="displayDimension === 'group' && row.platform" class="text-[10px] text-gray-400 dark:text-gray-500">
+              <span v-if="displayDimension === 'group' && row.platform" class="text-[10px] text-gray-400 dark:text-dark-500">
                 {{ row.platform.toUpperCase() }}
               </span>
             </div>
@@ -481,11 +481,11 @@ watch(
                   d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              <span class="text-gray-600 dark:text-gray-300">
+              <span class="text-gray-600 dark:text-dark-300">
                 <span class="font-bold text-green-600 dark:text-green-400">{{ row.available_accounts }}</span
                 >/{{ row.total_accounts }}
               </span>
-              <span class="text-gray-400 dark:text-gray-500">{{ row.availability_percentage }}%</span>
+              <span class="text-gray-400 dark:text-dark-500">{{ row.availability_percentage }}%</span>
             </div>
 
             <!-- 限流账号 -->
@@ -524,7 +524,7 @@ watch(
               <div class="truncate text-[11px] font-bold text-gray-900 dark:text-white" :title="row.name">
                 {{ row.name }}
               </div>
-              <div class="mt-0.5 text-[9px] text-gray-400 dark:text-gray-500">
+              <div class="mt-0.5 text-[9px] text-gray-400 dark:text-dark-500">
                 {{ row.group_name }}
               </div>
             </div>
@@ -575,7 +575,7 @@ watch(
               </span>
               <span
                 v-else
-                class="inline-flex items-center gap-1 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-400"
+                class="inline-flex items-center gap-1 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-700 dark:bg-dark-800 dark:text-dark-400"
               >
                 {{ t('admin.ops.accountAvailability.unavailable') }}
               </span>

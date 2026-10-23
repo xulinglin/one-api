@@ -86,7 +86,7 @@
       <template #table>
         <DataTable :columns="columns" :data="logs" :loading="loading" row-key="id">
           <template #cell-created_at="{ value }">
-            <span class="whitespace-nowrap text-gray-600 dark:text-gray-300">{{ formatTime(value) }}</span>
+            <span class="whitespace-nowrap text-gray-600 dark:text-dark-300">{{ formatTime(value) }}</span>
           </template>
 
           <template #cell-actor="{ row }">
@@ -102,7 +102,7 @@
 
           <template #cell-action="{ row }">
             <div class="min-w-0 max-w-xs">
-              <div class="truncate font-mono text-sm text-gray-800 dark:text-gray-200" :title="row.action">
+              <div class="truncate font-mono text-sm text-gray-800 dark:text-dark-200" :title="row.action">
                 {{ row.action }}
               </div>
               <div class="mt-0.5 truncate font-mono text-xs text-gray-400" :title="`${row.method} ${row.path}`">
@@ -119,11 +119,11 @@
           </template>
 
           <template #cell-latency_ms="{ value }">
-            <span class="whitespace-nowrap text-gray-500 dark:text-gray-400">{{ value }} ms</span>
+            <span class="whitespace-nowrap text-gray-500 dark:text-dark-400">{{ value }} ms</span>
           </template>
 
           <template #cell-client_ip="{ value }">
-            <span class="whitespace-nowrap font-mono text-gray-600 dark:text-gray-300">{{ value || '—' }}</span>
+            <span class="whitespace-nowrap font-mono text-gray-600 dark:text-dark-300">{{ value || '—' }}</span>
           </template>
 
           <template #cell-actions="{ row }">
@@ -140,7 +140,7 @@
           <template #empty>
             <div class="flex flex-col items-center py-8">
               <Icon name="shield" size="xl" class="mb-4 h-12 w-12 text-gray-300 dark:text-dark-600" />
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ t('admin.audit.empty') }}</p>
+              <p class="text-sm font-medium text-gray-500 dark:text-dark-400">{{ t('admin.audit.empty') }}</p>
             </div>
           </template>
         </DataTable>
@@ -170,7 +170,7 @@
       <div v-if="detailLoading" class="flex items-center justify-center py-16">
         <div class="flex flex-col items-center gap-3">
           <div class="h-8 w-8 animate-spin rounded-full border-b-2 border-primary-600"></div>
-          <div class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ t('common.loading') }}</div>
+          <div class="text-sm font-medium text-gray-500 dark:text-dark-400">{{ t('common.loading') }}</div>
         </div>
       </div>
 
@@ -188,13 +188,13 @@
           </div>
 
           <div class="mt-3 flex items-center gap-2 rounded-lg bg-white px-3 py-2 ring-1 ring-gray-200 dark:bg-dark-800 dark:ring-dark-600">
-            <span class="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[11px] font-bold text-gray-700 dark:bg-dark-700 dark:text-gray-200">
+            <span class="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[11px] font-bold text-gray-700 dark:bg-dark-700 dark:text-dark-200">
               {{ detail.method }}
             </span>
-            <span class="break-all font-mono text-xs text-gray-600 dark:text-gray-300">{{ detail.path }}</span>
+            <span class="break-all font-mono text-xs text-gray-600 dark:text-dark-300">{{ detail.path }}</span>
           </div>
 
-          <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-gray-500 dark:text-gray-400">
+          <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-gray-500 dark:text-dark-400">
             <span class="inline-flex items-center gap-1.5">
               <Icon name="clock" size="xs" />
               {{ formatTime(detail.created_at) }}
@@ -246,7 +246,7 @@
           <h4 class="mb-1.5 text-xs font-bold uppercase tracking-wider text-gray-400">
             {{ t('admin.audit.detail.userAgent') }}
           </h4>
-          <div class="break-all rounded-xl bg-gray-50 p-3 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-gray-400">
+          <div class="break-all rounded-xl bg-gray-50 p-3 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-dark-400">
             {{ detail.user_agent || '—' }}
           </div>
         </section>
@@ -256,7 +256,7 @@
           <h4 class="mb-1.5 text-xs font-bold uppercase tracking-wider text-gray-400">
             {{ t('admin.audit.detail.requestBody') }}
           </h4>
-          <pre class="max-h-72 overflow-auto rounded-xl bg-gray-50 p-4 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-gray-400">{{ prettyBody(detail.request_body) }}</pre>
+          <pre class="max-h-72 overflow-auto rounded-xl bg-gray-50 p-4 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-dark-400">{{ prettyBody(detail.request_body) }}</pre>
         </section>
 
         <!-- Extra -->
@@ -264,7 +264,7 @@
           <h4 class="mb-1.5 text-xs font-bold uppercase tracking-wider text-gray-400">
             {{ t('admin.audit.detail.extra') }}
           </h4>
-          <pre class="max-h-48 overflow-auto rounded-xl bg-gray-50 p-4 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-gray-400">{{ JSON.stringify(detail.extra, null, 2) }}</pre>
+          <pre class="max-h-48 overflow-auto rounded-xl bg-gray-50 p-4 font-mono text-xs leading-relaxed text-gray-600 dark:bg-dark-900 dark:text-dark-400">{{ JSON.stringify(detail.extra, null, 2) }}</pre>
         </section>
       </div>
     </BaseDialog>
@@ -322,7 +322,7 @@
       @close="cancelClearTotp"
     >
       <div class="py-2">
-        <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('admin.audit.clearConfirm.totpHint') }}</p>
+        <p class="text-sm text-gray-500 dark:text-dark-400">{{ t('admin.audit.clearConfirm.totpHint') }}</p>
         <input
           v-model.trim="clearTotpCode"
           type="text"

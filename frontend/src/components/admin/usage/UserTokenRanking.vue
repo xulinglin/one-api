@@ -3,9 +3,9 @@
   <div>
     <!-- Toolbar -->
     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-100 px-4 py-3 dark:border-dark-700/50 sm:px-6">
-      <p class="text-xs text-gray-400 dark:text-gray-500">{{ t('admin.usage.tokenRanking.subtitle') }}</p>
+      <p class="text-xs text-gray-400 dark:text-dark-500">{{ t('admin.usage.tokenRanking.subtitle') }}</p>
       <div class="flex items-center gap-3">
-        <span v-if="!loading && items.length > 0" class="text-xs text-gray-400 dark:text-gray-500">
+        <span v-if="!loading && items.length > 0" class="text-xs text-gray-400 dark:text-dark-500">
           {{ t('admin.usage.tokenRanking.userCount', { count: items.length }) }}
         </span>
         <div class="w-28">
@@ -62,15 +62,15 @@
               >{{ index + 1 }}</span>
               <span v-else class="inline-block w-6 text-center text-sm tabular-nums text-gray-400">{{ index + 1 }}</span>
             </td>
-            <td class="max-w-[260px] truncate px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-200" :title="item.email">
+            <td class="max-w-[260px] truncate px-4 py-3 text-sm font-medium text-gray-700 dark:text-dark-200" :title="item.email">
               {{ item.email || `User #${item.user_id}` }}
-              <span class="ml-1 font-normal text-gray-400 dark:text-gray-500">#{{ item.user_id }}</span>
+              <span class="ml-1 font-normal text-gray-400 dark:text-dark-500">#{{ item.user_id }}</span>
             </td>
-            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-gray-400">{{ item.requests.toLocaleString() }}</td>
-            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-gray-400">{{ fmtTokens(item.input_tokens) }}</td>
-            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-gray-400">{{ fmtTokens(item.output_tokens) }}</td>
-            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-gray-400">{{ fmtTokens(item.cache_tokens) }}</td>
-            <td class="whitespace-nowrap px-4 py-3 text-right text-sm font-medium tabular-nums text-gray-900 dark:text-gray-100">{{ fmtTokens(item.total_tokens) }}</td>
+            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-dark-400">{{ item.requests.toLocaleString() }}</td>
+            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-dark-400">{{ fmtTokens(item.input_tokens) }}</td>
+            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-dark-400">{{ fmtTokens(item.output_tokens) }}</td>
+            <td class="whitespace-nowrap px-4 py-3 text-right text-sm tabular-nums text-gray-500 dark:text-dark-400">{{ fmtTokens(item.cache_tokens) }}</td>
+            <td class="whitespace-nowrap px-4 py-3 text-right text-sm font-medium tabular-nums text-gray-900 dark:text-dark-100">{{ fmtTokens(item.total_tokens) }}</td>
             <td class="whitespace-nowrap px-4 py-3 text-right text-sm font-medium tabular-nums text-green-600 dark:text-green-400">${{ fmtCost(item.actual_cost) }}</td>
           </tr>
         </tbody>
@@ -119,7 +119,7 @@ const limitOptions = [
 // 前三名金/银/铜徽章
 const RANK_BADGE_CLASSES = [
   'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-400',
-  'bg-gray-200 text-gray-600 dark:bg-gray-500/20 dark:text-gray-300',
+  'bg-gray-200 text-gray-600 dark:bg-dark-500/20 dark:text-dark-300',
   'bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-400',
 ]
 

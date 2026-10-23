@@ -50,14 +50,14 @@
         >
           <template #cell-code="{ value }">
             <div class="flex items-center space-x-2">
-              <code class="font-mono text-sm text-gray-900 dark:text-gray-100">{{ value }}</code>
+              <code class="font-mono text-sm text-gray-900 dark:text-dark-100">{{ value }}</code>
               <button
                 @click="copyToClipboard(value)"
                 :class="[
                   'flex items-center transition-colors',
                   copiedCode === value
                     ? 'text-green-500'
-                    : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                    : 'text-gray-400 hover:text-gray-600 dark:hover:text-dark-300'
                 ]"
                 :title="copiedCode === value ? t('admin.promo.copied') : t('keys.copyToClipboard')"
               >
@@ -81,7 +81,7 @@
           </template>
 
           <template #cell-usage="{ row }">
-            <span class="text-sm text-gray-600 dark:text-gray-300">
+            <span class="text-sm text-gray-600 dark:text-dark-300">
               {{ row.used_count }} / {{ row.max_uses === 0 ? '∞' : row.max_uses }}
             </span>
           </template>
@@ -127,7 +127,7 @@
               </button>
               <button
                 @click="handleEdit(row)"
-                class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-dark-600 dark:hover:text-gray-300"
+                class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-dark-600 dark:hover:text-dark-300"
                 :title="t('common.edit')"
               >
                 <Icon name="edit" size="sm" />
@@ -323,7 +323,7 @@
       <div v-if="usagesLoading" class="flex items-center justify-center py-8">
         <Icon name="refresh" size="lg" class="animate-spin text-gray-400" />
       </div>
-      <div v-else-if="usages.length === 0" class="py-8 text-center text-gray-500 dark:text-gray-400">
+      <div v-else-if="usages.length === 0" class="py-8 text-center text-gray-500 dark:text-dark-400">
         {{ t('admin.promo.noUsages') }}
       </div>
       <div v-else class="space-y-3">
@@ -340,7 +340,7 @@
               <p class="text-sm font-medium text-gray-900 dark:text-white">
                 {{ usage.user?.email || t('admin.promo.userPrefix', { id: usage.user_id }) }}
               </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">
+              <p class="text-xs text-gray-500 dark:text-dark-400">
                 {{ formatDateTime(usage.used_at) }}
               </p>
             </div>

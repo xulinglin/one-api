@@ -42,7 +42,7 @@
           class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 dark:border-dark-600 dark:bg-dark-800"
         >
           <!-- Drag Handle -->
-          <div class="cursor-move text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" :title="t('admin.users.attributes.dragToReorder')">
+          <div class="cursor-move text-gray-400 hover:text-gray-600 dark:hover:text-dark-300" :title="t('admin.users.attributes.dragToReorder')">
             <Icon name="menu" size="md" />
           </div>
 
@@ -198,11 +198,11 @@
       <div class="flex items-center gap-6">
         <label class="flex items-center gap-2">
           <input v-model="form.required" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600" />
-          <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.users.attributes.required') }}</span>
+          <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.users.attributes.required') }}</span>
         </label>
         <label class="flex items-center gap-2">
           <input v-model="form.enabled" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600" />
-          <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.users.attributes.enabled') }}</span>
+          <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.users.attributes.enabled') }}</span>
         </label>
       </div>
     </form>

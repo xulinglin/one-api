@@ -14,7 +14,7 @@
           {{ t('channelMonitorV2.chart.description') }}
         </p>
       </div>
-      <div class="flex w-full min-w-0 flex-wrap items-center justify-end gap-2 text-xs text-gray-500 dark:text-gray-400 sm:w-auto">
+      <div class="flex w-full min-w-0 flex-wrap items-center justify-end gap-2 text-xs text-gray-500 dark:text-dark-400 sm:w-auto">
         <span class="flex shrink-0 items-center gap-1">
           <span class="h-2 w-2 rounded-full bg-red-500"></span>{{ t('channelMonitorV2.chart.errorLegend') }}
         </span>
@@ -27,7 +27,7 @@
         <span class="badge badge-gray shrink-0">{{ bucketLabel }}</span>
         <button
           type="button"
-          class="inline-flex shrink-0 items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-800"
+          class="inline-flex shrink-0 items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-dark-300 dark:hover:bg-dark-800"
           :disabled="!zoomed"
           @click="resetChartZoom"
         >
@@ -207,7 +207,7 @@ function smoothTrend(values: Array<number | null>): Array<number | null> {
 const chartOptions = computed(() => {
   const text = isDark.value ? '#9ca3af' : '#6b7280'
   const grid = isDark.value ? '#374151' : '#f3f4f6'
-  const tooltipBg = isDark.value ? '#1f2937' : '#ffffff'
+  const tooltipBg = isDark.value ? '#1c1c1c' : '#ffffff'
   const tooltipTitle = isDark.value ? '#f3f4f6' : '#111827'
   const tooltipBody = isDark.value ? '#d1d5db' : '#4b5563'
   return {

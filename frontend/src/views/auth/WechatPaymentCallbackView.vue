@@ -5,7 +5,7 @@
         <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
           {{ callbackTitleText }}
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-sm text-gray-600 dark:text-dark-400">
           {{ errorMessage || callbackProcessingText }}
         </p>
 
@@ -22,7 +22,7 @@
           v-else
           class="mt-6 rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-dark-700 dark:bg-dark-800/80"
         >
-          <p class="text-sm text-gray-700 dark:text-gray-300">
+          <p class="text-sm text-gray-700 dark:text-dark-300">
             {{ errorMessage }}
           </p>
           <button

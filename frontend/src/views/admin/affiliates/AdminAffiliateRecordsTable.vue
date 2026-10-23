@@ -65,7 +65,7 @@
             />
           </template>
           <template #cell-aff_code="{ row }">
-            <span class="font-mono text-sm text-gray-700 dark:text-gray-300">{{ row.aff_code || '-' }}</span>
+            <span class="font-mono text-sm text-gray-700 dark:text-dark-300">{{ row.aff_code || '-' }}</span>
           </template>
           <template #cell-order="{ row }">
             <span v-if="row.order_id == null" class="text-sm text-gray-400 dark:text-dark-500">-</span>
@@ -116,7 +116,7 @@
             <NullableAmountText :value="row.history_quota_after" />
           </template>
           <template #cell-created_at="{ row }">
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{ formatDateTime(row.created_at) }}</span>
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{ formatDateTime(row.created_at) }}</span>
           </template>
         </DataTable>
       </template>
@@ -386,7 +386,7 @@ const UserCell = defineComponent({
       h(cellProps.clickable ? 'button' : 'div', {
         class: cellProps.clickable
           ? 'max-w-56 truncate text-left text-sm font-medium text-primary-600 hover:text-primary-700 hover:underline dark:text-primary-400 dark:hover:text-primary-300'
-          : 'max-w-56 truncate text-sm text-gray-700 dark:text-gray-300',
+          : 'max-w-56 truncate text-sm text-gray-700 dark:text-dark-300',
         type: cellProps.clickable ? 'button' : undefined,
         onClick: cellProps.clickable ? () => emit('open', cellProps.id) : undefined,
       }, cellProps.email || '-'),

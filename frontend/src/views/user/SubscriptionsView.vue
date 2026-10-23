@@ -49,7 +49,7 @@
                 <p v-if="subscription.group?.description" class="mt-0.5 text-xs text-gray-500 dark:text-dark-400">
                   {{ subscription.group.description }}
                 </p>
-                <div class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-gray-400 dark:text-gray-500">
+                <div class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-gray-400 dark:text-dark-500">
                   <span>{{ t('payment.planCard.rate') }}: ×{{ subscription.group?.rate_multiplier ?? 1 }}</span>
                   <span v-if="subscriptionHasPeakRate(subscription)" class="text-amber-700 dark:text-amber-300">
                     {{ t('payment.planCard.peakRate') }}: {{ subscriptionPeakRateLabel(subscription) }}
@@ -64,7 +64,7 @@
                   subscription.status === 'active'
                     ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300'
                     : subscription.status === 'expired'
-                      ? 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-gray-400'
+                      ? 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-dark-400'
                       : 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300'
                 ]"
               >
@@ -95,7 +95,7 @@
               <span class="text-gray-500 dark:text-dark-400">{{
                 t('userSubscriptions.expires')
               }}</span>
-              <span class="text-gray-700 dark:text-gray-300">{{
+              <span class="text-gray-700 dark:text-dark-300">{{
                 t('userSubscriptions.noExpiration')
               }}</span>
             </div>
@@ -103,7 +103,7 @@
             <!-- Daily Usage -->
             <div v-if="subscription.group?.daily_limit_usd" class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
                   {{ t('userSubscriptions.daily') }}
                 </span>
                 <span class="text-sm text-gray-500 dark:text-dark-400">
@@ -140,7 +140,7 @@
             <!-- Weekly Usage -->
             <div v-if="subscription.group?.weekly_limit_usd" class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
                   {{ t('userSubscriptions.weekly') }}
                 </span>
                 <span class="text-sm text-gray-500 dark:text-dark-400">
@@ -181,7 +181,7 @@
             <!-- Monthly Usage -->
             <div v-if="subscription.group?.monthly_limit_usd" class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
                   {{ t('userSubscriptions.monthly') }}
                 </span>
                 <span class="text-sm text-gray-500 dark:text-dark-400">
@@ -351,7 +351,7 @@ function getExpirationClass(expiresAt: string): string {
   if (diff <= 0) return 'text-red-600 dark:text-red-400 font-medium'
   if (days <= 3) return 'text-red-600 dark:text-red-400'
   if (days <= 7) return 'text-orange-600 dark:text-orange-400'
-  return 'text-gray-700 dark:text-gray-300'
+  return 'text-gray-700 dark:text-dark-300'
 }
 
 function formatDurationParts(parts: RemainingDurationParts): string {

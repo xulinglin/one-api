@@ -5,7 +5,7 @@
         <h2 class="text-lg font-medium text-gray-900 dark:text-white">
           {{ t('profile.passkey.title') }}
         </h2>
-        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        <p class="mt-1 text-sm text-gray-500 dark:text-dark-400">
           {{ t('profile.passkey.description') }}
         </p>
       </div>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="px-6 py-6">
-      <div v-if="!enabled" class="mb-5 text-sm text-gray-500 dark:text-gray-400">
+      <div v-if="!enabled" class="mb-5 text-sm text-gray-500 dark:text-dark-400">
         {{ t('profile.passkey.featureDisabled') }}
       </div>
       <div v-if="enabled && !supported" class="mb-5 text-sm text-amber-600 dark:text-amber-400">
@@ -75,7 +75,7 @@
 
         <div
           v-else-if="credentials.length === 0"
-          class="rounded-lg border border-dashed border-gray-200 px-4 py-8 text-center text-sm text-gray-500 dark:border-dark-700 dark:text-gray-400"
+          class="rounded-lg border border-dashed border-gray-200 px-4 py-8 text-center text-sm text-gray-500 dark:border-dark-700 dark:text-dark-400"
         >
           {{ t('profile.passkey.empty') }}
         </div>
@@ -99,7 +99,7 @@
                   {{ t('profile.passkey.synced') }}
                 </span>
               </div>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('profile.passkey.createdAt', { date: formatDate(credential.created_at) }) }}
                 <template v-if="credential.last_used_at">
                   · {{ t('profile.passkey.lastUsed', { date: formatDate(credential.last_used_at) }) }}
@@ -139,7 +139,7 @@
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             {{ t('profile.passkey.deleteTitle') }}
           </h3>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
             {{ t('profile.passkey.deleteConfirm', { name: deleteTarget.name }) }}
           </p>
           <form class="mt-4 space-y-4" @submit.prevent="confirmDelete">

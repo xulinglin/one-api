@@ -13,7 +13,7 @@
               </span>
               {{ t('channelMonitorV2.title') }}
             </h1>
-            <div class="page-description mt-1.5 flex flex-wrap items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+            <div class="page-description mt-1.5 flex flex-wrap items-center gap-2 text-xs text-gray-500 dark:text-dark-400">
               <span class="relative flex h-2 w-2 shrink-0">
                 <span
                   class="relative inline-flex h-2 w-2 rounded-full"
@@ -44,7 +44,7 @@
             </div>
           </div>
           <button
-            class="btn btn-secondary btn-icon flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-500 hover:bg-gray-200 dark:bg-dark-700 dark:text-gray-400 dark:hover:bg-dark-600"
+            class="btn btn-secondary btn-icon flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-500 hover:bg-gray-200 dark:bg-dark-700 dark:text-dark-400 dark:hover:bg-dark-600"
             type="button"
             :title="t('common.refresh')"
             :disabled="loading"
@@ -345,14 +345,14 @@
                 class="grid w-full grid-cols-[minmax(100px,200px)_1fr_auto_auto] items-center gap-3 text-left"
                 @click="toggleError(row.category)"
               >
-                <span class="flex min-w-0 items-center gap-1.5 truncate text-gray-700 dark:text-gray-200">
+                <span class="flex min-w-0 items-center gap-1.5 truncate text-gray-700 dark:text-dark-200">
                   <span class="truncate">{{ errorLabel(row.category) }}</span>
                   <span v-if="row.ignored" class="badge badge-gray shrink-0 !px-1.5 !py-0 text-[10px]">{{ t('channelMonitorV2.ignored') }}</span>
                 </span>
                 <span class="h-2 overflow-hidden rounded-full bg-gray-100 dark:bg-dark-700">
                   <i
                     class="block h-full rounded-full"
-                    :class="row.ignored ? 'bg-gray-400 dark:bg-gray-500' : 'bg-gradient-to-r from-red-400 to-red-500'"
+                    :class="row.ignored ? 'bg-gray-400 dark:bg-dark-500' : 'bg-gradient-to-r from-red-400 to-red-500'"
                     :style="{ width: `${Math.max(2, row.rate * 100)}%` }"
                   ></i>
                 </span>

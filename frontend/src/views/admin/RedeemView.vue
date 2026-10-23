@@ -89,14 +89,14 @@
 
           <template #cell-code="{ value }">
             <div class="flex items-center space-x-2">
-              <code class="font-mono text-sm text-gray-900 dark:text-gray-100">{{ value }}</code>
+              <code class="font-mono text-sm text-gray-900 dark:text-dark-100">{{ value }}</code>
               <button
                 @click="copyToClipboard(value)"
                 :class="[
                   'flex items-center transition-colors',
                   copiedCode === value
                     ? 'text-green-500'
-                    : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                    : 'text-gray-400 hover:text-gray-600 dark:hover:text-dark-300'
                 ]"
                 :title="copiedCode === value ? t('admin.redeem.copied') : t('keys.copyToClipboard')"
               >
@@ -133,7 +133,7 @@
               <template v-if="row.type === 'balance'">${{ value.toFixed(2) }}</template>
               <template v-else-if="row.type === 'subscription'">
                 {{ row.validity_days || 30 }} {{ t('admin.redeem.days') }}
-                <span v-if="row.group" class="ml-1 text-xs text-gray-500 dark:text-gray-400"
+                <span v-if="row.group" class="ml-1 text-xs text-gray-500 dark:text-dark-400"
                   >({{ row.group.name }})</span
                 >
               </template>
@@ -368,7 +368,7 @@
                     'rounded-lg border px-3 py-2 text-sm transition-colors',
                     generateForm.expiry_option === option.value
                       ? 'border-primary-500 bg-primary-50 text-primary-700 dark:border-primary-400 dark:bg-primary-900/20 dark:text-primary-300'
-                      : 'border-gray-200 text-gray-700 hover:bg-gray-50 dark:border-dark-600 dark:text-gray-300 dark:hover:bg-dark-700'
+                      : 'border-gray-200 text-gray-700 hover:bg-gray-50 dark:border-dark-600 dark:text-dark-300 dark:hover:bg-dark-700'
                   ]"
                 >
                   {{ option.label }}
@@ -422,13 +422,13 @@
           <h2 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
             {{ t('admin.redeem.batchUpdateTitle') }}
           </h2>
-          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+          <p class="mb-4 text-sm text-gray-500 dark:text-dark-400">
             {{ t('admin.redeem.selectedCount', { count: selectedCount }) }}
           </p>
 
           <form data-test="batch-update-form" class="space-y-4" @submit.prevent="handleBatchUpdate">
             <div class="space-y-2">
-              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300">
                 <input
                   data-test="batch-field-status"
                   v-model="batchUpdateForm.update_status"
@@ -446,7 +446,7 @@
             </div>
 
             <div class="space-y-2">
-              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300">
                 <input
                   v-model="batchUpdateForm.update_expires_at"
                   type="checkbox"
@@ -469,7 +469,7 @@
             </div>
 
             <div class="space-y-2">
-              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300">
                 <input
                   data-test="batch-field-notes"
                   v-model="batchUpdateForm.update_notes"
@@ -489,7 +489,7 @@
             </div>
 
             <div class="space-y-2">
-              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-dark-300">
                 <input
                   v-model="batchUpdateForm.update_group_id"
                   type="checkbox"
@@ -554,14 +554,14 @@
                 <h2 class="text-base font-semibold text-gray-900 dark:text-white">
                   {{ t('admin.redeem.generatedSuccessfully') }}
                 </h2>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+                <p class="text-sm text-gray-500 dark:text-dark-400">
                   {{ t('admin.redeem.codesCreated', { count: generatedCodes.length }) }}
                 </p>
               </div>
             </div>
             <button
               @click="closeResultDialog"
-              class="rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-gray-300"
+              class="rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-dark-700 dark:hover:text-dark-300"
             >
               <Icon name="x" size="md" :stroke-width="2" />
             </button>
@@ -573,7 +573,7 @@
                 readonly
                 :value="generatedCodesText"
                 :style="{ height: textareaHeight }"
-                class="w-full resize-none rounded-lg border border-gray-200 bg-gray-50 p-3 font-mono text-sm text-gray-800 focus:outline-none dark:border-dark-600 dark:bg-dark-700 dark:text-gray-200"
+                class="w-full resize-none rounded-lg border border-gray-200 bg-gray-50 p-3 font-mono text-sm text-gray-800 focus:outline-none dark:border-dark-600 dark:bg-dark-700 dark:text-dark-200"
               ></textarea>
             </div>
           </div>

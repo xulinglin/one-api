@@ -50,7 +50,7 @@
 
           <div class="mt-5 grid gap-4 md:grid-cols-2">
             <div class="space-y-2">
-              <p class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ t('affiliate.yourCode') }}</p>
+              <p class="text-sm font-medium text-gray-700 dark:text-dark-300">{{ t('affiliate.yourCode') }}</p>
               <div class="flex flex-col items-stretch gap-2 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 dark:border-dark-700 dark:bg-dark-900 sm:flex-row sm:items-center">
                 <code class="min-w-0 break-all text-sm font-semibold text-gray-900 dark:text-white sm:flex-1 sm:truncate">{{ detail.aff_code }}</code>
                 <button class="btn btn-secondary btn-sm w-full sm:w-auto sm:shrink-0" @click="copyCode">
@@ -61,9 +61,9 @@
             </div>
 
             <div class="space-y-2">
-              <p class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ t('affiliate.inviteLink') }}</p>
+              <p class="text-sm font-medium text-gray-700 dark:text-dark-300">{{ t('affiliate.inviteLink') }}</p>
               <div class="flex flex-col items-stretch gap-2 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 dark:border-dark-700 dark:bg-dark-900 sm:flex-row sm:items-center">
-                <code class="min-w-0 break-all text-sm text-gray-700 dark:text-gray-300 sm:flex-1 sm:truncate">{{ inviteLink }}</code>
+                <code class="min-w-0 break-all text-sm text-gray-700 dark:text-dark-300 sm:flex-1 sm:truncate">{{ inviteLink }}</code>
                 <button class="btn btn-secondary btn-sm w-full sm:w-auto sm:shrink-0" @click="copyInviteLink">
                   <Icon name="copy" size="sm" />
                   <span>{{ t('affiliate.copyLink') }}</span>
@@ -126,9 +126,9 @@
                   class="border-b border-gray-100 last:border-b-0 dark:border-dark-800"
                 >
                   <td class="px-3 py-3 text-gray-900 dark:text-white">{{ item.email || '-' }}</td>
-                  <td class="px-3 py-3 text-gray-700 dark:text-gray-300">{{ item.username || '-' }}</td>
+                  <td class="px-3 py-3 text-gray-700 dark:text-dark-300">{{ item.username || '-' }}</td>
                   <td class="px-3 py-3 text-right font-medium text-emerald-600 dark:text-emerald-400">{{ formatCurrency(item.total_rebate) }}</td>
-                  <td class="px-3 py-3 text-gray-700 dark:text-gray-300">{{ formatDateTime(item.created_at) || '-' }}</td>
+                  <td class="px-3 py-3 text-gray-700 dark:text-dark-300">{{ formatDateTime(item.created_at) || '-' }}</td>
                 </tr>
               </tbody>
             </table>

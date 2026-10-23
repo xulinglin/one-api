@@ -41,7 +41,7 @@ const BADGE: Record<Platform, string> = {
   cline: 'bg-violet-500/10 text-violet-600 border-violet-500/30 dark:text-violet-400',
   composite: 'bg-cyan-500/10 text-cyan-700 border-cyan-500/30 dark:text-cyan-300',
 }
-const BADGE_DEFAULT = 'bg-slate-500/10 text-slate-600 border-slate-500/30 dark:text-slate-400'
+const BADGE_DEFAULT = 'bg-slate-500/10 text-slate-600 border-slate-500/30 dark:text-dark-400'
 
 // ── Light badge (softer bg, no border) ──────────────────────────────
 const BADGE_LIGHT: Record<Platform, string> = {

@@ -48,7 +48,7 @@
       </template>
 
       <template #cell-user_id="{ value }">
-        <span class="text-sm text-gray-600 dark:text-gray-400">#{{ value }}</span>
+        <span class="text-sm text-gray-600 dark:text-dark-400">#{{ value }}</span>
       </template>
 
       <template #cell-pay_amount="{ value, row }">
@@ -67,7 +67,7 @@
       </template>
 
       <template #cell-payment_type="{ value }">
-        <span class="text-sm text-gray-700 dark:text-gray-300">
+        <span class="text-sm text-gray-700 dark:text-dark-300">
           {{ t('payment.methods.' + value, value) }}
         </span>
       </template>
@@ -79,20 +79,20 @@
       </template>
 
       <template #cell-order_type="{ value }">
-        <span class="text-sm text-gray-700 dark:text-gray-300">
+        <span class="text-sm text-gray-700 dark:text-dark-300">
           {{ t('payment.admin.' + value + 'Order', value) }}
         </span>
       </template>
 
       <template #cell-created_at="{ value }">
-        <span class="text-xs text-gray-500 dark:text-gray-400">{{ formatDateTime(value) }}</span>
+        <span class="text-xs text-gray-500 dark:text-dark-400">{{ formatDateTime(value) }}</span>
       </template>
 
       <template #cell-actions="{ row }">
         <div class="flex items-center gap-2">
           <button
             @click="emit('detail', row)"
-            class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700 dark:hover:bg-gray-800/50 dark:hover:text-gray-300"
+            class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700 dark:hover:bg-dark-800/50 dark:hover:text-dark-300"
           >
             <Icon name="eye" size="sm" />
             <span class="text-xs">{{ t('common.view') }}</span>

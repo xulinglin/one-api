@@ -9,7 +9,7 @@
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
             {{ t('profile.totp.setupTitle') }}
           </h3>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
             {{ stepDescription }}
           </p>
         </div>
@@ -88,7 +88,7 @@
             </div>
 
             <div class="text-center">
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+              <p class="text-sm text-gray-500 dark:text-dark-400 mb-2">
                 {{ t('profile.totp.manualEntry') }}
               </p>
               <div class="flex items-center justify-center gap-2">

@@ -29,7 +29,7 @@
             <span class="block font-semibold text-gray-900 dark:text-white">{{
               account.name
             }}</span>
-            <span class="text-sm text-gray-500 dark:text-gray-400">
+            <span class="text-sm text-gray-500 dark:text-dark-400">
               {{
                 isOpenAI
                   ? t('admin.accounts.openaiAccount')
@@ -55,7 +55,7 @@
               value="oauth"
               class="mr-2 text-primary-600 focus:ring-primary-500"
             />
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{
               t('admin.accounts.types.oauth')
             }}</span>
           </label>
@@ -66,7 +66,7 @@
               value="setup-token"
               class="mr-2 text-primary-600 focus:ring-primary-500"
             />
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{
               t('admin.accounts.setupTokenLongLived')
             }}</span>
           </label>
@@ -75,7 +75,7 @@
 
       <!-- Gemini OAuth Type Display (read-only) -->
       <div v-if="isGemini" class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-dark-600 dark:bg-dark-700">
-        <div class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+        <div class="mb-2 text-sm font-medium text-gray-700 dark:text-dark-300">
           {{ t('admin.accounts.oauth.gemini.oauthTypeLabel') }}
         </div>
         <div class="flex items-center gap-3">
@@ -103,7 +103,7 @@
                     : t('admin.accounts.gemini.oauthType.customTitle')
               }}
             </span>
-            <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span class="text-xs text-gray-500 dark:text-dark-400">
               {{
                 geminiOAuthType === 'google_one'
                   ? t('admin.accounts.gemini.oauthType.googleOneDesc')

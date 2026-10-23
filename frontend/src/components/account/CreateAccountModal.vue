@@ -17,7 +17,7 @@
           >
             1
           </div>
-          <span class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">{{
+          <span class="ml-2 text-sm font-medium text-gray-700 dark:text-dark-300">{{
             t('admin.accounts.oauth.authMethod')
           }}</span>
         </div>
@@ -31,7 +31,7 @@
           >
             2
           </div>
-          <span class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">{{
+          <span class="ml-2 text-sm font-medium text-gray-700 dark:text-dark-300">{{
             oauthStepTitle
           }}</span>
         </div>
@@ -78,7 +78,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'anthropic'
                 ? 'bg-white text-orange-600 shadow-sm dark:bg-dark-600 dark:text-orange-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <Icon name="sparkles" size="sm" />
@@ -91,7 +91,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'openai'
                 ? 'bg-white text-green-600 shadow-sm dark:bg-dark-600 dark:text-green-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <svg
@@ -116,7 +116,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'gemini'
                 ? 'bg-white text-blue-600 shadow-sm dark:bg-dark-600 dark:text-blue-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <svg
@@ -141,7 +141,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'antigravity'
                 ? 'bg-white text-purple-600 shadow-sm dark:bg-dark-600 dark:text-purple-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <Icon name="cloud" size="sm" />
@@ -154,7 +154,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'grok'
                 ? 'bg-white text-zinc-900 shadow-sm dark:bg-dark-600 dark:text-zinc-100'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="grok" size="sm" />
@@ -167,7 +167,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all',
               form.platform === 'typesafe'
                 ? 'bg-white text-sky-700 shadow-sm dark:bg-dark-600 dark:text-sky-300'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="typesafe" size="sm" />
@@ -183,7 +183,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === 'kimi'
                 ? 'bg-white text-pink-600 shadow-sm dark:bg-dark-600 dark:text-pink-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="kimi" size="sm" />
@@ -196,7 +196,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === 'zhipu'
                 ? 'bg-white text-indigo-600 shadow-sm dark:bg-dark-600 dark:text-indigo-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="zhipu" size="sm" />
@@ -209,7 +209,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === 'deepseek'
                 ? 'bg-white text-teal-600 shadow-sm dark:bg-dark-600 dark:text-teal-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="deepseek" size="sm" />
@@ -222,7 +222,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === 'minimax'
                 ? 'bg-white text-rose-600 shadow-sm dark:bg-dark-600 dark:text-rose-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="minimax" size="sm" />
@@ -240,7 +240,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === 'opencode_go'
                 ? 'bg-white text-amber-700 shadow-sm dark:bg-dark-600 dark:text-amber-300'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon platform="opencode_go" size="sm" />
@@ -257,7 +257,7 @@
               'flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all',
               form.platform === spec.id
                 ? 'bg-white text-primary-600 shadow-sm dark:bg-dark-600 dark:text-primary-400'
-                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                : 'text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200'
             ]"
           >
             <PlatformIcon :platform="spec.id" size="sm" />
@@ -285,7 +285,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'oauth-based'
                   ? 'bg-orange-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="sparkles" size="sm" />
@@ -294,7 +294,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{
                 t('admin.accounts.claudeCode')
               }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{
                 t('admin.accounts.oauthSetupToken')
               }}</span>
             </div>
@@ -315,7 +315,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'apikey'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
@@ -324,7 +324,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{
                 t('admin.accounts.claudeConsole')
               }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{
                 t('admin.accounts.apiKey')
               }}</span>
             </div>
@@ -345,7 +345,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'bedrock'
                   ? 'bg-amber-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="cloud" size="sm" />
@@ -354,7 +354,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{
                 t('admin.accounts.bedrockLabel')
               }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{
                 t('admin.accounts.bedrockDesc')
               }}</span>
             </div>
@@ -375,14 +375,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'service_account'
                   ? 'bg-sky-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="cloud" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t('admin.accounts.vertexLabel') }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.vertexDesc') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.vertexDesc') }}</span>
             </div>
           </button>
 
@@ -415,14 +415,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'oauth-based'
                   ? 'bg-green-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">OAuth</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.chatgptOauth') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.chatgptOauth') }}</span>
             </div>
           </button>
 
@@ -441,14 +441,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'apikey'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">API Key</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.responsesApi') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.responsesApi') }}</span>
             </div>
           </button>
 
@@ -474,14 +474,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'oauth-based'
                   ? 'bg-zinc-900 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <PlatformIcon platform="grok" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">OAuth</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.grokOauth') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.grokOauth') }}</span>
             </div>
           </button>
 
@@ -501,14 +501,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'apikey'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">API Key</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.responsesApi') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.responsesApi') }}</span>
             </div>
           </button>
         </div>
@@ -525,20 +525,20 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               openCodeAccountMode === 'zen'
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
               :class="[
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
-                openCodeAccountMode === 'zen' ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                openCodeAccountMode === 'zen' ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="creditCard" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t('admin.accounts.opencodeGo.accountMode.zen') }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.opencodeGo.accountMode.zenDesc') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.opencodeGo.accountMode.zenDesc') }}</span>
             </div>
           </button>
           <button
@@ -548,20 +548,20 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               openCodeAccountMode === 'go'
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
               :class="[
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
-                openCodeAccountMode === 'go' ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                openCodeAccountMode === 'go' ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="bolt" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t('admin.accounts.opencodeGo.accountMode.go') }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.opencodeGo.accountMode.goDesc') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.opencodeGo.accountMode.goDesc') }}</span>
             </div>
           </button>
         </div>
@@ -580,13 +580,13 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               accountMode === mode
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
               :class="[
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
-                accountMode === mode ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                accountMode === mode ? cnAccentIconClass : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="creditCard" size="sm" />
@@ -608,7 +608,7 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               accountMode === 'payg'
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
@@ -616,14 +616,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountMode === 'payg'
                   ? cnAccentIconClass
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="creditCard" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t('admin.accounts.cnProviders.accountMode.payg') }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.cnProviders.accountMode.paygDesc') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.cnProviders.accountMode.paygDesc') }}</span>
             </div>
           </button>
           <!-- Coding Plan (kimi / zhipu only — DeepSeek has no coding plan) -->
@@ -635,7 +635,7 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               accountMode === 'coding'
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
@@ -643,14 +643,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountMode === 'coding'
                   ? cnAccentIconClass
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="bolt" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t('admin.accounts.cnProviders.accountMode.coding') }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.cnProviders.accountMode.codingDesc') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.cnProviders.accountMode.codingDesc') }}</span>
             </div>
           </button>
         </div>
@@ -669,7 +669,7 @@
               'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
               apiProtocol === opt.value
                 ? cnAccentActiveClass
-                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
             ]"
           >
             <div
@@ -677,14 +677,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 apiProtocol === opt.value
                   ? cnAccentIconClass
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon :name="opt.value === 'adaptive' ? 'swap' : opt.value === 'anthropic' ? 'sparkles' : opt.value === 'responses' ? 'terminal' : 'chat'" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ t(`admin.accounts.cnProviders.apiProtocol.${opt.labelKey}`) }}</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t(`admin.accounts.cnProviders.apiProtocol.${opt.labelKey}Desc`) }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t(`admin.accounts.cnProviders.apiProtocol.${opt.labelKey}Desc`) }}</span>
             </div>
           </button>
         </div>
@@ -751,7 +751,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'oauth-based'
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
@@ -760,7 +760,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">
                 {{ t('admin.accounts.gemini.accountType.oauthTitle') }}
               </span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.gemini.accountType.oauthDesc') }}
               </span>
             </div>
@@ -781,7 +781,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'apikey'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <svg
@@ -802,7 +802,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">
                 {{ t('admin.accounts.gemini.accountType.apiKeyTitle') }}
               </span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.gemini.accountType.apiKeyDesc') }}
               </span>
             </div>
@@ -823,7 +823,7 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 accountCategory === 'service_account'
                   ? 'bg-sky-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="cloud" size="sm" />
@@ -832,7 +832,7 @@
               <span class="block text-sm font-medium text-gray-900 dark:text-white">
                 {{ t('admin.accounts.vertexLabel') }}
               </span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.vertexGeminiDesc') }}
               </span>
             </div>
@@ -884,7 +884,7 @@
                   'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                   geminiOAuthType === 'google_one'
                     ? 'bg-purple-500 text-white'
-                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
                 ]"
               >
                 <Icon name="user" size="sm" />
@@ -893,7 +893,7 @@
                 <span class="block text-sm font-medium text-gray-900 dark:text-white">
                   Google One
                 </span>
-                <span class="text-xs text-gray-500 dark:text-gray-400">
+                <span class="text-xs text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.oauthType.googleOneDesc') }}
                 </span>
                 <div class="mt-2 flex flex-wrap gap-1">
@@ -927,7 +927,7 @@
                   'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                   geminiOAuthType === 'code_assist'
                     ? 'bg-blue-500 text-white'
-                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
                 ]"
               >
                 <Icon name="cloud" size="sm" />
@@ -936,10 +936,10 @@
                 <span class="block text-sm font-medium text-gray-900 dark:text-white">
                   GCP Code Assist
                 </span>
-                <span class="text-xs text-gray-500 dark:text-gray-400">
+                <span class="text-xs text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.oauthType.codeAssistDesc') }}
                 </span>
-                <div class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                <div class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.oauthType.codeAssistRequirement') }}
                   <a
                     :href="geminiHelpLinks.gcpProject"
@@ -971,7 +971,7 @@
             <button
               type="button"
               @click="showAdvancedOAuth = !showAdvancedOAuth"
-              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 dark:text-dark-400 dark:hover:text-dark-200"
             >
               <svg
                 :class="['h-4 w-4 transition-transform', showAdvancedOAuth ? 'rotate-90' : '']"
@@ -1011,7 +1011,7 @@
                   'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                   geminiOAuthType === 'ai_studio'
                     ? 'bg-amber-500 text-white'
-                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                    : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
                 ]"
               >
                 <svg
@@ -1032,10 +1032,10 @@
                 <span class="block text-sm font-medium text-gray-900 dark:text-white">
                   {{ t('admin.accounts.gemini.oauthType.customTitle') }}
                 </span>
-                <span class="text-xs text-gray-500 dark:text-gray-400">
+                <span class="text-xs text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.oauthType.customDesc') }}
                 </span>
-                <div class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                <div class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.oauthType.customRequirement') }}
                 </div>
                 <div class="mt-2 flex flex-wrap gap-1">
@@ -1123,14 +1123,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 antigravityAccountType === 'oauth'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="key" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">OAuth</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.antigravityOauth') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.antigravityOauth') }}</span>
             </div>
           </button>
 
@@ -1149,14 +1149,14 @@
                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg',
                 antigravityAccountType === 'upstream'
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-gray-400'
+                  : 'bg-gray-100 text-gray-500 dark:bg-dark-600 dark:text-dark-400'
               ]"
             >
               <Icon name="cloud" size="sm" />
             </div>
             <div>
               <span class="block text-sm font-medium text-gray-900 dark:text-white">API Key</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">{{ t('admin.accounts.types.antigravityApikey') }}</span>
+              <span class="text-xs text-gray-500 dark:text-dark-400">{{ t('admin.accounts.types.antigravityApikey') }}</span>
             </div>
           </button>
         </div>
@@ -1202,7 +1202,7 @@
         <div class="flex items-center justify-between gap-4 border-t border-gray-200 pt-4 dark:border-dark-600">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.upstreamBilling.autoProbe') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.upstreamBilling.autoProbeHint') }}
             </p>
           </div>
@@ -1226,7 +1226,7 @@
                 value="service_account"
                 class="mr-2 text-primary-600 focus:ring-primary-500"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.vertexAuthModeServiceAccount') }}</span>
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.vertexAuthModeServiceAccount') }}</span>
             </label>
             <label class="flex cursor-pointer items-center">
               <input
@@ -1236,7 +1236,7 @@
                 data-testid="vertex-auth-mode-apikey"
                 class="mr-2 text-primary-600 focus:ring-primary-500"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.vertexAuthModeApiKey') }}</span>
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.vertexAuthModeApiKey') }}</span>
             </label>
           </div>
         </div>
@@ -1319,7 +1319,7 @@
                     <Icon name="upload" size="sm" />
                     <span>{{ vertexClientEmail ? t('admin.accounts.vertexSaJsonLoaded') : t('admin.accounts.vertexSaJsonDrop') }}</span>
                   </div>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                  <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                     {{ vertexClientEmail ? t('admin.accounts.vertexSaJsonKeyHidden') : t('admin.accounts.vertexSaJsonDropHint') }}
                   </p>
                 </div>
@@ -1450,7 +1450,7 @@
           <button
             type="button"
             @click="addAntigravityModelMapping"
-            class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-gray-400 dark:hover:border-dark-400 dark:hover:text-gray-300"
+            class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-dark-400 dark:hover:border-dark-400 dark:hover:text-dark-300"
           >
             <svg class="mr-1 inline h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -1483,7 +1483,7 @@
               value="oauth"
               class="mr-2 text-primary-600 focus:ring-primary-500"
             />
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.types.oauth') }}</span>
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.types.oauth') }}</span>
           </label>
           <label class="flex cursor-pointer items-center">
             <input
@@ -1492,7 +1492,7 @@
               value="setup-token"
               class="mr-2 text-primary-600 focus:ring-primary-500"
             />
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{
               t('admin.accounts.setupTokenLongLived')
             }}</span>
           </label>
@@ -1529,7 +1529,7 @@
           <label class="input-label">{{ t('admin.accounts.cnProviders.apiProtocol.endpoints') }}</label>
           <div class="mt-2 space-y-3">
             <div v-for="item in cnAdaptiveProtocolOptions" :key="item.value">
-              <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">
+              <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-dark-400">
                 {{ t(`admin.accounts.cnProviders.apiProtocol.${item.labelKey}`) }}
               </label>
               <input
@@ -1568,7 +1568,7 @@
         >
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.upstreamBilling.autoProbe') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.upstreamBilling.autoProbeHint') }}
             </p>
           </div>
@@ -1612,7 +1612,7 @@
                   'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                   modelRestrictionMode === 'whitelist'
                     ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
                 ]"
               >
                 <svg
@@ -1637,7 +1637,7 @@
                   'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                   modelRestrictionMode === 'mapping'
                     ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
                 ]"
               >
                 <svg
@@ -1666,7 +1666,7 @@
                 :sync-credentials="syncPreviewCredentials"
                 @upstream-synced="upstreamModelsPreviewed = true"
               />
-              <p class="text-xs text-gray-500 dark:text-gray-400">
+              <p class="text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.selectedModels', { count: allowedModels.length }) }}
                 <span v-if="allowedModels.length === 0">{{
                   t('admin.accounts.supportsAllModels')
@@ -1747,7 +1747,7 @@
             <button
               type="button"
               @click="addModelMapping"
-              class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-gray-400 dark:hover:border-dark-400 dark:hover:text-gray-300"
+              class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-dark-400 dark:hover:border-dark-400 dark:hover:text-dark-300"
             >
               <svg
                 class="mr-1 inline h-4 w-4"
@@ -1786,7 +1786,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.poolMode') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.poolModeHint') }}
               </p>
             </div>
@@ -1822,7 +1822,7 @@
               step="1"
               class="input"
             />
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{
                 t('admin.accounts.poolModeRetryCountHint', {
                   default: DEFAULT_POOL_MODE_RETRY_COUNT,
@@ -1839,7 +1839,7 @@
               class="input"
               :placeholder="DEFAULT_POOL_MODE_RETRY_STATUS_CODES.join(', ')"
             />
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.poolModeRetryStatusCodesHint', { default: DEFAULT_POOL_MODE_RETRY_STATUS_CODES.join(', ') }) }}
             </p>
           </div>
@@ -1854,7 +1854,7 @@
           <div class="flex items-center justify-between gap-4">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.explicitCacheUpstream') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.explicitCacheUpstreamHint') }}
               </p>
             </div>
@@ -1881,7 +1881,7 @@
               class="input"
               placeholder="86400"
             />
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.explicitCacheUpstreamMaxTTLHint') }}
             </p>
           </div>
@@ -1892,7 +1892,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.customErrorCodes') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.customErrorCodesHint') }}
               </p>
             </div>
@@ -1932,7 +1932,7 @@
                   'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
                   selectedErrorCodes.includes(code.value)
                     ? 'bg-red-100 text-red-700 ring-1 ring-red-500 dark:bg-red-900/30 dark:text-red-400'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
                 ]"
               >
                 {{ code.value }} {{ code.label }}
@@ -1993,7 +1993,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.headerOverride.title') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.headerOverride.hint') }}
               </p>
             </div>
@@ -2044,7 +2044,7 @@
                 value="sigv4"
                 class="mr-2 text-primary-600 focus:ring-primary-500"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.bedrockAuthModeSigv4') }}</span>
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.bedrockAuthModeSigv4') }}</span>
             </label>
             <label class="flex cursor-pointer items-center">
               <input
@@ -2053,7 +2053,7 @@
                 value="apikey"
                 class="mr-2 text-primary-600 focus:ring-primary-500"
               />
-              <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.bedrockAuthModeApikey') }}</span>
+              <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.bedrockAuthModeApikey') }}</span>
             </label>
           </div>
         </div>
@@ -2150,7 +2150,7 @@
               type="checkbox"
               class="rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-500"
             />
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{ t('admin.accounts.bedrockForceGlobal') }}</span>
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{ t('admin.accounts.bedrockForceGlobal') }}</span>
           </label>
           <p class="input-hint mt-1">{{ t('admin.accounts.bedrockForceGlobalHint') }}</p>
         </div>
@@ -2168,7 +2168,7 @@
                 'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                 modelRestrictionMode === 'whitelist'
                   ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
               ]"
             >
               {{ t('admin.accounts.modelWhitelist') }}
@@ -2180,7 +2180,7 @@
                 'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                 modelRestrictionMode === 'mapping'
                   ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
               ]"
             >
               {{ t('admin.accounts.modelMapping') }}
@@ -2196,7 +2196,7 @@
               :sync-credentials="syncPreviewCredentials"
               @upstream-synced="upstreamModelsPreviewed = true"
             />
-            <p class="text-xs text-gray-500 dark:text-gray-400">
+            <p class="text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.selectedModels', { count: allowedModels.length }) }}
               <span v-if="allowedModels.length === 0">{{ t('admin.accounts.supportsAllModels') }}</span>
             </p>
@@ -2235,7 +2235,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.poolMode') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.poolModeHint') }}
               </p>
             </div>
@@ -2271,7 +2271,7 @@
               step="1"
               class="input"
             />
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{
                 t('admin.accounts.poolModeRetryCountHint', {
                   default: DEFAULT_POOL_MODE_RETRY_COUNT,
@@ -2288,7 +2288,7 @@
               class="input"
               :placeholder="DEFAULT_POOL_MODE_RETRY_STATUS_CODES.join(', ')"
             />
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.poolModeRetryStatusCodesHint', { default: DEFAULT_POOL_MODE_RETRY_STATUS_CODES.join(', ') }) }}
             </p>
           </div>
@@ -2302,7 +2302,7 @@
       >
         <div class="mb-3">
           <h3 class="input-label mb-0 text-base font-semibold">{{ t('admin.accounts.quotaControl.title') }}</h3>
-          <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
             {{ t('admin.accounts.quotaControl.hint') }}
           </p>
         </div>
@@ -2354,7 +2354,7 @@
       >
         <div class="mb-3">
           <h3 class="input-label mb-0 text-base font-semibold">{{ t('admin.accounts.quotaControl.title') }}</h3>
-          <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
             {{ t('admin.accounts.quotaLimitHint') }}
           </p>
         </div>
@@ -2407,7 +2407,7 @@
         <div class="mb-3 flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.grokCustomBaseUrl.title') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.grokCustomBaseUrl.hint') }}
             </p>
           </div>
@@ -2448,7 +2448,7 @@
         <div class="mb-3 flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.headerOverride.title') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.headerOverride.hint') }}
             </p>
           </div>
@@ -2510,7 +2510,7 @@
                 'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                 modelRestrictionMode === 'whitelist'
                   ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
               ]"
             >
               {{ t('admin.accounts.modelWhitelist') }}
@@ -2522,7 +2522,7 @@
                 'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-all',
                 modelRestrictionMode === 'mapping'
                   ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
               ]"
             >
               {{ t('admin.accounts.modelMapping') }}
@@ -2538,7 +2538,7 @@
               :sync-credentials="syncPreviewCredentials"
               @upstream-synced="upstreamModelsPreviewed = true"
             />
-            <p class="text-xs text-gray-500 dark:text-gray-400">
+            <p class="text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.selectedModels', { count: allowedModels.length }) }}
               <span v-if="allowedModels.length === 0">{{
                 t('admin.accounts.supportsAllModels')
@@ -2605,7 +2605,7 @@
             <button
               type="button"
               @click="addModelMapping"
-              class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-gray-400 dark:hover:border-dark-400 dark:hover:text-gray-300"
+              class="mb-3 w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-dark-400 dark:hover:border-dark-400 dark:hover:text-dark-300"
             >
               + {{ t('admin.accounts.addMapping') }}
             </button>
@@ -2631,7 +2631,7 @@
         <div class="mb-3 flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.tempUnschedulable.title') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.tempUnschedulable.hint') }}
             </p>
           </div>
@@ -2666,7 +2666,7 @@
               :key="preset.label"
               type="button"
               @click="addTempUnschedRule(preset.rule)"
-              class="rounded-lg bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600 transition-colors hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-300 dark:hover:bg-dark-500"
+              class="rounded-lg bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600 transition-colors hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-300 dark:hover:bg-dark-500"
             >
               + {{ preset.label }}
             </button>
@@ -2679,7 +2679,7 @@
               class="rounded-lg border border-gray-200 p-3 dark:border-dark-600"
             >
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-xs font-medium text-gray-500 dark:text-gray-400">
+                <span class="text-xs font-medium text-gray-500 dark:text-dark-400">
                   {{ t('admin.accounts.tempUnschedulable.ruleIndex', { index: index + 1 }) }}
                 </span>
                 <div class="flex items-center gap-2">
@@ -2687,7 +2687,7 @@
                     type="button"
                     :disabled="index === 0"
                     @click="moveTempUnschedRule(index, -1)"
-                    class="rounded p-1 text-gray-400 transition-colors hover:text-gray-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:text-gray-200"
+                    class="rounded p-1 text-gray-400 transition-colors hover:text-gray-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:text-dark-200"
                   >
                     <Icon name="chevronUp" size="sm" :stroke-width="2" />
                   </button>
@@ -2695,7 +2695,7 @@
                     type="button"
                     :disabled="index === tempUnschedRules.length - 1"
                     @click="moveTempUnschedRule(index, 1)"
-                    class="rounded p-1 text-gray-400 transition-colors hover:text-gray-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:text-gray-200"
+                    class="rounded p-1 text-gray-400 transition-colors hover:text-gray-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:text-dark-200"
                   >
                     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -2752,7 +2752,7 @@
                         'flex items-center gap-3 rounded-lg border-2 p-3 text-left transition-all',
                         rule.scope === option.value
                           ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
-                          : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-gray-600'
+                          : 'border-gray-200 hover:border-gray-400 dark:border-dark-600 dark:hover:border-dark-600'
                       ]"
                     >
                       <span
@@ -2765,7 +2765,7 @@
                       </span>
                       <span>
                         <span class="block text-sm font-medium text-gray-900 dark:text-white">{{ option.label }}</span>
-                        <span class="text-xs text-gray-500 dark:text-gray-400">{{ option.description }}</span>
+                        <span class="text-xs text-gray-500 dark:text-dark-400">{{ option.description }}</span>
                       </span>
                     </button>
                   </div>
@@ -2797,7 +2797,7 @@
           <button
             type="button"
             @click="addTempUnschedRule()"
-            class="w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-sm text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-gray-400 dark:hover:border-dark-400 dark:hover:text-gray-300"
+            class="w-full rounded-lg border-2 border-dashed border-gray-300 px-4 py-2 text-sm text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-700 dark:border-dark-500 dark:text-dark-400 dark:hover:border-dark-400 dark:hover:text-dark-300"
           >
             <svg
               class="mr-1 inline h-4 w-4"
@@ -2822,7 +2822,7 @@
             <label class="input-label mb-0">{{
               t('admin.accounts.interceptWarmupRequests')
             }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.interceptWarmupRequestsDesc') }}
             </p>
           </div>
@@ -2851,7 +2851,7 @@
       >
         <div class="mb-3">
           <h3 class="input-label mb-0 text-base font-semibold">{{ t('admin.accounts.quotaControl.title') }}</h3>
-          <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
             {{ t('admin.accounts.quotaControl.hint') }}
           </p>
         </div>
@@ -2861,7 +2861,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.windowCost.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.windowCost.hint') }}
               </p>
             </div>
@@ -2886,7 +2886,7 @@
             <div>
               <label class="input-label">{{ t('admin.accounts.quotaControl.windowCost.limit') }}</label>
               <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">$</span>
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-dark-400">$</span>
                 <input
                   v-model.number="windowCostLimit"
                   type="number"
@@ -2901,7 +2901,7 @@
             <div>
               <label class="input-label">{{ t('admin.accounts.quotaControl.windowCost.stickyReserve') }}</label>
               <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">$</span>
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-dark-400">$</span>
                 <input
                   v-model.number="windowCostStickyReserve"
                   type="number"
@@ -2921,7 +2921,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.sessionLimit.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.sessionLimit.hint') }}
               </p>
             </div>
@@ -2966,7 +2966,7 @@
                   class="input pr-12"
                   :placeholder="t('admin.accounts.quotaControl.sessionLimit.idleTimeoutPlaceholder')"
                 />
-                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">{{ t('common.minutes') }}</span>
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-dark-400">{{ t('common.minutes') }}</span>
               </div>
               <p class="input-hint">{{ t('admin.accounts.quotaControl.sessionLimit.idleTimeoutHint') }}</p>
             </div>
@@ -2978,7 +2978,7 @@
           <div class="mb-3 flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.rpmLimit.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.rpmLimit.hint') }}
               </p>
             </div>
@@ -3024,7 +3024,7 @@
                     'flex-1 rounded-lg px-3 py-2 text-sm font-medium transition-all',
                     rpmStrategy === 'tiered'
                       ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
                   ]"
                 >
                   <div class="text-center">
@@ -3039,7 +3039,7 @@
                     'flex-1 rounded-lg px-3 py-2 text-sm font-medium transition-all',
                     rpmStrategy === 'sticky_exempt'
                       ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500'
                   ]"
                 >
                   <div class="text-center">
@@ -3068,7 +3068,7 @@
           <!-- 用户消息限速模式（独立于 RPM 开关，始终可见） -->
           <div class="mt-4">
             <label class="input-label">{{ t('admin.accounts.quotaControl.rpmLimit.userMsgQueue') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 mb-2">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400 mb-2">
               {{ t('admin.accounts.quotaControl.rpmLimit.userMsgQueueHint') }}
             </p>
             <div class="flex space-x-2">
@@ -3078,7 +3078,7 @@
                   'px-3 py-1.5 text-sm rounded-md border transition-colors',
                   userMsgQueueMode === opt.value
                     ? 'bg-primary-600 text-white border-primary-600'
-                    : 'bg-white dark:bg-dark-700 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-dark-500 hover:bg-gray-50 dark:hover:bg-dark-600'
+                    : 'bg-white dark:bg-dark-700 text-gray-700 dark:text-dark-300 border-gray-300 dark:border-dark-500 hover:bg-gray-50 dark:hover:bg-dark-600'
                 ]">
                 {{ opt.label }}
               </button>
@@ -3091,7 +3091,7 @@
           <div class="flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.tlsFingerprint.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.tlsFingerprint.hint') }}
               </p>
             </div>
@@ -3126,7 +3126,7 @@
           <div class="flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.sessionIdMasking.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.sessionIdMasking.hint') }}
               </p>
             </div>
@@ -3153,7 +3153,7 @@
           <div class="flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.cacheTTLOverride.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.cacheTTLOverride.hint') }}
               </p>
             </div>
@@ -3182,7 +3182,7 @@
               <option value="5m">5m</option>
               <option value="1h">1h</option>
             </select>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.quotaControl.cacheTTLOverride.targetHint') }}
             </p>
           </div>
@@ -3193,7 +3193,7 @@
           <div class="flex items-center justify-between">
             <div>
               <label class="input-label mb-0">{{ t('admin.accounts.quotaControl.customBaseUrl.label') }}</label>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
                 {{ t('admin.accounts.quotaControl.customBaseUrl.hint') }}
               </p>
             </div>
@@ -3293,7 +3293,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.oauthPassthrough') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.oauthPassthroughDesc') }}
             </p>
           </div>
@@ -3323,7 +3323,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.flattenNamespaces') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.flattenNamespacesDesc') }}
             </p>
           </div>
@@ -3355,10 +3355,10 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.wsMode') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.wsModeDesc') }}
             </p>
-            <p v-if="openAIWSModeHintKey" class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p v-if="openAIWSModeHintKey" class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t(openAIWSModeHintKey) }}
             </p>
           </div>
@@ -3376,7 +3376,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.anthropic.apiKeyPassthrough') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.anthropic.apiKeyPassthroughDesc') }}
             </p>
           </div>
@@ -3405,7 +3405,7 @@
         <div class="flex items-center justify-between gap-4">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.anthropic.apiKeyAuthScheme') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.anthropic.apiKeyAuthSchemeDesc') }}
             </p>
           </div>
@@ -3424,7 +3424,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.anthropic.webSearchEmulation') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.anthropic.webSearchEmulationDesc') }}
             </p>
           </div>
@@ -3444,7 +3444,7 @@
         <div class="flex items-center justify-between gap-4">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.longContextBilling') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.longContextBillingDesc') }}
             </p>
           </div>
@@ -3476,7 +3476,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.codexCLIOnly') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.codexCLIOnlyDesc') }}
             </p>
           </div>
@@ -3502,7 +3502,7 @@
         >
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.codexCLIOnlyAppServer') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.codexCLIOnlyAppServerDesc') }}
             </p>
           </div>
@@ -3532,7 +3532,7 @@
         <div class="flex items-center justify-between gap-4">
           <div class="min-w-0">
             <label class="input-label mb-0">{{ t('admin.accounts.openai.codexFingerprintMode') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.codexFingerprintModeDesc') }}
             </p>
           </div>
@@ -3550,7 +3550,7 @@
         <div class="flex items-center justify-between">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.compactMode') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.compactModeDesc') }}
             </p>
           </div>
@@ -3589,7 +3589,7 @@
         <div class="flex items-center justify-between gap-4">
           <div>
             <label class="input-label mb-0">{{ t('admin.accounts.openai.responsesMode') }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.openai.responsesModeDesc') }}
             </p>
           </div>
@@ -3624,7 +3624,7 @@
                 :checked="openAIEndpointCapabilities.includes(option.value)"
                 @change="toggleOpenAIEndpointCapability(option.value, $event)"
               />
-              <span class="text-gray-700 dark:text-gray-200">{{ option.label }}</span>
+              <span class="text-gray-700 dark:text-dark-200">{{ option.label }}</span>
             </label>
           </div>
           <p class="input-hint">{{ t('admin.accounts.openai.endpointCapabilitiesDesc') }}</p>
@@ -3638,7 +3638,7 @@
       >
         <div>
           <label class="input-label mb-0">{{ t('admin.accounts.openai.imagesUrlToB64Json') }}</label>
-          <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+          <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
             {{ t('admin.accounts.openai.imagesUrlToB64JsonDesc') }}
           </p>
         </div>
@@ -3668,7 +3668,7 @@
             <label class="input-label mb-0">{{
               t('admin.accounts.autoPauseOnExpired')
             }}</label>
-            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+            <p class="mt-1 text-xs text-gray-500 dark:text-dark-400">
               {{ t('admin.accounts.autoPauseOnExpiredDesc') }}
             </p>
           </div>
@@ -3699,23 +3699,23 @@
               v-model="mixedScheduling"
               class="h-4 w-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500 dark:border-dark-500"
             />
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t('admin.accounts.mixedScheduling') }}
             </span>
           </label>
           <div class="group relative">
             <span
-              class="inline-flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 hover:bg-gray-300 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500"
+              class="inline-flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 hover:bg-gray-300 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500"
             >
               ?
             </span>
             <!-- Tooltip（向下显示避免被弹窗裁剪） -->
             <div
-              class="pointer-events-none absolute left-0 top-full z-[100] mt-1.5 w-72 rounded bg-gray-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-gray-700"
+              class="pointer-events-none absolute left-0 top-full z-[100] mt-1.5 w-72 rounded bg-gray-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-dark-700"
             >
               {{ t('admin.accounts.mixedSchedulingTooltip') }}
               <div
-                class="absolute bottom-full left-3 border-4 border-transparent border-b-gray-900 dark:border-b-gray-700"
+                class="absolute bottom-full left-3 border-4 border-transparent border-b-gray-900 dark:border-b-dark-700"
               ></div>
             </div>
           </div>
@@ -3727,22 +3727,22 @@
               v-model="allowOverages"
               class="h-4 w-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500 dark:border-dark-500"
             />
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span class="text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t('admin.accounts.allowOverages') }}
             </span>
           </label>
           <div class="group relative">
             <span
-              class="inline-flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 hover:bg-gray-300 dark:bg-dark-600 dark:text-gray-400 dark:hover:bg-dark-500"
+              class="inline-flex h-4 w-4 cursor-help items-center justify-center rounded-full bg-gray-200 text-xs text-gray-500 hover:bg-gray-300 dark:bg-dark-600 dark:text-dark-400 dark:hover:bg-dark-500"
             >
               ?
             </span>
             <div
-              class="pointer-events-none absolute left-0 top-full z-[100] mt-1.5 w-72 rounded bg-gray-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-gray-700"
+              class="pointer-events-none absolute left-0 top-full z-[100] mt-1.5 w-72 rounded bg-gray-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-dark-700"
             >
               {{ t('admin.accounts.allowOveragesTooltip') }}
               <div
-                class="absolute bottom-full left-3 border-4 border-transparent border-b-gray-900 dark:border-b-gray-700"
+                class="absolute bottom-full left-3 border-4 border-transparent border-b-gray-900 dark:border-b-dark-700"
               ></div>
             </div>
           </div>
@@ -3896,19 +3896,19 @@
         </h3>
         <div class="space-y-4">
           <div>
-            <p class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p class="mb-2 text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t('admin.accounts.gemini.setupGuide.checklistTitle') }}
             </p>
-            <ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400">
+            <ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-dark-400">
               <li>{{ t('admin.accounts.gemini.setupGuide.checklistItems.usIp') }}</li>
               <li>{{ t('admin.accounts.gemini.setupGuide.checklistItems.age') }}</li>
             </ul>
           </div>
           <div>
-            <p class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p class="mb-2 text-sm font-medium text-gray-700 dark:text-dark-300">
               {{ t('admin.accounts.gemini.setupGuide.activationTitle') }}
             </p>
-            <ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400">
+            <ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-dark-400">
               <li>{{ t('admin.accounts.gemini.setupGuide.activationItems.geminiWeb') }}</li>
               <li>{{ t('admin.accounts.gemini.setupGuide.activationItems.gcpProject') }}</li>
             </ul>
@@ -3965,13 +3965,13 @@
           <table class="w-full text-xs">
             <thead class="bg-gray-50 dark:bg-dark-600">
               <tr>
-                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-gray-300">
+                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-dark-300">
                   {{ t('admin.accounts.gemini.quotaPolicy.columns.channel') }}
                 </th>
-                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-gray-300">
+                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-dark-300">
                   {{ t('admin.accounts.gemini.quotaPolicy.columns.account') }}
                 </th>
-                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-gray-300">
+                <th class="px-3 py-2 text-left font-medium text-gray-700 dark:text-dark-300">
                   {{ t('admin.accounts.gemini.quotaPolicy.columns.limits') }}
                 </th>
               </tr>
@@ -3981,22 +3981,22 @@
                 <td class="px-3 py-2 text-gray-900 dark:text-white">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.googleOne.channel') }}
                 </td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Free</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Free</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.googleOne.limitsFree') }}
                 </td>
               </tr>
               <tr>
                 <td class="px-3 py-2 text-gray-900 dark:text-white"></td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Pro</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Pro</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.googleOne.limitsPro') }}
                 </td>
               </tr>
               <tr>
                 <td class="px-3 py-2 text-gray-900 dark:text-white"></td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Ultra</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Ultra</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.googleOne.limitsUltra') }}
                 </td>
               </tr>
@@ -4004,15 +4004,15 @@
                 <td class="px-3 py-2 text-gray-900 dark:text-white">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.gcp.channel') }}
                 </td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Standard</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Standard</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.gcp.limitsStandard') }}
                 </td>
               </tr>
               <tr>
                 <td class="px-3 py-2 text-gray-900 dark:text-white"></td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Enterprise</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Enterprise</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.gcp.limitsEnterprise') }}
                 </td>
               </tr>
@@ -4020,15 +4020,15 @@
                 <td class="px-3 py-2 text-gray-900 dark:text-white">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.aiStudio.channel') }}
                 </td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Free</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Free</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.aiStudio.limitsFree') }}
                 </td>
               </tr>
               <tr>
                 <td class="px-3 py-2 text-gray-900 dark:text-white"></td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">Paid</td>
-                <td class="px-3 py-2 text-gray-600 dark:text-gray-400">
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">Paid</td>
+                <td class="px-3 py-2 text-gray-600 dark:text-dark-400">
                   {{ t('admin.accounts.gemini.quotaPolicy.rows.aiStudio.limitsPaid') }}
                 </td>
               </tr>

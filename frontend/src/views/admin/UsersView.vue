@@ -156,7 +156,7 @@
                     v-for="filter in builtInFilters"
                     :key="filter.key"
                     @click="toggleBuiltInFilter(filter.key)"
-                    class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                    class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
                   >
                     <span>{{ filter.name }}</span>
                     <Icon
@@ -177,7 +177,7 @@
                     v-for="attr in filterableAttributes"
                     :key="attr.id"
                     @click="toggleAttributeFilter(attr)"
-                    class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                    class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
                   >
                     <span>{{ attr.name }}</span>
                     <Icon
@@ -215,8 +215,8 @@
                     :class="[
                       'flex w-full items-center justify-between px-4 py-2 text-left text-sm',
                       isForcedVisibleColumn(col.key)
-                        ? 'cursor-not-allowed text-gray-400 dark:text-gray-500'
-                        : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700'
+                        ? 'cursor-not-allowed text-gray-400 dark:text-dark-500'
+                        : 'text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700'
                     ]"
                     :title="isForcedVisibleColumn(col.key) ? t('admin.users.columnAlwaysVisible') : ''"
                   >
@@ -225,7 +225,7 @@
                       v-if="isColumnVisible(col.key)"
                       name="check"
                       size="sm"
-                      :class="isForcedVisibleColumn(col.key) ? 'text-gray-400 dark:text-gray-500' : 'text-primary-500'"
+                      :class="isForcedVisibleColumn(col.key) ? 'text-gray-400 dark:text-dark-500' : 'text-primary-500'"
                       :stroke-width="2"
                     />
                   </button>
@@ -304,7 +304,7 @@
           </template>
 
           <template #cell-username="{ value }">
-            <span class="text-sm text-gray-700 dark:text-gray-300">{{ value || '-' }}</span>
+            <span class="text-sm text-gray-700 dark:text-dark-300">{{ value || '-' }}</span>
           </template>
 
           <template #cell-notes="{ value }">
@@ -312,7 +312,7 @@
               <span
                 v-if="value"
                 :title="value.length > 30 ? value : undefined"
-                class="block truncate text-sm text-gray-600 dark:text-gray-400"
+                class="block truncate text-sm text-gray-600 dark:text-dark-400"
               >
                 {{ value.length > 30 ? value.substring(0, 25) + '...' : value }}
               </span>
@@ -328,7 +328,7 @@
           >
             <div class="max-w-xs">
               <span
-                class="block truncate text-sm text-gray-700 dark:text-gray-300"
+                class="block truncate text-sm text-gray-700 dark:text-dark-300"
                 :title="getAttributeValue(row.id, def.id)"
               >
                 {{ getAttributeValue(row.id, def.id) }}
@@ -522,7 +522,7 @@
                     class="flex w-full items-center justify-between gap-3 px-3 py-1.5 text-left text-xs normal-case tracking-normal hover:bg-gray-100 dark:hover:bg-dark-700"
                     :class="isUsageSortActive(usageKey, metric)
                       ? 'font-medium text-primary-600 dark:text-primary-400'
-                      : 'text-gray-700 dark:text-gray-300'"
+                      : 'text-gray-700 dark:text-dark-300'"
                     :data-test="`usage-sort-${usageKey}-${metric}`"
                     @click.stop="toggleUsageSort(usageKey, metric)"
                   >
@@ -588,7 +588,7 @@
                   value === 'active' ? 'bg-green-500' : 'bg-red-500'
                 ]"
               ></span>
-              <span class="text-sm text-gray-700 dark:text-gray-300">
+              <span class="text-sm text-gray-700 dark:text-dark-300">
                 {{ value === 'active' ? t('common.active') : t('admin.users.disabled') }}
               </span>
             </div>
@@ -686,7 +686,7 @@
               <!-- View API Keys -->
               <button
                 @click="handleViewApiKeys(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <Icon name="key" size="sm" class="text-gray-400" :stroke-width="2" />
                 {{ t('admin.users.apiKeys') }}
@@ -695,7 +695,7 @@
               <!-- Allowed Groups -->
               <button
                 @click="handleAllowedGroups(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <Icon name="users" size="sm" class="text-gray-400" :stroke-width="2" />
                 {{ t('admin.users.groups') }}
@@ -706,7 +706,7 @@
               <!-- Deposit -->
               <button
                 @click="handleDeposit(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <Icon name="plus" size="sm" class="text-emerald-500" :stroke-width="2" />
                 {{ t('admin.users.deposit') }}
@@ -715,7 +715,7 @@
               <!-- Withdraw -->
               <button
                 @click="handleWithdraw(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <svg class="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
@@ -726,7 +726,7 @@
               <!-- Platform Quotas -->
               <button
                 @click="handlePlatformQuota(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <Icon name="chartBar" size="sm" class="text-gray-400" :stroke-width="2" />
                 {{ t('admin.users.platformQuota.menuItem') }}
@@ -735,7 +735,7 @@
               <!-- Balance History -->
               <button
                 @click="handleBalanceHistory(user); closeActionMenu()"
-                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700"
+                class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-700"
               >
                 <Icon name="dollar" size="sm" class="text-gray-400" :stroke-width="2" />
                 {{ t('admin.users.balanceHistory') }}

@@ -9,7 +9,7 @@
         <!-- SVG mode: render inline -->
         <span
           v-if="mode === 'svg' && modelValue"
-          class="text-gray-600 dark:text-gray-300 [&>svg]:h-full [&>svg]:w-full"
+          class="text-gray-600 dark:text-dark-300 [&>svg]:h-full [&>svg]:w-full"
           :class="innerSizeClass"
           v-html="sanitizedValue"
         ></span>
@@ -62,7 +62,7 @@
           {{ resolvedRemoveLabel }}
         </button>
       </div>
-      <p v-if="hint" class="text-xs text-gray-500 dark:text-gray-400">{{ hint }}</p>
+      <p v-if="hint" class="text-xs text-gray-500 dark:text-dark-400">{{ hint }}</p>
       <p v-if="error" class="text-xs text-red-500">{{ error }}</p>
     </div>
   </div>

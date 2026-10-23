@@ -119,7 +119,7 @@ const options = computed(() => {
         labels: { color: c.text, usePointStyle: true, boxWidth: 6, font: { size: 10 } }
       },
       tooltip: {
-        backgroundColor: isDarkMode.value ? '#1f2937' : '#ffffff',
+        backgroundColor: isDarkMode.value ? '#1c1c1c' : '#ffffff',
         titleColor: isDarkMode.value ? '#f3f4f6' : '#111827',
         bodyColor: isDarkMode.value ? '#d1d5db' : '#4b5563',
         borderColor: c.grid,
@@ -170,7 +170,7 @@ const options = computed(() => {
       <div class="flex items-center gap-2">
         <button
           type="button"
-          class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-800"
+          class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-dark-300 dark:hover:bg-dark-800"
           :disabled="!hasRequestErrors"
           @click="emit('openRequestErrors')"
         >
@@ -178,7 +178,7 @@ const options = computed(() => {
         </button>
         <button
           type="button"
-          class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-800"
+          class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 text-[11px] font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-50 dark:border-dark-700 dark:bg-dark-900 dark:text-dark-300 dark:hover:bg-dark-800"
           :disabled="!hasUpstreamErrors"
           @click="emit('openUpstreamErrors')"
         >
